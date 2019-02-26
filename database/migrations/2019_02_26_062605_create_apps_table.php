@@ -15,12 +15,12 @@ class CreateAppsTable extends Migration
     {
         DB::unprepared('
             CREATE TABLE `apps` (
-              `id` int(10) NOT NULL,
+              `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
               `cat_id` int(10) NOT NULL,
               `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
               `keywords` text COLLATE utf8_unicode_ci DEFAULT NULL,
               `abstract` text COLLATE utf8_unicode_ci,
-              `imgs` text COLLATE utf8_unicode_ci,
+              `picture` text COLLATE utf8_unicode_ci,
               `is_publish` tinyint(1) NOT NULL DEFAULT "0",
               `is_recommend` tinyint(1) NOT NULL DEFAULT "0",
               `publish_date` datetime DEFAULT NULL,

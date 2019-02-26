@@ -23,8 +23,8 @@ class AppController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('Index')
-            ->description('description')
+            ->header('平台列表')
+            ->description('(苹果赚钱，阅读赚钱，安卓赚钱，综合赚钱)')
             ->body($this->grid());
     }
 
@@ -81,17 +81,17 @@ class AppController extends Controller
     {
         $grid = new Grid(new App);
 
-        $grid->id('Id');
-        $grid->cat_id('Cat id');
-        $grid->name('Name');
-        $grid->keywords('Keywords');
-        $grid->abstract('Abstract');
-        $grid->imgs('Imgs');
-        $grid->is_publish('Is publish');
-        $grid->is_recommend('Is recommend');
-        $grid->publish_date('Publish date');
-        $grid->created_at('Created at');
-        $grid->updated_at('Updated at');
+        $grid->id('ID')->sortable();
+        $grid->cat_id('栏目');
+        $grid->name('平台名称');
+        $grid->keywords('关键词');
+        $grid->abstract('简介');
+        $grid->picture('图片');
+        $grid->is_publish('发布');
+        $grid->is_recommend('推荐(热门)');
+        $grid->publish_date('发布时间');
+        $grid->created_at('创建时间');
+        $grid->updated_at('更新时间');
 
         return $grid;
     }
@@ -107,16 +107,16 @@ class AppController extends Controller
         $show = new Show(App::findOrFail($id));
 
         $show->id('Id');
-        $show->cat_id('Cat id');
-        $show->name('Name');
-        $show->keywords('Keywords');
-        $show->abstract('Abstract');
-        $show->imgs('Imgs');
-        $show->is_publish('Is publish');
-        $show->is_recommend('Is recommend');
-        $show->publish_date('Publish date');
-        $show->created_at('Created at');
-        $show->updated_at('Updated at');
+        $show->cat_id('栏目');
+        $show->name('平台名称');
+        $show->keywords('关键词');
+        $show->abstract('简介');
+        $show->picture('图片');
+        $show->is_publish('发布');
+        $show->is_recommend('推荐(热门)');
+        $show->publish_date('发布时间');
+        $show->created_at('创建时间');
+        $show->updated_at('更新时间');
 
         return $show;
     }
@@ -129,15 +129,14 @@ class AppController extends Controller
     protected function form()
     {
         $form = new Form(new App);
-
-        $form->number('cat_id', 'Cat id');
-        $form->text('name', 'Name');
-        $form->textarea('keywords', 'Keywords');
-        $form->textarea('abstract', 'Abstract');
-        $form->textarea('imgs', 'Imgs');
-        $form->switch('is_publish', 'Is publish');
-        $form->switch('is_recommend', 'Is recommend');
-        $form->datetime('publish_date', 'Publish date')->default(date('Y-m-d H:i:s'));
+        $form->number('cat_id', '栏目');
+        $form->text('name', '平台名称');
+        $form->textarea('keywords', '关键词');
+        $form->textarea('abstract', '简介');
+        $form->multipleImage('picture', '图片');
+        $form->switch('is_publish', '发布');
+        $form->switch('is_recommend', '推荐(热门)');
+        $form->datetime('publish_date', '发布时间')->default(date('Y-m-d H:i:s'));
 
         return $form;
     }
