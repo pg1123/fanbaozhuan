@@ -1,6 +1,12 @@
 {
     "name": "laravel/laravel",
     "type": "project",
+     "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    },
     "description": "The Laravel Framework.",
     "keywords": [
         "framework",
