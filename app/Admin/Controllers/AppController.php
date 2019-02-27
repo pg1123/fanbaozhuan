@@ -83,10 +83,10 @@ class AppController extends Controller
 
         $grid->id('ID')->sortable();
         $grid->cat_id('栏目');
-        $grid->name('平台名称');
+        $grid->name('平台名称')->sortable();
         $grid->keywords('关键词');
         $grid->abstract('简介');
-        $grid->picture('图片');
+        //$grid->picture('图片');
         $grid->is_publish('发布');
         $grid->is_recommend('推荐(热门)');
         $grid->publish_date('发布时间');

@@ -19,9 +19,17 @@ class App extends Model
     {
         return json_decode($picture, true);
     }
+
+    public function getFirstPicture()
+    {
+        if (count($this->picture) > 0) {
+            return self::UPLOAD_DIR . '/' . $this->picture[0];
+        }
+        return null;
+    }
 }
 
-
+//php artisan make:migration create_users_table
 //php artisan migrate
 //php artisan make:model App\\Models\\App
 //php artisan admin:make AppController --model=App\\Models\\App
