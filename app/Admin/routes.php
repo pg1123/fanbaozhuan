@@ -13,6 +13,8 @@ Route::group([
     $router->get('/', 'HomeController@index');
     $router->resource('apps', AppController::class);
     $router->resource('appcat', AppCatController::class);
+    $router->resource('news', NewsController::class);
+    $router->resource('newscat', NewsCatController::class);
 
 
 
