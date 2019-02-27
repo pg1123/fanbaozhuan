@@ -1,5 +1,11 @@
 <?php
 
+$agent = strtolower($_SERVER['HTTP_USER_AGENT']);
+$is_iphone = (strpos($agent, 'iphone')) ? true : false;
+$is_ipad = (strpos($agent, 'ipad')) ? true : false;
+$is_android = (strpos($agent, 'android')) ? true : false;
+$isMobile = ($is_iphone or $is_ipad or $is_android) ? true : false;
+
 return [
 
     /*
@@ -14,7 +20,7 @@ return [
     */
 
     'paths' => [
-        resource_path('views'),
+        $isMobile ? resource_path('views') : resource_path('views_pc')
     ],
 
     /*
