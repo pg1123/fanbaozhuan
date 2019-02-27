@@ -27,6 +27,11 @@ class App extends Model
         }
         return null;
     }
+
+    public function appcat()
+    {
+        return $this->belongsTo(AppCat::class, 'cat_id', 'id');
+    }
 }
 
 //php artisan make:migration create_users_table

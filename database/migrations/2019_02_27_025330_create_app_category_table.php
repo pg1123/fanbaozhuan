@@ -13,10 +13,15 @@ class CreateAppCategoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('app_category', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
-        });
+        DB::unprepared('
+             CREATE TABLE `app_category` (
+                  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+                  `name` varchar(50) NOT NULL,
+                  `created_at` timestamp NULL DEFAULT NULL,
+                  `updated_at` timestamp NULL DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8
+            ');
     }
 
     /**
