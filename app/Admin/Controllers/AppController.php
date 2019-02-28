@@ -84,11 +84,8 @@ class AppController extends Controller
         $grid = new Grid(new App);
 
         $grid->id('ID')->sortable();
-        //print_r($grid->AppCat());exit;
-        $grid->appcat()->name('栏目');
-        $grid->column('appcat.name','名称');
-
-        //$grid->cat_id('栏目');
+        $grid->appcat()->name('栏目')->sortable();
+        //$grid->column('appcat.name','栏目');
         $grid->name('平台名称')->sortable();
         $grid->keywords('关键词');
         $grid->abstract('简介');
@@ -115,6 +112,7 @@ class AppController extends Controller
         $show->id('Id');
         $show->cat_id('栏目');
         $show->name('平台名称');
+        $show->logo('logo');
         $show->keywords('关键词');
         $show->abstract('简介');
         $show->picture('图片');
@@ -142,9 +140,10 @@ class AppController extends Controller
         }
         $form->select('cat_id', '栏目')->options($catsList);
         $form->text('name', '平台名称');
+        $form->image('logo', '平台Logo');
         $form->textarea('keywords', '关键词');
         $form->textarea('abstract', '简介');
-        $form->multipleImage('picture', '图片');
+        $form->multipleImage('picture', '图片')->removable();
         $form->switch('is_publish', '发布');
         $form->switch('is_recommend', '推荐(热门)');
         $form->datetime('publish_date', '发布时间')->default(date('Y-m-d H:i:s'));
