@@ -112,10 +112,20 @@ class AppController extends Controller
         $show->id('Id');
         $show->cat_id('栏目');
         $show->name('平台名称');
-        $show->logo('logo');
+        $url = env('APP_URL').'/uploads';
+        $show->logo('logo')->setEscape(false)->as(function ($logo) {
+            return "<img src=". env('APP_URL') . "/uploads/{$logo}>";
+        });
         $show->keywords('关键词');
         $show->abstract('简介');
-        $show->picture('图片');
+        $show->picture('图片')->setEscape(false)->as(function ($pictures) {
+            $data='';
+            //$pictures=json_decode($pictures);
+            foreach ($pictures as $picture) {
+                $data = $data . '<img style="display:inline;float:left; width:30%; padding-right:1px" src=' . env('APP_URL') . "/uploads/{$picture}>";
+            }
+            return $data;
+        });
         $show->is_publish('发布');
         $show->is_recommend('推荐(热门)');
         $show->publish_date('发布时间');
