@@ -90,8 +90,18 @@ class AppController extends Controller
         $grid->keywords('关键词');
         $grid->abstract('简介');
         //$grid->picture('图片');
-        $grid->is_publish('发布');
-        $grid->is_recommend('推荐(热门)');
+        $states = [
+            'on' => ['value' => 1, 'text' =>'Yes'],
+            'off' => ['value' => 0, 'text' => 'No'],
+        ];
+        /*$grid->column('发布')->switch(['is_publish'], $states);
+        $grid->column('推荐hot')->switch(['is_publish'], $states);
+*/
+        $grid->column('设置')->switchGroup([
+            'is_publish' => '发布',
+            'is_recommend' => '推荐(热门)'
+        ], $states);
+
         $grid->publish_date('发布时间');
         $grid->created_at('创建时间');
         $grid->updated_at('更新时间');
