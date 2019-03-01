@@ -29,19 +29,19 @@
     <div id="fan-home-slider" class="flexslider">
       <ul class="slides">
         <li class="clone">
-          <div class="slide"> <a href="#"><img src="images/banner1.jpg" alt=""></a> </div>
+          <div class="slide"> <a href="#"><img src="{{ asset('uploads/images/banner1.png') }}" alt=""></a> </div>
         </li>
         <li>
-          <div class="slide"> <a href="#"><img src="images/banner2.png" alt=""></a> </div>
+          <div class="slide"> <a href="#"><img src="{{ asset('uploads/images/banner2.png') }}" alt=""></a> </div>
         </li>
         <li>
-          <div class="slide"> <a href="#"><img src="images/banner3.jpg" alt=""></a> </div>
+          <div class="slide"> <a href="#"><img src="{{ asset('uploads/images/banner3.png') }}" alt=""></a> </div>
         </li>
         <li>
-          <div class="slide"> <a href="#"><img src="images/banner4.png" alt=""></a> </div>
+          <div class="slide"> <a href="#"><img src="{{ asset('uploads/images/banner4.png') }}" alt=""></a> </div>
         </li>
         <li>
-          <div class="slide"> <a href="#"><img src="images/banner5.png" alt=""></a> </div>
+          <div class="slide"> <a href="#"><img src="{{ asset('uploads/images/banner5.png') }}" alt=""></a> </div>
         </li>
       </ul>
     </div>
@@ -230,9 +230,12 @@
   </div>
   <div class="footer"> @饭宝赚，版权归饭宝赚所有 </div>
 </div>
-<script src="js/jquery-1.11.3.min.js"></script>
-<script src="js/mbslider.js"></script>
-<script type="text/javascript" src="js/idangerous.swiper.min.js"></script>
+<script type="text/javascript" src="{{ asset('js/jquery-1.11.3.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/mbslider.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/idangerous.swiper.min.js') }}"></script>
+
+
+
 <script type="text/javascript">
 <!--移动端js-->
   $(function () {
