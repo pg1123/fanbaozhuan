@@ -89,26 +89,15 @@
       <h2>最热门手赚</h2>
     </div>
     <ul>
-      <li><a href="#"> <img src=" images/logo/logo1.jpg">
-        <h2> 试客小兵<span>新手</span> <span class="sp1">提现秒到账</span> </h2>
-        <p>每单试玩奖励1.6~3.0元</p>
-        <button>去赚钱</button>
-        </a></li>
-      <li><a href="#"> <img src=" images/logo/logo2.jpg">
-        <h2> 小鱼赚钱 <span>新手</span> <span class="sp1">提现秒到账</span> </h2>
-        <p>每单试玩奖励1.6~3.0元</p>
-        <button>去赚钱</button>
-        </a></li>
-      <li><a href="#"> <img src=" images/logo/logo3.png">
-        <h2> 蝉试客<span>新手</span> <span class="sp1">提现秒到账</span> </h2>
-        <p>每单试玩奖励1.6~3.0元</p>
-        <button>去赚钱</button>
-        </a></li>
-      <li><a href="#"> <img src=" images/logo/logo4.png">
-        <h2> 熊猫赚钱<span>新手</span> <span class="sp1">提现秒到账</span> </h2>
-        <p>每单试玩奖励1.6~3.0元</p>
-        <button>去赚钱</button>
-        </a></li>
+       @foreach($apps as $app)
+      <li>
+        <a href="#"> <img src="{{ asset('uploads/' . $app->logo) }}">
+          <h2> {{ $app->name }}<span>新手</span> <span class="sp1">提现秒到账</span> </h2>
+          <p>{{ $app->keywords }}</p>
+          <button>去赚钱</button>
+        </a>
+      </li>
+      @endforeach
     </ul>
     <h3>更多试玩平台正在准备中</h3>
   </div>
