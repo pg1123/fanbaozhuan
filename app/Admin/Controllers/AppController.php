@@ -91,16 +91,15 @@ class AppController extends Controller
         $grid->abstract('简介');
         //$grid->picture('图片');
         $states = [
-            'on' => ['value' => 1, 'text' =>'Yes'],
-            'off' => ['value' => 0, 'text' => 'No'],
+            'on' => ['value' => 1, 'text' =>'Yes', 'color' => 'success'],
+            'off' => ['value' => 0, 'text' => 'No', 'color' => 'danger'],
         ];
-        /*$grid->column('发布')->switch(['is_publish'], $states);
-        $grid->column('推荐hot')->switch(['is_publish'], $states);
-*/
-        $grid->column('设置')->switchGroup([
+        $grid->is_publish('发布')->switch($states);
+        $grid->is_recommend('推荐(热门)')->switch($states);
+        /*$grid->column('设置')->switchGroup([
             'is_publish' => '发布',
             'is_recommend' => '推荐(热门)'
-        ], $states);
+        ], $states);*/
 
         $grid->publish_date('发布时间');
         $grid->created_at('创建时间');
@@ -131,8 +130,10 @@ class AppController extends Controller
         $show->picture('图片')->setEscape(false)->as(function ($pictures) {
             $data='';
             //$pictures=json_decode($pictures);
-            foreach ($pictures as $picture) {
-                $data = $data . '<img style="display:inline;float:left; width:30%; padding-right:1px" src=' . env('APP_URL') . "/uploads/{$picture}>";
+            if (count($pictures) > 0) {
+                foreach ($pictures as $picture) {
+                    $data = $data . '<img style="display:inline;float:left; width:30%; padding-right:1px" src=' . env('APP_URL') . "/uploads/{$picture}>";
+                }
             }
             return $data;
         });
@@ -164,8 +165,12 @@ class AppController extends Controller
         $form->textarea('keywords', '关键词');
         $form->textarea('abstract', '简介');
         $form->multipleImage('picture', '图片')->removable();
-        $form->switch('is_publish', '发布');
-        $form->switch('is_recommend', '推荐(热门)');
+        $states = [
+            'on' => ['value' => 1, 'text' =>'Yes', 'color' => 'success'],
+            'off' => ['value' => 0, 'text' => 'No', 'color' => 'danger'],
+        ];
+        $form->switch('is_publish', '发布')->states($states);
+        $form->switch('is_recommend', '推荐(热门)')->states($states);
         $form->datetime('publish_date', '发布时间')->default(date('Y-m-d H:i:s'));
 
         return $form;
