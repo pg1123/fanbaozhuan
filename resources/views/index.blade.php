@@ -66,22 +66,12 @@
       <h2>精品推荐</h2>
     </div>
     <ul class="clearfix">
-      <li> <a href="#"> <img src=" images/logo/logo1.jpg">
-        <h2>试客小兵</h2>
+      @foreach($jpApps as $app)
+      <li> <a href="#"> <img src="{{ asset('uploads/' . $app->logo) }}">
+        <h2>{{ $app->name }}</h2>
         <button>去赚钱</button>
         </a> </li>
-      <li> <a href="#"> <img src=" images/logo/logo2.jpg">
-        <h2>小鱼赚钱</h2>
-        <button>去赚钱</button>
-        </a> </li>
-      <li> <a href="#"> <img src=" images/logo/logo3.png">
-        <h2>蝉试客</h2>
-        <button>去赚钱</button>
-        </a> </li>
-      <li> <a href="#"> <img src=" images/logo/logo4.png">
-        <h2>熊猫赚钱</h2>
-        <button>去赚钱</button>
-        </a> </li>
+      @endforeach
     </ul>
   </div>
   <div class="main mbmain">
@@ -89,7 +79,7 @@
       <h2>最热门手赚</h2>
     </div>
     <ul>
-       @foreach($apps as $app)
+       @foreach($hotApps as $app)
       <li>
         <a href="#"> <img src="{{ asset('uploads/' . $app->logo) }}">
           <h2> {{ $app->name }}<span>新手</span> <span class="sp1">提现秒到账</span> </h2>

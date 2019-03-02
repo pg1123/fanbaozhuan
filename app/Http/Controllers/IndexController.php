@@ -13,9 +13,14 @@ class IndexController extends Controller
 {
 
     public function index() {
-        $apps = App::where('is_publish', 1)->get();
+        $jpApps = App::where('is_publish', 1)
+                             ->orderBy('updated_at', 'asc')
+                             ->limit(4)
+                            ->get();
+        $hotApps = App::where('is_publish', 1)->get();
         return view('index', [
-            'apps' => $apps,
+            'jpApps' => $jpApps,
+            'hotApps' => $hotApps,
         ]);
     }
 
