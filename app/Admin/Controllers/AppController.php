@@ -4,6 +4,8 @@ namespace App\Admin\Controllers;
 
 use App\Models\App;
 use App\Models\AppCat;
+use Illuminate\Http\Request;
+
 
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
@@ -175,4 +177,20 @@ class AppController extends Controller
 
         return $form;
     }
+
+    public function sort(Request $request)
+    {
+        $entity = App::findOrFail($request->id);
+        print_r($entity);exit;
+        $positionEntity = App::findOrFail($request->positionEntityId);
+
+        if ($request->type == 'moveAfter') {
+            $entity->moveAfter($positionEntity);
+        } else {
+            $entity->moveBefore($positionEntity);
+        }
+
+        return ['success' => true];
+    }
+
 }

@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class App extends Model
 {
+    use \Rutorika\Sortable\SortableTrait;
     protected $table = 'apps';
+    protected static $sortableField = 'position';
 
     public function setPictureAttribute($picture)
     {
