@@ -66,7 +66,7 @@
 
             <tbody>
                 @foreach($grid->rows() as $row)
-                <tr {!! $row->getRowAttributes() !!} data-itemId="{{ $row->position }}" >
+                <tr {!! $row->getRowAttributes() !!} data-itemId="{{ $row->id }}" >
                     @foreach($grid->columnNames as $name)
                     <td {!! $row->getColumnAttributes($name) !!}>
                         {!! $row->column($name) !!}
@@ -96,6 +96,7 @@
             'type': 'POST',
             'data': requestData,
             'success': function(data) {
+                console.log(data);
                 if (data.success) {
                     console.log('success');
                 } else {
@@ -129,22 +130,18 @@
             console.log( '$next: ' + $next.data('itemid'));
 
             if ($previous.length > 0) {
-                 console.log(111111);
                 changePosition({
                     type: 'moveAfter',
                     id: $item.data('itemid'),
                     positionEntityId: $previous.data('itemid')
                 });
-                //http://fanbaozhuan.local/admin/sort?type=moveAfter&id=1&positionEntityId=6
             } else if ($next.length > 0) {
-                console.log(22222);
                 changePosition({
                     type: 'moveBefore',
                     id: $item.data('itemid'),
                     positionEntityId: $next.data('itemid')
                 });
             } else {
-                console.log(33333);
                 console.log('something wrong');
             }
         }

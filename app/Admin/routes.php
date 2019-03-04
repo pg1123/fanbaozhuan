@@ -10,7 +10,7 @@ Route::group([
     'middleware'    => config('admin.route.middleware'),
 ], function (Router $router) {
 
-Route::get('sort', 'AppController@sort')->name('apps.sort');
+Route::post('sort', 'AppController@sort')->name('apps.sort');
 
     $router->get('/', 'HomeController@index');
     $router->resource('apps', AppController::class);

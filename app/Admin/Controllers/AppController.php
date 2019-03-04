@@ -181,7 +181,6 @@ class AppController extends Controller
     public function sort(Request $request)
     {
         $entity = App::findOrFail($request->id);
-        print_r($entity);exit;
         $positionEntity = App::findOrFail($request->positionEntityId);
 
         if ($request->type == 'moveAfter') {
