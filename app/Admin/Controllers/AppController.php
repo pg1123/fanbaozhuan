@@ -86,6 +86,7 @@ class AppController extends Controller
         $grid = new Grid(new App);
 
         $grid->id('ID')->sortable();
+        $grid->position('排名')->sortable();
         $grid->appcat()->name('栏目')->sortable();
         //$grid->column('appcat.name','栏目');
         $grid->name('平台名称')->sortable();
@@ -121,6 +122,7 @@ class AppController extends Controller
         $show = new Show(App::findOrFail($id));
 
         $show->id('Id');
+        $show->position('排名');
         $show->cat_id('栏目');
         $show->name('平台名称');
         $url = env('APP_URL').'/uploads';
