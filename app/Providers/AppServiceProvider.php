@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Models\App;
+use Illuminate\Support\Facades\Schema; //NEW: Import Schema
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,6 +26,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Schema::defaultStringLength(191); //NEW: Increase StringLength
+
         App::deleting(function ($model) {
             $model->next()->decrement('position');
         });
