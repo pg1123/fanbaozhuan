@@ -3,102 +3,26 @@
 
 /*移动端样式*/
 body{ background-color:#f5f5f5;}
-* {
-    padding: 0;
-    margin: 0;
-}
-.clearfix {
- *zoom: 1;
-}
-.clearfix:before, .clearfix:after {
-    display: table;
-    line-height: 0;
-    content: "";
-}
-.clearfix:after {
-    clear: both;
-}
-li {
-    list-style: none;
-}
-a {
-    color: #000;
-    text-decoration: none;
-}
-
-a,a:hover,a:active,a:visited,a:link,a:focus{
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
-    -webkit-tap-highlight-color: transparent;
-    outline:none;
-    background: none;
-    text-decoration: none;
-}
-
-button, input {
-    font-family: "微软雅黑";
-    outline: none;
-}
-.mbfbz {
-    max-width: 600px;
-    margin: 0 auto;
-    font-family: "微软雅黑";
-    font-size: 12px;
-}
-/*图片滚动*/
-.fan-slider {
-    padding: 1px;
-    position: relative;
-    background-color: #ffffff;
-    border-radius: 3px;
-    text-align: center;
-    line-height: 0px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0;
-    background-color: #fff;
-}
-.fan-slider .slide {
-    position: relative;
-}
-.fan-slider .flex-control-paging {
-    padding-top: 15px;
-    display: inline-block;
-    position: absolute;
-    bottom: 16px;
-    width:auto;
-}
-.fan-slider .flex-control-paging li {
-    margin: 0px;
-    padding: 0px;
-    float: left;
-    overflow: hidden;
-    list-style-type: none;
-}
-.fan-slider .flex-control-paging li a {
-    display: block;
-    background-repeat: no-repeat;
-    text-indent: -9000px;
-    cursor: pointer;
-}
-.fan-slider .flex-control-paging li a.flex-active {
-    background-position: right top;
-}
-.flexslider {
-    margin: 0;
-    padding: 0;
-}
-.flexslider .slides > li {
-    display: none;
-    -webkit-backface-visibility: hidden;
-    list-style-type: none;
-} /* Hide the slides before the JS is loaded. Avoids image jumping */
-.flexslider .slides img {
-    width: 100%;
-    display: block;
-}
-.flex-pauseplay span {
-    text-transform: capitalize;
-}
+* {padding: 0;margin: 0;}
+.clearfix {*zoom: 1;}
+.clearfix:before, .clearfix:after {display: table;line-height: 0;content: "";}
+.clearfix:after {clear: both;}
+li {list-style: none;}
+a {color: #000;text-decoration: none;}
+a,a:hover,a:active,a:visited,a:link,a:focus{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color: transparent;outline:none;background: none;text-decoration: none;}
+button, input {font-family: "微软雅黑";outline: none;}
+.mbfbz {max-width: 600px; margin: 0 auto;font-family: "微软雅黑";font-size: 12px;}
+/*图片滚动*/    
+.fan-slider {padding: 1px;position: relative;background-color: #ffffff;border-radius: 3px;text-align: center;line-height: 0px;margin-right: auto;margin-left: auto; padding: 0;background-color: #fff;}
+.fan-slider .slide {position: relative;}
+.fan-slider .flex-control-paging {padding-top: 15px; display: inline-block;position: absolute;bottom: 16px;width:auto;}
+.fan-slider .flex-control-paging li {margin: 0px;padding: 0px;float: left;overflow: hidden;list-style-type: none;}
+.fan-slider .flex-control-paging li a {display: block;background-repeat: no-repeat;text-indent: -9000px;cursor: pointer;}
+.fan-slider .flex-control-paging li a.flex-active {background-position: right top;}
+.flexslider {margin: 0;padding: 0;}
+.flexslider .slides > li {display: none;-webkit-backface-visibility: hidden;list-style-type: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {width: 100%;display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
 
 /*头部导航*/
 #mbheader{background-color:#fff;}
@@ -108,280 +32,96 @@ button, input {
 .mbheader input{ border:none; line-height:30px; padding-left:5%; width:70%; float:left;border-radius:40px 0 0 40px;}
 .mbheader button{ border:none; line-height:30px;  width:20%; background-color:#4bb5ff; float:right; border-radius:0 40px 40px 0; color:#fff;}
 .mbheader ul{ height:46px; background-color:#fff;}
-#mbheader ul li{ text-align:center; width:25%; line-height:46px; font-size:15px; float:left;}
+#mbheader ul li{ text-align:center; width:25%; line-height:46px; font-size:16px; float:left;}
 #mbheader ul .mbactive{ border-bottom:3px solid #2676cf; }
 #mbheader ul .mbactive a{color:#2676cf}
-.notic {
-    padding: 10px 15px;
-    background-color:#fff;
-}
-.notic i {
-    float: left;
-    color: #2676cf;
-    font-size: 18px;
-    margin-left: 5px;
-    margin-top: 8px;
-    margin-left: 15px;
-}
-.n_banner {
-    overflow: hidden;
-    background-color: #f5f2f2;
-    border-radius: 32px;
-    height: 32px;
-    line-height: 32px;
-    width: 75%;
-    float: left;
-}
-.n_banner ol {
-    height: 32px;
-    overflow: hidden;
-    padding-left: 10px;
-    font-size: 12px;
-    line-height: 32px;
-    float: left;
-    margin-top: 2px;
-}
-.notic button {
-    width: 22%;
-    float: right;
-    background-color: #2676cf;
-    height: 30px;
-    border: none;
-    border-radius: 30px;
-    font-size: 12px;
-}
-.notic button a {
-    color: #fff;
-}
-.main {
-    padding: 10px 15px;
-    background-color:#fff;
-    margin-top:10px;
-}
-.title h2 {
-    display: block;
-    float: left;
-    font-size: 16px;
-    border-left: 3px solid #2676cf;
-    padding-left: 10px;
-    height: 14px;
-    line-height: 14px;
-}
-.title span {
-    color: #999;
-    float: right;
-    font-size:13px;
-}
-.mbmain ul li {
-    padding: 20px 0;
-    border-bottom: 1px solid #e5e5e5;
-    position: relative;
-    height: 50px;
-}
-.mbmain ul li img {
-    float: left;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-}
-.mbmain ul li h2 {
-    font-size: 14px;
-    font-weight: normal;
-}
-.mbmain ul li a p {
-    color: #999;
-    padding-top: 5px;
-}
-.mbmain ul li button {
-    position: absolute;
-    right: 0;
-    top: 32px;
-    background-color: #f3f3f3;
-    height: 28px;
-    border: none;
-    border-radius: 30px;
-    font-size: 14px;
-    color: #2676cf;
-    width: 70px;
-    font-weight: bold;
-}
-.mbmain ul li span {
-    color: #fff;
-    font-size: 10px;
-    background-color: #f59c62;
-    line-height: 16px;
-    border-radius: 0 10px 10px 10px;
-    padding: 2px 5px;
-    margin-left: 4px;
-}
-.mbmain ul li .sp1 {
-    background-color: #9593E4;
-}
-.mbmain h3 {
-    font-size: 12px;
-    text-align: center;
-    color: #999;
-    line-height: 36px;
-    border: 1px dashed #ccc;
-    font-weight: normal;
-    margin-top: 10px;
-}
+.notic {padding: 10px 15px;background-color:#fff;}
+.notic i {float: left;color: #2676cf;font-size: 18px;margin-left: 5px;margin-top: 8px; margin-left: 15px;}
+.n_banner { overflow: hidden; background-color: #f5f2f2;border-radius: 32px; height: 32px;line-height: 32px;width: 75%;float: left;}
+.n_banner ol {height: 32px; overflow: hidden;padding-left: 10px; font-size: 12px;line-height: 32px;float: left; margin-top: 2px;}
+.notic button {width: 22%;float: right;background-color: #2676cf;height: 30px;border: none;border-radius: 30px;font-size: 12px;}
+.notic button a {color: #fff;}
+.main {padding: 10px 15px;background-color:#fff;margin-top:10px;}
+.title h2 {display: block;float: left;font-size: 16px;border-left: 3px solid #2676cf;padding-left: 10px;height: 14px;line-height: 14px;}
+.title span {color: #999;float: right;font-size:13px;}
+.mbmain ul{ padding-top:10px;}
+.mbmain ul li {padding: 20px 0;border-bottom: 1px solid #e5e5e5;position: relative;height: 50px;}
+.mbmain ul li img {float: left;width: 50px;height: 50px;margin-right: 10px;}
+.mbmain ul li h2 {font-size: 14px;font-weight: normal;margin-top:-6px;}
+.mbmain ul li a p {color: #999;padding-top: 5px;padding-right:80px;}
+.mbmain ul li button {position: absolute;right: 0;top: 32px;background-color: #f3f3f3;height: 28px;border: none;border-radius: 30px;font-size: 14px;color: #2676cf; width: 70px;font-weight: bold;}
+.mbmain ul li span {color: #fff;font-size: 10px;background-color: #f59c62;line-height: 16px;border-radius: 0 10px 10px 10px;padding: 2px 5px;margin-left: 4px;}
+.mbmain ul li .sp1 {background-color: #9593E4;}
+.mbmain h3 {font-size: 12px;text-align: center;color: #999;line-height: 36px;border: 1px dashed #ccc;font-weight: normal;margin-top: 10px;}
 .mbmaina ul{ height:140px; overflow:hidden; }
 .mbmaina ul li{ float:left; text-align:center; width:25%; padding:20px 0; }
-.mbmaina ul li img{width: 50px;
-    height: 50px;
-    margin-right: 10px;}
-.mbmaina ul li button {
-    background-color: #fff;
-    height: 28px;
-    border:1px solid #2676cf;
-    border-radius: 30px;
-    font-size: 14px;
-    color: #2676cf;
-    width: 70px;
-    display:block;
-    margin:0 auto;
-    margin-top:5px;
-}
-.mbmaina ul li h2{font-size: 14px;
-    font-weight: normal; margin-top:5px;}
+.mbmaina ul li img{width: 50px;height: 50px;}
+.mbmaina ul li button {background-color: #fff;height: 28px;border:1px solid #2676cf;border-radius: 30px;font-size: 14px;color: #2676cf;width: 70px;display:block;margin:0 auto;margin-top:5px;}
+.mbmaina ul li h2{font-size: 14px;font-weight: normal; margin-top:5px;}
+.mbmainc{ padding:0;}
+.mbmainc ul{ height:auto;}
 .tabul  li{ float:left; text-align:center; width:25%; padding:10px 0; }
-.tabul  li img{width: 50px;
-    height: 50px;
-    margin-right: 10px;}
-.tabul li h2{font-size: 14px;
-    font-weight: normal; margin-top:5px;}
-
+.tabul  li img{width: 50px;height: 50px;}
+.tabul li h2{font-size: 14px;font-weight: normal; margin-top:2px;}  
+.appmain .tabul li h2{ margin-top:-6px;}    
 .wrap{margin:10px auto 0 auto;}
 .tabs{height:46px; border-bottom:3px solid #d2d2d2;}
-.tabs a{display:block;float:left;width:33.33%;color:#333;text-align:center;background:#fff;line-height:46px;font-size:15px;text-decoration:none;}
+.tabsapp{  border:1px solid #2676cf; height:32px;border-radius:4px;}
+.tabs a{display:block;float:left;width:33.33%;color:#333;text-align:center;background:#fff;line-height:46px;font-size:14px;text-decoration:none;}
+.tabsapp a{ background-color:#fff;width:50%; height:32px; line-height:32px;}
 .tabs a.active{color:#2676cf; border-bottom:3px solid #2676cf}
+.tabsapp a.active{ background-color:#2676cf; color:#fff;border-bottom:none;}
 .swiper-container{background:#fff;width:100%;border-top:0;}
 .swiper-slide{width:100%;background:none;color:#fff;}
 .content-slide{padding:10px 15px; }
-.content-slide p{text-indent:2em;line-height:1.9;}
+.content-slide p{text-indent:2em; line-height:18px; padding-right:80px; max-height:36px; overflow:hidden;}
 .swiper-slide ,.swiper-wrapper{height:auto !important;}
-.swiper-container {
-    margin:0 auto;
-    position:relative;
-    overflow:hidden;
-    -webkit-backface-visibility:hidden;
-    -moz-backface-visibility:hidden;
-    -ms-backface-visibility:hidden;
-    -o-backface-visibility:hidden;
-    backface-visibility:hidden;
-    /* Fix of Webkit flickering */
-    z-index:1;
-}
-.swiper-wrapper {
-    position:relative;
-    width:100%;
-    -webkit-transition-property:-webkit-transform, left, top;
-    -webkit-transition-duration:0s;
-    -webkit-transform:translate3d(0px,0,0);
-    -webkit-transition-timing-function:ease;
-
-    -moz-transition-property:-moz-transform, left, top;
-    -moz-transition-duration:0s;
-    -moz-transform:translate3d(0px,0,0);
-    -moz-transition-timing-function:ease;
-
-    -o-transition-property:-o-transform, left, top;
-    -o-transition-duration:0s;
-    -o-transform:translate3d(0px,0,0);
-    -o-transition-timing-function:ease;
-    -o-transform:translate(0px,0px);
-
-    -ms-transition-property:-ms-transform, left, top;
-    -ms-transition-duration:0s;
-    -ms-transform:translate3d(0px,0,0);
-    -ms-transition-timing-function:ease;
-
-    transition-property:transform, left, top;
-    transition-duration:0s;
-    transform:translate3d(0px,0,0);
-    transition-timing-function:ease;
-
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-}
-.swiper-free-mode > .swiper-wrapper {
-    -webkit-transition-timing-function: ease-out;
-    -moz-transition-timing-function: ease-out;
-    -ms-transition-timing-function: ease-out;
-    -o-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-    margin: 0 auto;
-}
-.swiper-slide {
-    float: left;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-}
-
-/* IE10 Windows Phone 8 Fixes */
-.swiper-wp8-horizontal {
-    -ms-touch-action: pan-y;
-}
-.swiper-wp8-vertical {
-    -ms-touch-action: pan-x;
-}
-
-/* ===============================================================
-Your custom styles, here you need to specify container's and slide's
-sizes, pagination, etc.
-================================================================*/
-.swiper-container {
-    /* Specify Swiper's Size: */
-
-    /*width:200px;
-    height: 100px;*/
-}
-.swiper-slide {
-    /* Specify Slides's Size: */
-    /*width: 100%;
-    height: 100%;*/
-}
-.swiper-slide-active {
-    /* Specific active slide styling: */
-}
-.swiper-slide-visible {
-    /* Specific visible slide styling: */
-
-}
-/* ===============================================================
-Pagination Styles
-================================================================*/
-.swiper-pagination-switch {
-    /* Stylize pagination button: */
-
-}
-.swiper-active-switch {
-    /* Specific active button style: */
-}
-.swiper-visible-switch {
-    /* Specific visible button style: */
-}
+.swiper-container {margin:0 auto;position:relative;overflow:hidden;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-o-backface-visibility:hidden;backface-visibility:hidden;/* Fix of Webkit flickering */z-index:1;}
+.swiper-wrapper {position:relative;width:100%;-webkit-transition-property:-webkit-transform, left, top;-webkit-transition-duration:0s;-webkit-transform:translate3d(0px,0,0);-webkit-transition-timing-function:ease;-moz-transition-property:-moz-transform, left, top;-moz-transition-duration:0s;-moz-transform:translate3d(0px,0,0);-moz-transition-timing-function:ease;-o-transition-property:-o-transform, left, top;-o-transition-duration:0s;-o-transform:translate3d(0px,0,0);-o-transition-timing-function:ease;-o-transform:translate(0px,0px);-ms-transition-property:-ms-transform, left, top;-ms-transition-duration:0s;-ms-transform:translate3d(0px,0,0);-ms-transition-timing-function:ease;transition-property:transform, left, top;transition-duration:0s;transform:translate3d(0px,0,0);transition-timing-function:ease;-webkit-box-sizing: content-box;-moz-box-sizing: content-box;box-sizing: content-box;}
+.swiper-free-mode > .swiper-wrapper {-webkit-transition-timing-function: ease-out;-moz-transition-timing-function: ease-out-o-transition-timing-function: ease-out;transition-timing-function: ease-out;margin: 0 auto;}
+.swiper-slide {float: left;-webkit-box-sizing: content-box;-moz-box-sizing: content-box;box-sizing: content-box;}
+.swiper-wp8-horizontal {-ms-touch-action: pan-y;}
+.swiper-wp8-vertical {-ms-touch-action: pan-x;}
+.swiper-container {/* Specify Swiper's Size: *//*width:200px;height: 100px;*/}
+.swiper-slide {/* Specify Slides's Size: *//*width: 100%;height: 100%;*/}
+.swiper-slide-active {/* Specific active slide styling: */}
+.swiper-slide-visible {/* Specific visible slide styling: */    }
+.swiper-pagination-switch {/* Stylize pagination button: */ }
+.swiper-active-switch {/* Specific active button style: */  }
+.swiper-visible-switch {/* Specific visible button style: */    }
 .mbmainb .title a{ float:right; color:#999; font-size:14px;}
 .mbmainb ul{ margin-top:10px;}
-.mbmainb ul li {
-    padding: 12px 0;
-    border-top: 1px solid #e5e5e5;
-    position: relative;
-    height: 50px;
-}
-.mbmainb ul li img {
-    float: left;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-}
-.mbmainb ul li h2 {
-    font-size: 14px;
-    font-weight: normal;
-    line-height:20px;
-    margin-top:4px;
-}
-.footer{ text-align:center; color:#666; line-height:60px; font-size:14px;}
+.mbmainb ul li { padding: 12px 0;border-top: 1px solid #e5e5e5;position: relative;height: 50px;}
+.mbmainb ul li img {float: left;width: 50px; height: 50px;margin-right: 10px;}
+.mbmainb ul li h2 {font-size: 14px;font-weight: normal;line-height:20px;margin-top:4px}
+.footer{ text-align:center; color:#666; line-height:60px; font-size:14px;}  
+/*苹果赚钱*/
+.appmain .swiper-container ,.appmain .swiper-slide{ background-color:inherit;}
+.tabsapp{ margin:10px 15px;}
+.appmain .content-slide{ padding:0;}
+.appmain ul li {padding: 20px 15px;height: 50px;width:inherit;text-align:left;background-color:#fff;float:none;position:relative;margin-bottom:8px;}
+.appmain ul li img {float: left;width: 50px;height: 50px;margin-right: 10px;}
+.appmain ul li h2 {font-size: 14px;font-weight: normal;}
+.appmain ul li a p {color: #999;padding-top: 5px;text-indent:0;}
+.appmain ul li button {position: absolute;right: 15px;top: 32px;background-color: #f3f3f3;height: 28px;border: none;border-radius: 30px;font-size: 14px;color: #2676cf;width: 70px;font-weight: bold;}
+.appmain ul li span {color: #fff;font-size: 10px;background-color: #f59c62;line-height: 16px;border-radius: 0 10px 10px 10px;padding: 2px 5px;margin-left: 4px;}
+.appmain ul li .sp1 {background-color: #9593E4;}
+.appmain ul li strong{ float: left;width: 18px;padding: 1px; background-color: #FF2300;color: #fff; font-weight:normal; display:inline-block; text-align:center; margin-right:8px;}
+.appmain ul li .grey{ background-color:#bbb;}
+/*详细页*/
+.demain1 { margin-top:10px; background-color:#fff; padding:10px 15px;}
+.demain1 img{ float:left;width: 70px;height: 70px;margin-right: 10px;}
+.demain1 h2 {font-size: 16px;font-weight: normal;padding-bottom: 6px;}
+.demain1 p {color: #999; line-height:20px;}
+.demain1 button { color:#fff; background-color:#4bb5ff; height:40px; line-height:40px; border-radius:6px; border:none; width:100%; display:block; font-size:18px; margin-top:10px;}
+.demain2 ,.demain3 ,.demain4{margin-top:10px; background-color:#fff; padding:10px 15px;}
+.demain2 p ,.demain3 p{    font-size: 14px;
+    line-height: 18px;
+    color: #333;
+    padding: 10px 0; display:block;}
+.demain2 div img{ float:left; width:31.33%; margin:0 1%;}
+.demain3 div img{ float:left; width:23%; margin:0 1%;}  
+.demain4 ul{ padding-top:10px;}
+.demain4  li{ float:left; text-align:center; width:25%; padding:10px 0; }
+.demain4 li img{width: 50px;height: 50px;}
+.demain4 li h2{font-size: 14px;font-weight: normal; margin-top:2px;}
