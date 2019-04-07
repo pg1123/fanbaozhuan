@@ -19,8 +19,12 @@ return [
     |
     */
 
+    /*'paths' => [
+        $isMobile ? resource_path('views') : resource_path('views_pc')
+    ],*/
+
     'paths' => [
-        !$isMobile ? resource_path('views') : resource_path('views_pc')
+        resource_path('views')
     ],
 
     /*

@@ -20,14 +20,14 @@
     </div>
     <ul class="clearfix">
       <li class="mbactive"><a href="#">首页</a></li>
-      <li><a href="#">苹果赚钱</a></li>
+      <li><a href="apple.html">苹果赚钱</a></li>
       <li><a href="#">安卓赚钱</a></li>
-      <li><a href="#">阅读赚钱</a></li>
+      <li><a href="#">综合赚钱</a></li>
     </ul>
   </div>
   <div class="fan-slider">
     <div id="fan-home-slider" class="flexslider">
-      <ul class="slides">
+       <ul class="slides">
         <li class="clone">
           <div class="slide"> <a href="#"><img src="{{ asset('uploads/images/banner1.png') }}" alt=""></a> </div>
         </li>
@@ -38,10 +38,10 @@
           <div class="slide"> <a href="#"><img src="{{ asset('uploads/images/banner3.png') }}" alt=""></a> </div>
         </li>
         <li>
-          <div class="slide"> <a href="#"><img src="{{ asset('uploads/images/banner4.png') }}" alt=""></a> </div>
+          <div class="slide"> <a href="#"><img src="{{ asset('uploads/images/banner4.jpg') }}" alt=""></a> </div>
         </li>
         <li>
-          <div class="slide"> <a href="#"><img src="{{ asset('uploads/images/banner5.png') }}" alt=""></a> </div>
+          <div class="slide"> <a href="#"><img src="{{ asset('uploads/images/banner5.jpg') }}" alt=""></a> </div>
         </li>
       </ul>
     </div>
@@ -61,6 +61,15 @@
     <a href="">试玩攻略</a>
     </button>
   </div>
+  <div class="main mbmaina mbmainc">
+    <ul class="clearfix">
+      <li> <a href="#"> <img src="{{ asset('uploads/images/icon/icon1.jpg') }}"><h2>必备</h2></a></li>
+      <li> <a href="#"> <img src="{{ asset('uploads/images/icon/icon2.jpg') }}"><h2>最新</h2></a></li>
+      <li> <a href="#"> <img src="{{ asset('uploads/images/icon/icon3.jpg') }}"><h2>排行</h2></a></li>
+      <li> <a href="#"> <img src="{{ asset('uploads/images/icon/icon4.jpg') }}"><h2>红包</h2></a></li>
+  
+    </ul>
+  </div>
   <div class="main mbmaina">
     <div class="title clearfix">
       <h2>精品推荐</h2>
@@ -79,10 +88,10 @@
       <h2>最热门手赚</h2>
     </div>
     <ul>
-       @foreach($hotApps as $app)
+      @foreach($hotApps as $app)
       <li>
         <a href="#"> <img src="{{ asset('uploads/' . $app->logo) }}">
-          <h2> {{ $app->name }}<span>新手</span> <span class="sp1">提现秒到账</span> </h2>
+          <h2> {{ $app->name }}<!-- <span>新手</span> <span class="sp1">提现秒到账</span> --> </h2>
           <p>{{ $app->keywords }}</p>
           <button>去赚钱</button>
         </a>
@@ -212,9 +221,6 @@
 <script type="text/javascript" src="{{ asset('js/jquery-1.11.3.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/mbslider.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/idangerous.swiper.min.js') }}"></script>
-
-
-
 <script type="text/javascript">
 <!--移动端js-->
   $(function () {
@@ -222,16 +228,16 @@ $('#fan-home-slider').flexslider({
         animation: "slide",
         slideshowSpeed: 3000,
         pauseOnHover: true,
-        animationLoop: true,
+        animationLoop: true,   
         before: function (slider) {
             slider.pause();
             slider.play();
         },
     });
-
-    $(".flex-prev ,.flex-next").empty();
-});
-
+    
+$(".flex-prev ,.flex-next").empty();  
+}); 
+  
 $(function() {
     var index = 0;
     var adtimer;
@@ -301,7 +307,10 @@ $(function() {
         })
     });
 });
-
+ 
+ 
+ 
+ 
 var tabsSwiper = new Swiper('.swiper-container',{
     speed:500,
     onSlideChangeStart: function(){
@@ -319,7 +328,7 @@ $(".tabs a").on('touchstart mousedown',function(e){
 
 $(".tabs a").click(function(e){
     e.preventDefault();
-});
+});  
 </script>
 </body>
 </html>
