@@ -24,6 +24,28 @@ class IndexController extends Controller
         ]);
     }
 
+    public function apple() {
+        $appleApps = App::where('is_publish', 1)
+                             ->orderBy('updated_at', 'asc')
+                             ->limit(4)
+                            ->get();
+        return view('apple', [
+            'appleApps' => $appleApps,
+        ]);
+    }
+
+    public function appInfo() {
+        $appleApps = App::where('is_publish', 1)
+                             ->orderBy('updated_at', 'asc')
+                             ->limit(4)
+                            ->get();
+        return view('apple', [
+            'appleApps' => $appleApps,
+        ]);
+    }
+
+
+
     public function getNews() {
         $cats = Category::where('name', '=', 'News')->get(['id']);
         foreach ($cats as $key => $value) {

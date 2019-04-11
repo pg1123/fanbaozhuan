@@ -20,7 +20,7 @@
     </div>
     <ul class="clearfix">
       <li class="mbactive"><a href="#">首页</a></li>
-      <li><a href="apple.html">苹果赚钱</a></li>
+      <li><a href="/apple">苹果赚钱</a></li>
       <li><a href="#">安卓赚钱</a></li>
       <li><a href="#">综合赚钱</a></li>
     </ul>
