@@ -76,7 +76,7 @@
     </div>
     <ul class="clearfix">
       @foreach($jpApps as $app)
-      <li> <a href="#"> <img src="{{ asset('uploads/' . $app->logo) }}">
+      <li> <a href="{{ action('IndexController@appInfo', ['cat_id' => $app->id, 'id' => $app->id]) }}"> <img src="{{ asset('uploads/' . $app->logo) }}">
         <h2>{{ $app->name }}</h2>
         <button>去赚钱</button>
         </a> </li>
@@ -90,7 +90,7 @@
     <ul>
       @foreach($hotApps as $app)
       <li>
-        <a href="#"> <img src="{{ asset('uploads/' . $app->logo) }}">
+        <a href="{{ action('IndexController@appInfo', ['cat_id' => $app->id, 'id' => $app->id]) }}"> <img src="{{ asset('uploads/' . $app->logo) }}">
           <h2> {{ $app->name }}<!-- <span>新手</span> <span class="sp1">提现秒到账</span> --> </h2>
           <p>{{ $app->keywords }}</p>
           <button>去赚钱</button>

@@ -34,13 +34,10 @@ class IndexController extends Controller
         ]);
     }
 
-    public function appInfo() {
-        $appleApps = App::where('is_publish', 1)
-                             ->orderBy('updated_at', 'asc')
-                             ->limit(4)
-                            ->get();
-        return view('apple', [
-            'appleApps' => $appleApps,
+    public function appInfo($catId, $id) {
+        $app = App::find($id);
+        return view('appInfo', [
+            'app' => $app
         ]);
     }
 
