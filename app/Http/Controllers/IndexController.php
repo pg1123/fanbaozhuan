@@ -36,14 +36,19 @@ class IndexController extends Controller
 
     public function appInfo($catId, $id) {
         $app = App::find($id);
+        $jpApps = App::where('is_publish', 1)
+                    ->orderBy('updated_at', 'asc')
+                    ->limit(4)
+                    ->get();
         return view('appInfo', [
-            'app' => $app
+            'app' => $app,
+            'jpApps' => $jpApps
         ]);
     }
 
 
 
-    public function getNews() {
+    /*public function getNews() {
         $cats = Category::where('name', '=', 'News')->get(['id']);
         foreach ($cats as $key => $value) {
             $catId = $value['id'];
@@ -59,5 +64,5 @@ class IndexController extends Controller
         return Article::where('is_featured', '1')
             ->orderBy('created_at', 'desc')
             ->first();
-    }
+    }*/
 }

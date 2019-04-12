@@ -48,6 +48,8 @@
   </div>
   <div class="notic clearfix">
     <div id="container" class="banner n_banner clearfix"> <i class="fa fa-volume-up" aria-hidden="true"></i>
+    <img src="{{ asset('uploads/images/icon/gonggao.png') }}" alt="" style="width: 18px;display: inline;float: left;;
+    margin-top: 10px;">
       <ol>
         <li style="margin-top: 0px;"><a href="http://sc.chinaz.com/" target="_blank">添加微信客服: fbz662</a></li>
         <li style="margin-top: 0px;"><a href="http://sc.chinaz.com/" target="_blank">每天下午3点任务最多</a></li>
@@ -76,7 +78,7 @@
     </div>
     <ul class="clearfix">
       @foreach($jpApps as $app)
-      <li> <a href="{{ action('IndexController@appInfo', ['cat_id' => $app->id, 'id' => $app->id]) }}"> <img src="{{ asset('uploads/' . $app->logo) }}">
+      <li> <a href="{{ action('IndexController@appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) }}"> <img src="{{ asset('uploads/' . $app->logo) }}">
         <h2>{{ $app->name }}</h2>
         <button>去赚钱</button>
         </a> </li>
@@ -90,7 +92,7 @@
     <ul>
       @foreach($hotApps as $app)
       <li>
-        <a href="{{ action('IndexController@appInfo', ['cat_id' => $app->id, 'id' => $app->id]) }}"> <img src="{{ asset('uploads/' . $app->logo) }}">
+        <a href="{{ action('IndexController@appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) }}"> <img src="{{ asset('uploads/' . $app->logo) }}">
           <h2> {{ $app->name }}<!-- <span>新手</span> <span class="sp1">提现秒到账</span> --> </h2>
           <p>{{ $app->keywords }}</p>
           <button>去赚钱</button>
