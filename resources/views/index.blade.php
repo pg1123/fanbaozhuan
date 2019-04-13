@@ -88,11 +88,4 @@
 @endsection
 
 @section('footer')
-$('#start').on('click', function(event) {
-    event.preventDefault();
-    //window.location.href = $(this).data('url');
-    window.open($(this).data('url'));
-    window.history.back(-1);
-
-});
 @endsection

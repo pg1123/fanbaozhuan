@@ -8,8 +8,8 @@
     </div>
     <ul class="clearfix">
       <li class="mbactive"><a href="{{ route('index.index') }}">首页</a></li>
-      <li><a href="{{ route('index.apple') }}">苹果赚钱</a></li>
-      <li><a href="#">安卓赚钱</a></li>
-      <li><a href="#">综合赚钱</a></li>
+      <li><a href="{{ route('index.catApps',['cat' => 'apple']) }}">苹果赚钱</a></li>
+      <li><a href="{{ route('index.catApps',['cat' => 'android']) }}">安卓赚钱</a></li>
+      <li><a href="{{ route('index.catApps',['cat' => 'zh']) }}">综合赚钱</a></li>
     </ul>
 </div>
