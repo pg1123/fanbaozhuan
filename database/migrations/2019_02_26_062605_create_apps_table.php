@@ -25,6 +25,8 @@ class CreateAppsTable extends Migration
               `picture` text COLLATE utf8_unicode_ci,
               `is_publish` tinyint(1) NOT NULL DEFAULT "0",
               `is_recommend` tinyint(1) NOT NULL DEFAULT "0",
+              `is_bibei` tinyint(1) NOT NULL DEFAULT "0",
+              `is_new` tinyint(1) NOT NULL DEFAULT "0",
               `publish_date` datetime DEFAULT NULL,
               `created_at` datetime DEFAULT NULL,
               `updated_at` datetime DEFAULT NULL,

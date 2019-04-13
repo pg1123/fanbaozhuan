@@ -59,9 +59,10 @@
         <div class="mouse_bottom"></div>
       </div>
     </div>
-    <button id="gonglue" data-url="/portal/Index/gonglue">
+    <!-- <button id="gonglue" data-url="/portal/Index/gonglue">
     <a href="">试玩攻略</a>
-    </button>
+    </button> -->
+    <div id="gonlue"></div>
   </div>
   <div class="main mbmaina mbmainc">
     <ul class="clearfix">

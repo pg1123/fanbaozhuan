@@ -125,3 +125,14 @@ button, input {font-family: "微软雅黑";outline: none;}
 .demain4  li{ float:left; text-align:center; width:25%; padding:10px 0; }
 .demain4 li img{width: 50px;height: 50px;}
 .demain4 li h2{font-size: 14px;font-weight: normal; margin-top:2px;}
+#gonlue {
+    position: absolute;
+    height: 1.78378rem;
+    width: 4.89rem;
+    right: 1.54rem;
+    bottom: 17.rem;
+    background-image: url(../uploads/images/icon/gonglue.png);
+    background-position: 100% 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}

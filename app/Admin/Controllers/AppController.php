@@ -91,7 +91,7 @@ class AppController extends Controller
         //$grid->column('appcat.name','栏目');
         $grid->name('平台名称')->sortable();
         $grid->keywords('关键词');
-        $grid->abstract('简介');
+        //$grid->abstract('简介');
         //$grid->picture('图片');
         $states = [
             'on' => ['value' => 1, 'text' =>'Yes', 'color' => 'success'],
@@ -99,6 +99,8 @@ class AppController extends Controller
         ];
         $grid->is_publish('发布')->switch($states);
         $grid->is_recommend('推荐(热门)')->switch($states);
+        $grid->is_bibei('必备')->switch($states);
+        $grid->is_new('最新')->switch($states);
         /*$grid->column('设置')->switchGroup([
             'is_publish' => '发布',
             'is_recommend' => '推荐(热门)'
@@ -161,6 +163,8 @@ class AppController extends Controller
         });
         $show->is_publish('发布');
         $show->is_recommend('推荐(热门)');
+        $show->is_bibei('必备');
+        $show->is_new('最新');
         $show->publish_date('发布时间');
         $show->created_at('创建时间');
         $show->updated_at('更新时间');
@@ -194,6 +198,8 @@ class AppController extends Controller
         ];
         $form->switch('is_publish', '发布')->states($states);
         $form->switch('is_recommend', '推荐(热门)')->states($states);
+        $form->switch('is_bibei', '必备')->states($states);
+        $form->switch('is_new', '最新')->states($states);
         $form->datetime('publish_date', '发布时间')->default(date('Y-m-d H:i:s'));
 
         return $form;
