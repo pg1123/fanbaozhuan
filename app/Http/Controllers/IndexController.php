@@ -50,7 +50,41 @@ class IndexController extends Controller
         ]);
     }
 
-    public function bibei() {
+    public function showApps($type)
+    {
+        switch ($type) {
+            case 'bibei':
+                $title ='精品必备';
+                $apps = App::where('is_publish', 1)
+                    ->where('cat_id', self::APPLE)
+                    ->where('is_bibei', 1)
+                    ->orderBy('position', 'asc')
+                    ->get();
+                break;
+            case 'new':
+                $title = '最新';
+                $apps = App::where('is_publish', 1)
+                    ->where('cat_id', self::APPLE)
+                    ->where('is_new', 1)
+                    ->orderBy('position', 'asc')
+                    ->get();
+            case 'order':
+                $title = '排行';
+                $apps = App::where('is_publish', 1)
+                    ->where('cat_id', self::APPLE)
+                    ->orderBy('position', 'asc')
+                    ->get();
+            default:
+                break;
+        }
+
+        return view('show_apps', [
+            'title' => $title,
+            'apps' => $apps
+        ]);
+    }
+
+    /*public function bibei() {
         $bibeiApps = App::where('is_publish', 1)
             ->where('cat_id', self::APPLE)
             ->where('is_bibei', 1)
@@ -80,7 +114,7 @@ class IndexController extends Controller
         return view('order', [
             'orderApps' => $newApps
         ]);
-    }
+    }*/
 
     public function appInfo($catId, $id) {
         $app = App::find($id);
