@@ -19,15 +19,15 @@
       </div>
     </div>
     <ul class="clearfix">
-      <li class="mbactive"><a href="#">首页</a></li>
-      <li><a href="#">苹果赚钱</a></li>
+      <li class="mbactive"><a href="{{ route('index.index') }}">首页</a></li>
+      <li><a href="{{ route('index.apple') }}">苹果赚钱</a></li>
       <li><a href="#">安卓赚钱</a></li>
-      <li><a href="#">阅读赚钱</a></li>
+      <li><a href="#">综合赚钱</a></li>
     </ul>
   </div>
   <div class="fan-slider">
     <div id="fan-home-slider" class="flexslider">
-      <ul class="slides">
+       <ul class="slides">
         <li class="clone">
           <div class="slide"> <a href="#"><img src="{{ asset('uploads/images/banner1.png') }}" alt=""></a> </div>
         </li>
@@ -38,16 +38,18 @@
           <div class="slide"> <a href="#"><img src="{{ asset('uploads/images/banner3.png') }}" alt=""></a> </div>
         </li>
         <li>
-          <div class="slide"> <a href="#"><img src="{{ asset('uploads/images/banner4.png') }}" alt=""></a> </div>
+          <div class="slide"> <a href="#"><img src="{{ asset('uploads/images/banner4.jpg') }}" alt=""></a> </div>
         </li>
         <li>
-          <div class="slide"> <a href="#"><img src="{{ asset('uploads/images/banner5.png') }}" alt=""></a> </div>
+          <div class="slide"> <a href="#"><img src="{{ asset('uploads/images/banner5.jpg') }}" alt=""></a> </div>
         </li>
       </ul>
     </div>
   </div>
   <div class="notic clearfix">
     <div id="container" class="banner n_banner clearfix"> <i class="fa fa-volume-up" aria-hidden="true"></i>
+    <img src="{{ asset('uploads/images/icon/gonggao.png') }}" alt="" style="width: 18px;display: inline;float: left;;
+    margin-top: 10px;">
       <ol>
         <li style="margin-top: 0px;"><a href="http://sc.chinaz.com/" target="_blank">添加微信客服: fbz662</a></li>
         <li style="margin-top: 0px;"><a href="http://sc.chinaz.com/" target="_blank">每天下午3点任务最多</a></li>
@@ -57,17 +59,27 @@
         <div class="mouse_bottom"></div>
       </div>
     </div>
-    <button id="gonglue" data-url="/portal/Index/gonglue">
+    <!-- <button id="gonglue" data-url="/portal/Index/gonglue">
     <a href="">试玩攻略</a>
-    </button>
+    </button> -->
+    <div id="gonlue"></div>
+  </div>
+  <div class="main mbmaina mbmainc">
+    <ul class="clearfix">
+      <li> <a href="{{ route('index.bibei') }}"> <img src="{{ asset('uploads/images/icon/icon1.jpg') }}"><h2>必备</h2></a></li>
+      <li> <a href="#"> <img src="{{ asset('uploads/images/icon/icon2.jpg') }}"><h2>最新</h2></a></li>
+      <li> <a href="#"> <img src="{{ asset('uploads/images/icon/icon3.jpg') }}"><h2>排行</h2></a></li>
+      <li> <a href="#"> <img src="{{ asset('uploads/images/icon/icon4.jpg') }}"><h2>红包</h2></a></li>
+  
+    </ul>
   </div>
   <div class="main mbmaina">
     <div class="title clearfix">
-      <h2>精品推荐</h2>
+      <h2>今日推荐</h2>
     </div>
     <ul class="clearfix">
       @foreach($jpApps as $app)
-      <li> <a href="#"> <img src="{{ asset('uploads/' . $app->logo) }}">
+      <li> <a href="{{ action('IndexController@appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) }}"> <img src="{{ asset('uploads/' . $app->logo) }}">
         <h2>{{ $app->name }}</h2>
         <button>去赚钱</button>
         </a> </li>
@@ -79,10 +91,10 @@
       <h2>最热门手赚</h2>
     </div>
     <ul>
-       @foreach($hotApps as $app)
+      @foreach($hotApps as $app)
       <li>
-        <a href="#"> <img src="{{ asset('uploads/' . $app->logo) }}">
-          <h2> {{ $app->name }}<span>新手</span> <span class="sp1">提现秒到账</span> </h2>
+        <a href="{{ action('IndexController@appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) }}"> <img src="{{ asset('uploads/' . $app->logo) }}">
+          <h2> {{ $app->name }}<!-- <span>新手</span> <span class="sp1">提现秒到账</span> --> </h2>
           <p>{{ $app->keywords }}</p>
           <button>去赚钱</button>
         </a>
@@ -212,9 +224,6 @@
 <script type="text/javascript" src="{{ asset('js/jquery-1.11.3.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/mbslider.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/idangerous.swiper.min.js') }}"></script>
-
-
-
 <script type="text/javascript">
 <!--移动端js-->
   $(function () {
@@ -222,16 +231,16 @@ $('#fan-home-slider').flexslider({
         animation: "slide",
         slideshowSpeed: 3000,
         pauseOnHover: true,
-        animationLoop: true,
+        animationLoop: true,   
         before: function (slider) {
             slider.pause();
             slider.play();
         },
     });
-
-    $(".flex-prev ,.flex-next").empty();
-});
-
+    
+$(".flex-prev ,.flex-next").empty();  
+}); 
+  
 $(function() {
     var index = 0;
     var adtimer;
@@ -301,7 +310,10 @@ $(function() {
         })
     });
 });
-
+ 
+ 
+ 
+ 
 var tabsSwiper = new Swiper('.swiper-container',{
     speed:500,
     onSlideChangeStart: function(){
@@ -319,7 +331,7 @@ $(".tabs a").on('touchstart mousedown',function(e){
 
 $(".tabs a").click(function(e){
     e.preventDefault();
-});
+});  
 </script>
 </body>
 </html>
