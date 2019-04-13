@@ -34,6 +34,17 @@ class App extends Model
     {
         return $this->belongsTo(AppCat::class, 'cat_id', 'id');
     }
+
+    public static function getJpApps($count=4)
+    {
+        return (new static())->where('is_jp', 1)->orderBy('position', 'asc')->take($count)->get();
+    }
+
+    public static function getHotApps($catId)
+    {
+        return (new static())->where('cat_id', $catId)->where('is_recommend', 1)->orderBy('position', 'asc')->get();
+    }
+
 }
 
 //php artisan make:migration create_users_table

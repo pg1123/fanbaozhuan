@@ -17,16 +17,8 @@ class IndexController extends Controller
     const ZONGHE = 4;
 
     public function index() {
-        $jpApps = App::where('is_publish', 1)
-            ->where('is_jp', 1)
-            ->orderBy('position', 'asc')
-            ->limit(4)
-            ->get();
-        $hotApps = App::where('is_publish', 1)
-            ->where('cat_id', self::APPLE)
-            ->where('is_recommend', 1)
-            ->orderBy('position', 'asc')
-            ->get();
+        $jpApps = App::getJpApps();
+        $hotApps = App::getHotApps(self::APPLE);
         return view('index', [
             'jpApps' => $jpApps,
             'hotApps' => $hotApps,
