@@ -29,52 +29,20 @@ class IndexController extends Controller
     {
         switch ($cat) {
             case 'apple':
-                $newApps = App::where('is_publish', 1)
-                    ->where('cat_id', self::APPLE)
-                    ->where('is_new', 1)
-                    ->orderBy('position', 'asc')
-                    ->get();
-                $hotApps = App::where('is_publish', 1)
-                    ->where('cat_id', self::APPLE)
-                    ->where('is_recommend', 1)
-                    ->orderBy('position', 'asc')
-                    ->get();
+                $newApps = App::getNewApps(self::APPLE);
+                $hotApps = App::getHotApps(self::APPLE);
                 break;
             case 'android':
-                $newApps = App::where('is_publish', 1)
-                    ->where('cat_id', self::ANDROID)
-                    ->where('is_new', 1)
-                    ->orderBy('position', 'asc')
-                    ->get();
-                $hotApps = App::where('is_publish', 1)
-                    ->where('cat_id', self::ANDROID)
-                    ->where('is_recommend', 1)
-                    ->orderBy('position', 'asc')
-                    ->get();
+                $newApps = App::getNewApps(self::ANDROID);
+                $hotApps = App::getHotApps(self::ANDROID);
                 break;
             case 'yuedu':
-                $newApps = App::where('is_publish', 1)
-                    ->where('cat_id', self::YUEDU)
-                    ->where('is_new', 1)
-                    ->orderBy('position', 'asc')
-                    ->get();
-                $hotApps = App::where('is_publish', 1)
-                    ->where('cat_id', self::YUEDU)
-                    ->where('is_recommend', 1)
-                    ->orderBy('position', 'asc')
-                    ->get();
+                $newApps = App::getNewApps(self::YUEDU);
+                $hotApps = App::getHotApps(self::YUEDU);
                 break;
             case 'zh':
-                $newApps = App::where('is_publish', 1)
-                    ->where('cat_id', self::ZONGHE)
-                    ->where('is_new', 1)
-                    ->orderBy('position', 'asc')
-                    ->get();
-                $hotApps = App::where('is_publish', 1)
-                    ->where('cat_id', self::ZONGHE)
-                    ->where('is_recommend', 1)
-                    ->orderBy('position', 'asc')
-                    ->get();
+                $newApps = App::getNewApps(self::ZONGHE);
+                $hotApps = App::getHotApps(self::ZONGHE);
                 break;
             default:
                 # code...
@@ -85,23 +53,6 @@ class IndexController extends Controller
             'hotApps' => $hotApps,
         ]);
     }
-
-    /*public function apple() {
-        $newApps = App::where('is_publish', 1)
-            ->where('cat_id', self::APPLE)
-            ->where('is_new', 1)
-            ->orderBy('position', 'asc')
-            ->get();
-        $hotApps = App::where('is_publish', 1)
-            ->where('cat_id', self::APPLE)
-            ->where('is_recommend', 1)
-            ->orderBy('position', 'asc')
-            ->get();
-        return view('apple', [
-            'newApps' => $newApps,
-            'hotApps' => $hotApps,
-        ]);
-    }*/
 
     public function showApps($type)
     {

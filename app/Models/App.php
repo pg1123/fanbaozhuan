@@ -45,6 +45,11 @@ class App extends Model
         return (new static())->where('cat_id', $catId)->where('is_recommend', 1)->orderBy('position', 'asc')->get();
     }
 
+    public static function getNewApps($catId)
+    {
+        return (new static())->where('cat_id', $catId)->where('is_new', 1)->orderBy('position', 'asc')->get();
+    }
+
 }
 
 //php artisan make:migration create_users_table
