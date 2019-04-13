@@ -19,40 +19,21 @@
       </div>
     </div>
     <ul class="clearfix">
-      <li><a href="/">首页</a></li>
-      <li class="mbactive"><a href="/apple">苹果赚钱</a></li>
+      <li class="mbactive"><a href="{{ route('index.index') }}">首页</a></li>
+      <li><a href="{{ route('index.apple') }}">苹果赚钱</a></li>
       <li><a href="#">安卓赚钱</a></li>
       <li><a href="#">综合赚钱</a></li>
     </ul>
   </div>
   <div class="appmain">
       <div class="wrap">
-    <div class="tabs tabsapp"> <a href="#" hidefocus="true" class="active">最新</a> <a href="#" hidefocus="true">推荐</a></div>
+    <div class="tabs tabsapp"> <a href="#" hidefocus="true" class="active">精品必备</a> <a href="#" hidefocus="true"></a></div>
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="content-slide">
             <ul class="tabul clearfix">
-
-              @foreach($newApps as $app)
-                  <li><a href="{{ action('IndexController@appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) }}"> 
-                <strong>1</strong>
-                <img src="{{ asset('uploads/' . $app->logo) }}">
-                <h2>{{ $app->name }}</h2>
-                <p>{{ $app->keywords }}</p>
-                <button>去赚钱</button>
-                </a></li>
-              @endforeach
-
-
-              
-            </ul>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="content-slide">
-            <ul class="tabul clearfix">
-              @foreach($hotApps as $app)
+              @foreach($bibeiApps as $app)
                   <li><a href="{{ action('IndexController@appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) }}"> 
                 <!-- <strong>1</strong> -->
                 <img src="{{ asset('uploads/' . $app->logo) }}">

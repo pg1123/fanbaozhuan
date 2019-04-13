@@ -18,5 +18,6 @@
 Route::get('/', 'IndexController@index')->name('index.index');
 
 Route::get('/apple', 'IndexController@apple')->name('index.apple');
+Route::get('/bibei', 'IndexController@bibei')->name('index.bibei');
 
 Route::get('/app/{cat_id}/{id}', 'IndexController@appInfo')->name('index.app');

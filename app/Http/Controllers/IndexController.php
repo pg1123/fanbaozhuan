@@ -11,13 +11,22 @@ use App\Models\AppCat;
  */
 class IndexController extends Controller
 {
+    const APPLE = 1;
+    const ANDROID = 2;
+    const YUEDU = 3;
+    const ZONGHE = 4;
 
     public function index() {
         $jpApps = App::where('is_publish', 1)
-                             ->orderBy('updated_at', 'asc')
-                             ->limit(4)
-                            ->get();
-        $hotApps = App::where('is_publish', 1)->get();
+            ->where('is_jp', 1)
+            ->orderBy('position', 'asc')
+            ->limit(4)
+            ->get();
+        $hotApps = App::where('is_publish', 1)
+            ->where('cat_id', self::APPLE)
+            ->where('is_recommend', 1)
+            ->orderBy('position', 'asc')
+            ->get();
         return view('index', [
             'jpApps' => $jpApps,
             'hotApps' => $hotApps,
@@ -25,19 +34,37 @@ class IndexController extends Controller
     }
 
     public function apple() {
-        $appleApps = App::where('is_publish', 1)
-                             ->orderBy('updated_at', 'asc')
-                             ->limit(4)
-                            ->get();
+        $newApps = App::where('is_publish', 1)
+            ->where('cat_id', self::APPLE)
+            ->where('is_new', 1)
+            ->orderBy('position', 'asc')
+            ->get();
+        $hotApps = App::where('is_publish', 1)
+            ->where('cat_id', self::APPLE)
+            ->where('is_recommend', 1)
+            ->orderBy('position', 'asc')
+            ->get();
         return view('apple', [
-            'appleApps' => $appleApps,
+            'newApps' => $newApps,
+            'hotApps' => $hotApps,
+        ]);
+    }
+
+    public function bibei() {
+        $bibeiApps = App::where('is_publish', 1)
+            //->where('cat_id', self::APPLE)
+            ->where('is_bibei', 1)
+            ->orderBy('position', 'asc')
+            ->get();
+        return view('bibei', [
+            'bibeiApps' => $bibeiApps
         ]);
     }
 
     public function appInfo($catId, $id) {
         $app = App::find($id);
         $jpApps = App::where('is_publish', 1)
-                    ->orderBy('updated_at', 'asc')
+                    ->orderBy('position', 'asc')
                     ->limit(4)
                     ->get();
         return view('appInfo', [

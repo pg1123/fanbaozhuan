@@ -19,8 +19,8 @@
       </div>
     </div>
     <ul class="clearfix">
-      <li class="mbactive"><a href="#">首页</a></li>
-      <li><a href="/apple">苹果赚钱</a></li>
+      <li class="mbactive"><a href="{{ route('index.index') }}">首页</a></li>
+      <li><a href="{{ route('index.apple') }}">苹果赚钱</a></li>
       <li><a href="#">安卓赚钱</a></li>
       <li><a href="#">综合赚钱</a></li>
     </ul>
@@ -66,7 +66,7 @@
   </div>
   <div class="main mbmaina mbmainc">
     <ul class="clearfix">
-      <li> <a href="#"> <img src="{{ asset('uploads/images/icon/icon1.jpg') }}"><h2>必备</h2></a></li>
+      <li> <a href="{{ route('index.bibei') }}"> <img src="{{ asset('uploads/images/icon/icon1.jpg') }}"><h2>必备</h2></a></li>
       <li> <a href="#"> <img src="{{ asset('uploads/images/icon/icon2.jpg') }}"><h2>最新</h2></a></li>
       <li> <a href="#"> <img src="{{ asset('uploads/images/icon/icon3.jpg') }}"><h2>排行</h2></a></li>
       <li> <a href="#"> <img src="{{ asset('uploads/images/icon/icon4.jpg') }}"><h2>红包</h2></a></li>
@@ -75,7 +75,7 @@
   </div>
   <div class="main mbmaina">
     <div class="title clearfix">
-      <h2>精品推荐</h2>
+      <h2>今日推荐</h2>
     </div>
     <ul class="clearfix">
       @foreach($jpApps as $app)
