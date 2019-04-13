@@ -52,12 +52,33 @@ class IndexController extends Controller
 
     public function bibei() {
         $bibeiApps = App::where('is_publish', 1)
-            //->where('cat_id', self::APPLE)
+            ->where('cat_id', self::APPLE)
             ->where('is_bibei', 1)
             ->orderBy('position', 'asc')
             ->get();
         return view('bibei', [
             'bibeiApps' => $bibeiApps
+        ]);
+    }
+
+    public function new() {
+        $newApps = App::where('is_publish', 1)
+            ->where('cat_id', self::APPLE)
+            ->where('is_new', 1)
+            ->orderBy('position', 'asc')
+            ->get();
+        return view('new', [
+            'newApps' => $newApps
+        ]);
+    }
+
+    public function order() {
+        $orderApps = App::where('is_publish', 1)
+            ->where('cat_id', self::APPLE)
+            ->orderBy('position', 'asc')
+            ->get();
+        return view('order', [
+            'orderApps' => $newApps
         ]);
     }
 

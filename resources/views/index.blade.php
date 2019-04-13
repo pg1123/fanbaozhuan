@@ -46,8 +46,8 @@
   <div class="main mbmaina mbmainc">
     <ul class="clearfix">
       <li> <a href="{{ route('index.bibei') }}"> <img src="{{ asset('uploads/images/icon/icon1.jpg') }}"><h2>必备</h2></a></li>
-      <li> <a href="#"> <img src="{{ asset('uploads/images/icon/icon2.jpg') }}"><h2>最新</h2></a></li>
-      <li> <a href="#"> <img src="{{ asset('uploads/images/icon/icon3.jpg') }}"><h2>排行</h2></a></li>
+      <li> <a href="{{ route('index.new') }}"> <img src="{{ asset('uploads/images/icon/icon2.jpg') }}"><h2>最新</h2></a></li>
+      <li> <a href="{{ route('index.new') }}"> <img src="{{ asset('uploads/images/icon/icon3.jpg') }}"><h2>排行</h2></a></li>
       <li> <a href="#"> <img src="{{ asset('uploads/images/icon/icon4.jpg') }}"><h2>红包</h2></a></li>
   
     </ul>
@@ -88,4 +88,11 @@
 @endsection
 
 @section('footer')
+$('#start').on('click', function(event) {
+    event.preventDefault();
+    //window.location.href = $(this).data('url');
+    window.open($(this).data('url'));
+    window.history.back(-1);
+
+});
 @endsection
