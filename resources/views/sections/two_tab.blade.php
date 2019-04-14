@@ -8,7 +8,7 @@
             <ul class="tabul clearfix">
 
               @foreach($newApps as $key => $app)
-                <li><a href="{{ action('IndexController@appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) }}">
+                <li><a href="{{ $app->picture ? route('index.appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) : $app->url}}">
                  
                 <strong @if ($key > 2) class="grey" @endif >{{ $key + 1 }}</strong>
                 <img src="{{ asset('uploads/' . $app->logo) }}">
@@ -24,7 +24,7 @@
           <div class="content-slide">
             <ul class="tabul clearfix">
               @foreach($hotApps as $app)
-                  <li><a href="{{ action('IndexController@appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) }}"> 
+                  <li><a href="{{ $app->picture ? route('index.appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) : $app->url}}"> 
                 <!-- <strong>1</strong> -->
                 <img src="{{ asset('uploads/' . $app->logo) }}">
                 <h2>{{ $app->name }}</h2>

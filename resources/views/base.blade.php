@@ -126,7 +126,16 @@ $(".tabs a").on('touchstart mousedown',function(e){
 
 $(".tabs a").click(function(e){
     e.preventDefault();
-});  
+});
+
+
+$("#mbheader ul li").each(function(index){//便利对象
+    $(this).click(function(){//点击触发事件
+        $("li").removeClass("mbactive");//删除当前元素的样式
+        $("li").eq(index).addClass("mbactive");//添加当前元素的样式
+    });
+});
+
 </script>
 </body>
 </html>

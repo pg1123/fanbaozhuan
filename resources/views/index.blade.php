@@ -58,7 +58,7 @@
     </div>
     <ul class="clearfix">
       @foreach($jpApps as $app)
-      <li> <a href="{{ action('IndexController@appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) }}"> <img src="{{ asset('uploads/' . $app->logo) }}">
+      <li> <a href="{{ $app->picture ? route('index.appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) : $app->url}}"> <img src="{{ asset('uploads/' . $app->logo) }}">
         <h2>{{ $app->name }}</h2>
         <button>去赚钱</button>
         </a> </li>
@@ -72,7 +72,7 @@
     <ul>
       @foreach($hotApps as $app)
       <li>
-        <a href="{{ action('IndexController@appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) }}"> <img src="{{ asset('uploads/' . $app->logo) }}">
+        <a href="{{ $app->picture ? route('index.appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) : $app->url}}"> <img src="{{ asset('uploads/' . $app->logo) }}">
           <h2> {{ $app->name }}<!-- <span>新手</span> <span class="sp1">提现秒到账</span> --> </h2>
           <p>{{ $app->keywords }}</p>
           <button>去赚钱</button>
@@ -80,7 +80,7 @@
       </li>
       @endforeach
     </ul>
-    <h3>更多试玩平台正在准备中</h3>
+    <h3>多平台一起操作收益翻倍</h3>
   </div>
   @include('sections.tab')
   @include('sections.articles')

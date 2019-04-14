@@ -35,19 +35,29 @@ class App extends Model
         return $this->belongsTo(AppCat::class, 'cat_id', 'id');
     }
 
-    public static function getJpApps($count=4)
+    public static function getApps($catId, $count=99999)
+    {
+        return (new static())->where('cat_id', $catId)->orderBy('position', 'asc')->take($count)->get();
+    }
+
+    public static function getJpApps($count=null)
     {
         return (new static())->where('is_jp', 1)->orderBy('position', 'asc')->take($count)->get();
     }
 
-    public static function getHotApps($catId)
+    public static function getHotApps($catId, $count=99999)
     {
-        return (new static())->where('cat_id', $catId)->where('is_recommend', 1)->orderBy('position', 'asc')->get();
+        return (new static())->where('cat_id', $catId)->where('is_recommend', 1)->orderBy('position', 'asc')->take($count)->get();
     }
 
-    public static function getNewApps($catId)
+    public static function getNewApps($catId, $count=99999)
     {
-        return (new static())->where('cat_id', $catId)->where('is_new', 1)->orderBy('position', 'asc')->get();
+        return (new static())->where('cat_id', $catId)->where('is_new', 1)->orderBy('position', 'asc')->take($count)->get();
+    }
+
+    public static function getBibeiApps($catId, $count=null)
+    {
+        return (new static())->where('cat_id', $catId)->where('is_bibei', 1)->orderBy('position', 'asc')->get();
     }
 
 }

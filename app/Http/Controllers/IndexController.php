@@ -17,11 +17,21 @@ class IndexController extends Controller
     const ZONGHE = 4;
 
     public function index() {
-        $jpApps = App::getJpApps();
+        $jpApps = App::getJpApps(4);
         $hotApps = App::getHotApps(self::APPLE);
+        //tabs
+        $appleNewsTab = App::getNewApps(self::APPLE, 4);
+        $appleHotsTab = App::getHotApps(self::APPLE, 4);
+        $androidTab = App::getApps(self::ANDROID, 8);
+        $yueduTab = App::getApps(self::YUEDU, 8);
+        $zhTab = App::getApps(self::ZONGHE, 8);
         return view('index', [
             'jpApps' => $jpApps,
             'hotApps' => $hotApps,
+            'appleNewsTab' => $appleNewsTab,
+            'appleHotsTab' => $appleHotsTab,
+            'androidTab' => $androidTab,
+            'zhTab' => $zhTab,
         ]);
     }
 
@@ -51,6 +61,7 @@ class IndexController extends Controller
         return view('apple', [
             'newApps' => $newApps,
             'hotApps' => $hotApps,
+            'cat' => $cat
         ]);
     }
 
@@ -59,11 +70,7 @@ class IndexController extends Controller
         switch ($type) {
             case 'bibei':
                 $title ='精品必备';
-                $apps = App::where('is_publish', 1)
-                    ->where('cat_id', self::APPLE)
-                    ->where('is_bibei', 1)
-                    ->orderBy('position', 'asc')
-                    ->get();
+                $apps = App::getBibeiApps(self::APPLE, 5);
                 break;
             case 'new':
                 $title = '最新';
@@ -121,6 +128,7 @@ class IndexController extends Controller
     }*/
 
     public function appInfo($catId, $id) {
+        $cat = AppCat::find($catId);
         $app = App::find($id);
         $jpApps = App::where('is_publish', 1)
                     ->orderBy('position', 'asc')
@@ -128,7 +136,8 @@ class IndexController extends Controller
                     ->get();
         return view('appInfo', [
             'app' => $app,
-            'jpApps' => $jpApps
+            'jpApps' => $jpApps,
+            'cat' => $cat
         ]);
     }
 

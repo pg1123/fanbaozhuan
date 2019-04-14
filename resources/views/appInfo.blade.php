@@ -8,19 +8,22 @@
       <div class="demain1">
          <img src="{{ asset('uploads/' . $app->logo) }}">
          <h2>{{ $app->name }}</h2>
-         <p>240372次下载&nbsp;丨&nbsp;北京爱普优邦科技有限公司</p>
+         <p>240372次下载&nbsp;丨&nbsp;{{ $cat->name }}</p>
          <p>任务更新时间集中在15:00~18:00</p>
          <button id="start" data-url = "{{ $app->url }}">开始赚钱</button>
       </div>
-    <div class="demain3">
-        <div class="title clearfix">
-            <h2>特别注意</h2>
+
+    @if( $app->cat_id == 1)
+        <div class="demain3">
+            <div class="title clearfix">
+                <h2>特别注意</h2>
+            </div>
+            <p>特别注意：该平台任务助手下载安装后需要在“设置-通用-设备管理”中添加信任方可使用</p>
+            <div class="clearfix">
+                <img src="{{ asset('uploads/images/icon/set1.png') }}" /><img src="{{ asset('uploads/images/icon/set2.png') }}" /><img src="{{ asset('uploads/images/icon/set3.png') }}" /><img src="{{ asset('uploads/images/icon/set4.png') }}" />
+            </div>
         </div>
-        <p>特别注意：该平台任务助手下载安装后需要在“设置-通用-设备管理”中添加信任方可使用</p>
-        <div class="clearfix">
-            <img src="{{ asset('uploads/images/icon/set1.png') }}" /><img src="{{ asset('uploads/images/icon/set2.png') }}" /><img src="{{ asset('uploads/images/icon/set3.png') }}" /><img src="{{ asset('uploads/images/icon/set4.png') }}" />
-        </div>
-    </div>
+    @endif
 
       <div class="demain2">
       <div class="title clearfix">

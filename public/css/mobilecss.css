@@ -32,7 +32,7 @@ button, input {font-family: "微软雅黑";outline: none;}
 .mbheader input{ border:none; line-height:30px; padding-left:5%; width:70%; float:left;border-radius:40px 0 0 40px;}
 .mbheader button{ border:none; line-height:30px;  width:20%; background-color:#4bb5ff; float:right; border-radius:0 40px 40px 0; color:#fff;}
 .mbheader ul{ height:46px; background-color:#fff;}
-#mbheader ul li{ text-align:center; width:25%; line-height:46px; font-size:16px; float:left;}
+#mbheader ul li{ text-align:center; width:20%; line-height:46px; font-size:16px; float:left;}
 #mbheader ul .mbactive{ border-bottom:3px solid #2676cf; }
 #mbheader ul .mbactive a{color:#2676cf}
 .notic {padding: 10px 15px;background-color:#fff;position: relative;}

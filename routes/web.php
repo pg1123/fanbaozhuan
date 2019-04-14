@@ -19,9 +19,9 @@ Route::get('/', 'IndexController@index')->name('index.index');
 
 Route::get('/{cat}', 'IndexController@catApps')->name('index.catApps');
 
-Route::get('/{type}', 'IndexController@showApps')->name('index.show');
+Route::get('/show/{type}', 'IndexController@showApps')->name('index.show');
 /*Route::get('/bibei', 'IndexController@bibei')->name('index.bibei');
 Route::get('/new', 'IndexController@new')->name('index.new');
 Route::get('/order', 'IndexController@order')->name('index.order');*/
 
-Route::get('/app/{cat_id}/{id}', 'IndexController@appInfo')->name('index.app');
+Route::get('/app/{cat_id}/{id}', 'IndexController@appInfo')->name('index.appInfo');

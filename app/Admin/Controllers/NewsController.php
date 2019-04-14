@@ -133,7 +133,7 @@ class NewsController extends Controller
         $form->number('cat_id', 'Cat id');
         $form->text('title', 'Title');
         $form->textarea('content', 'Content');
-        $form->textarea('picture', 'Picture');
+        $form->image('picture', '图片')->removable();
         $form->number('views', 'Views');
         $form->switch('is_hot', 'Is hot');
         $form->switch('is_publish', 'Is publish');

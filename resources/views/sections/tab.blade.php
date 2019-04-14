@@ -1,94 +1,43 @@
 <div class="wrap">
-    <div class="tabs"> <a href="#" hidefocus="true" class="active">苹果赚钱</a> <a href="#" hidefocus="true">安卓赚钱</a> <a href="#" hidefocus="true">阅读赚钱</a> </div>
+    <div class="tabs"> <a href="#" hidefocus="true" class="active">苹果赚钱</a> <a href="#" hidefocus="true">安卓赚钱</a> <a href="#" hidefocus="true">综合赚钱</a> </div>
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="content-slide">
             <ul class="tabul clearfix">
-              <li> <a href="#"> <img src=" images/logo/logo1.jpg">
-                <h2>试客小兵</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo2.jpg">
-                <h2>小鱼赚钱</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo3.png">
-                <h2>蝉试客</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo4.png">
-                <h2>熊猫赚钱</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo1.jpg">
-                <h2>试客小兵</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo2.jpg">
-                <h2>小鱼赚钱</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo3.png">
-                <h2>蝉试客</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo4.png">
-                <h2>熊猫赚钱</h2>
-                </a> </li>
+              @foreach($appleNewsTab as $app)
+                <li> <a href="{{ $app->picture ? route('index.appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) : $app->url}}"> <img src="{{ asset('uploads/' . $app->logo) }}">
+                  <h2>{{ $app->name }}</h2>
+                  </a> </li>
+              @endforeach
+
+              @foreach($appleHotsTab as $app)
+                <li> <a href="{{ $app->picture ? route('index.appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) : $app->url}}"> <img src="{{ asset('uploads/' . $app->logo) }}">
+                  <h2>{{ $app->name }}</h2>
+                  </a> </li>
+              @endforeach
             </ul>
           </div>
         </div>
         <div class="swiper-slide">
           <div class="content-slide">
             <ul class="tabul clearfix">
-              <li> <a href="#"> <img src=" images/logo/logo1.jpg">
-                <h2>试客小兵</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo2.jpg">
-                <h2>小鱼赚钱</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo3.png">
-                <h2>蝉试客</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo4.png">
-                <h2>熊猫赚钱</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo1.jpg">
-                <h2>试客小兵</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo2.jpg">
-                <h2>小鱼赚钱</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo3.png">
-                <h2>蝉试客</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo4.png">
-                <h2>熊猫赚钱</h2>
-                </a> </li>
+              @foreach($androidTab as $app)
+                <li> <a href="{{ $app->picture ? route('index.appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) : $app->url}}"> <img src="{{ asset('uploads/' . $app->logo) }}">
+                  <h2>{{ $app->name }}</h2>
+                  </a> </li>
+              @endforeach
             </ul>
           </div>
         </div>
         <div class="swiper-slide">
           <div class="content-slide">
             <ul class="tabul clearfix">
-              <li> <a href="#"> <img src=" images/logo/logo1.jpg">
-                <h2>试客小兵</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo2.jpg">
-                <h2>小鱼赚钱</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo3.png">
-                <h2>蝉试客</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo4.png">
-                <h2>熊猫赚钱</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo1.jpg">
-                <h2>试客小兵</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo2.jpg">
-                <h2>小鱼赚钱</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo3.png">
-                <h2>蝉试客</h2>
-                </a> </li>
-              <li> <a href="#"> <img src=" images/logo/logo4.png">
-                <h2>熊猫赚钱</h2>
-                </a> </li>
+              @foreach($zhTab as $app)
+                <li> <a href="{{ $app->picture ? route('index.appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) : $app->url}}"> <img src="{{ asset('uploads/' . $app->logo) }}">
+                  <h2>{{ $app->name }}</h2>
+                  </a> </li>
+              @endforeach
             </ul>
           </div>
         </div>
