@@ -83,7 +83,7 @@
     <h3>多平台一起操作收益翻倍</h3>
   </div>
   @include('sections.tab')
-  @include('sections.articles')
+  @include('sections.news')
   
 @endsection
 

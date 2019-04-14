@@ -85,11 +85,16 @@ class NewsController extends Controller
         $grid->id('Id');
         $grid->newscat()->name('栏目')->sortable();
         $grid->title('Title');
-        $grid->content('Content');
-        $grid->picture('Picture');
+        //$grid->content('Content');
+        //$grid->picture('Picture');
+
+        $states = [
+            'on' => ['value' => 1, 'text' =>'Yes', 'color' => 'success'],
+            'off' => ['value' => 0, 'text' => 'No', 'color' => 'danger'],
+        ];
+        $grid->is_publish('发布')->switch($states);
+        $grid->is_hot('热门')->switch($states);
         $grid->views('Views');
-        $grid->is_hot('Is hot');
-        $grid->is_publish('Is publish');
         $grid->published_date('Published date');
         $grid->created_at('Created at');
         $grid->updated_at('Updated at');
@@ -112,9 +117,9 @@ class NewsController extends Controller
         $show->title('Title');
         $show->content('Content');
         $show->picture('Picture');
-        $show->views('Views');
-        $show->is_hot('Is hot');
         $show->is_publish('Is publish');
+        $show->is_hot('Is hot');
+        $show->views('Views');
         $show->published_date('Published date');
         $show->created_at('Created at');
         $show->updated_at('Updated at');
@@ -138,7 +143,7 @@ class NewsController extends Controller
         $form->select('cat_id', '栏目')->options($catsList);
 
         $form->text('title', 'Title');
-        $form->textarea('content', 'Content');
+        $form->editor('content', 'Content');
         $form->image('picture', '图片')->removable();
         $form->number('views', 'Views');
         $form->switch('is_hot', 'Is hot');

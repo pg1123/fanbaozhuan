@@ -5,6 +5,7 @@ use App\Http\Controllers\ArticleController;
 use Illuminate\Http\Request;
 use App\Models\App;
 use App\Models\AppCat;
+use App\Models\News;
 
 /**
  *
@@ -25,6 +26,10 @@ class IndexController extends Controller
         $androidTab = App::getApps(self::ANDROID, 8);
         $yueduTab = App::getApps(self::YUEDU, 8);
         $zhTab = App::getApps(self::ZONGHE, 8);
+
+        //news
+        $news = News::getNews();
+
         return view('index', [
             'jpApps' => $jpApps,
             'hotApps' => $hotApps,
@@ -32,6 +37,7 @@ class IndexController extends Controller
             'appleHotsTab' => $appleHotsTab,
             'androidTab' => $androidTab,
             'zhTab' => $zhTab,
+            'news' => $news
         ]);
     }
 
@@ -142,22 +148,4 @@ class IndexController extends Controller
     }
 
 
-
-    /*public function getNews() {
-        $cats = Category::where('name', '=', 'News')->get(['id']);
-        foreach ($cats as $key => $value) {
-            $catId = $value['id'];
-        }
-        $news = Post::where('cate_id', $catId)
-                ->orderBy('created_at', 'asc')
-                ->limit(5)
-                ->get();
-        return $news;
-    }
-
-    public function getFeatured() {
-        return Article::where('is_featured', '1')
-            ->orderBy('created_at', 'desc')
-            ->first();
-    }*/
 }

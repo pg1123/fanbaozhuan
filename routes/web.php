@@ -25,3 +25,6 @@ Route::get('/new', 'IndexController@new')->name('index.new');
 Route::get('/order', 'IndexController@order')->name('index.order');*/
 
 Route::get('/app/{cat_id}/{id}', 'IndexController@appInfo')->name('index.appInfo');
+
+Route::get('/news/list', 'NewsController@newsList')->name('news.list');
+Route::get('/news/{id}', 'NewsController@newsInfo')->name('news.info');
