@@ -64,7 +64,7 @@ class IndexController extends Controller
                 # code...
                 break;
         }
-        return view('apple', [
+        return view('catApps', [
             'newApps' => $newApps,
             'hotApps' => $hotApps,
             'cat' => $cat

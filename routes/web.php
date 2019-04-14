@@ -28,3 +28,5 @@ Route::get('/app/{cat_id}/{id}', 'IndexController@appInfo')->name('index.appInfo
 
 Route::get('/news/list', 'NewsController@newsList')->name('news.list');
 Route::get('/news/{id}', 'NewsController@newsInfo')->name('news.info');
+
+Route::get('/use/gonglue', 'NewsController@gonglue')->name('news.gonglue');

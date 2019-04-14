@@ -31,7 +31,8 @@
     margin-top: 10px;">
       <ol>
         <li style="margin-top: 0px;"><a href="http://sc.chinaz.com/" target="_blank">添加微信客服: fbz662</a></li>
-        <li style="margin-top: 0px;"><a href="http://sc.chinaz.com/" target="_blank">每天下午3点任务最多</a></li>
+        <li style="margin-top: 0px;"><a href="http://sc.chinaz.com/" target="_blank">所有试玩平台每天15点以后更新任务</a></li>
+        <li style="margin-top: 0px;"><a href="http://sc.chinaz.com/" target="_blank">多平台一起操作收益翻倍!</a></li>
       </ol>
       <div class="mouse_direction">
         <div class="mouse_top"></div>
@@ -41,7 +42,7 @@
     <!-- <button id="gonglue" data-url="/portal/Index/gonglue">
     <a href="">试玩攻略</a>
     </button> -->
-    <div id="gonlue"></div>
+    <a href="{{ route('news.gonglue')}}"><div id="gonlue"></div></a>
   </div>
   <div class="main mbmaina mbmainc">
     <ul class="clearfix">

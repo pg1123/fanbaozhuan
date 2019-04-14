@@ -28,5 +28,9 @@ class NewsController extends Controller
         ]);
     }
 
+    public function gonglue() {
+        return view('news.gonglue');
+    }
+
 
 }

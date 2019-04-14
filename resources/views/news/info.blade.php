@@ -4,19 +4,17 @@
 @endsection
 
 @section('content')
-    <!-- <div class="appmain">
-      <div class="wrap">
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="content-slide">
-            
-          </div>
-        </div>
-      </div>
+<div class="main mbmainb">
+    <div class="title clearfix">
+      <h2>{{ $new->title }}</h2>
     </div>
-  </div>
-  </div> -->
+    <ul class="clearfix">
+        <p> 时间: &nbsp; {{ $new->published_date }}</p>
+    </ul>
+</div>
+<div class="main mbmainb">
+    <p>{!! $new->content !!}</p>
+</div>
 @endsection
 
 @section('footer')
