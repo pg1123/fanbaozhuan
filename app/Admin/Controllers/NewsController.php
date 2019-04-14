@@ -3,6 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Models\News;
+use App\Models\NewsCat;
 use App\Http\Controllers\Controller;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
@@ -82,7 +83,7 @@ class NewsController extends Controller
         $grid = new Grid(new News);
 
         $grid->id('Id');
-        $grid->cat_id('Cat id');
+        $grid->newscat()->name('栏目')->sortable();
         $grid->title('Title');
         $grid->content('Content');
         $grid->picture('Picture');
@@ -107,7 +108,7 @@ class NewsController extends Controller
         $show = new Show(News::findOrFail($id));
 
         $show->id('Id');
-        $show->cat_id('Cat id');
+        $show->cat_id('栏目');
         $show->title('Title');
         $show->content('Content');
         $show->picture('Picture');
@@ -129,8 +130,13 @@ class NewsController extends Controller
     protected function form()
     {
         $form = new Form(new News);
+        $newsCats = NewsCat::all();
+        $catsList = [];
+        foreach ($newsCats as $c) {
+            $catsList[$c->id] = $c['name'];
+        }
+        $form->select('cat_id', '栏目')->options($catsList);
 
-        $form->number('cat_id', 'Cat id');
         $form->text('title', 'Title');
         $form->textarea('content', 'Content');
         $form->image('picture', '图片')->removable();
