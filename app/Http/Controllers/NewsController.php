@@ -32,5 +32,9 @@ class NewsController extends Controller
         return view('news.gonglue');
     }
 
+    public function zfb() {
+        return view('news.zfb');
+    }
+
 
 }

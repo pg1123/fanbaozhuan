@@ -49,7 +49,7 @@
       <li> <a href="{{ route('index.show',['type' => 'bibei']) }}"> <img src="{{ asset('uploads/images/icon/icon1.jpg') }}"><h2>必备</h2></a></li>
       <li> <a href="{{ route('index.show',['type' => 'new']) }}"> <img src="{{ asset('uploads/images/icon/icon2.jpg') }}"><h2>最新</h2></a></li>
       <li> <a href="{{ route('index.show',['type' => 'order']) }}"> <img src="{{ asset('uploads/images/icon/icon3.jpg') }}"><h2>排行</h2></a></li>
-      <li> <a href="#"> <img src="{{ asset('uploads/images/icon/icon4.jpg') }}"><h2>红包</h2></a></li>
+      <li> <a href="{{ route('news.zfb') }}"> <img src="{{ asset('uploads/images/icon/icon4.jpg') }}"><h2>红包</h2></a></li>
   
     </ul>
   </div>
