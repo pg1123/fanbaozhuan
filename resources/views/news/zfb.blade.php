@@ -25,7 +25,7 @@
     </style>
     <header class="mui-bar mui-bar-nav">
         <a class="xax" href="javascript:history.back(-1)">
-            <i class="fa fa-angle-left" aria-hidden="true"></i>
+            <
         </a>
         <h1 class="mui-title">
             支付宝领红包
