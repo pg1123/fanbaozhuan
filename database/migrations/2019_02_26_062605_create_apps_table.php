@@ -20,6 +20,7 @@ class CreateAppsTable extends Migration
               `cat_id` int(10) NOT NULL,
               `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
               `logo` text COLLATE utf8_unicode_ci,
+              `url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
               `keywords` text COLLATE utf8_unicode_ci DEFAULT NULL,
               `abstract` text COLLATE utf8_unicode_ci,
               `picture` text COLLATE utf8_unicode_ci,
