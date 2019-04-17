@@ -1,6 +1,6 @@
 <div class="main mbmainb">
     <div class="title clearfix">
-      <h2>最新福利</h2>
+      <h2>手赚资讯</h2>
       <a href="{{ route('news.list') }}">更多</a></div>
     <ul class="clearfix">
         @foreach($news as $new)

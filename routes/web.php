@@ -17,7 +17,11 @@
 
 Route::get('/', 'IndexController@index')->name('index.index');
 
-Route::get('/cat/{cat}', 'IndexController@catApps')->name('index.catApps');
+Route::get('/{cat}', 'IndexController@catApps')
+->where([
+    'cat' => '^(apple||android|yuedu|zh)$'
+])
+->name('index.catApps');
 
 Route::get('/show/{type}', 'IndexController@showApps')
 ->where([
