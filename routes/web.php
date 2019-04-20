@@ -39,3 +39,10 @@ Route::get('/news/{id}', 'NewsController@newsInfo')->name('news.info');
 
 Route::get('/gonglue', 'NewsController@gonglue')->name('news.gonglue');
 Route::get('/hongbao', 'NewsController@zfb')->name('news.zfb');
+
+
+
+
+Route::group(['prefix' => 'line'], function () {
+    Route::get('/', 'Line\IndexController@index')->name('line.index');
+});

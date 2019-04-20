@@ -1,0 +1,25 @@
+<?php
+namespace App\Http\Controllers\Line;
+
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use App\Models\App;
+use App\Models\AppCat;
+use App\Models\News;
+
+/**
+ *
+ */
+class IndexController extends Controller
+{
+    const APPLE = 1;
+    const ANDROID = 2;
+    const YUEDU = 3;
+    const ZONGHE = 4;
+
+    public function index() {
+        return view('line.index');
+    }
+
+}
