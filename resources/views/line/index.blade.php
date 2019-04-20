@@ -16,8 +16,9 @@
     <link rel="shortcut icon" href="{{ asset('uploads/images/icon/fan_logo.ico') }}">
     <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/index.css?v=1.12345685">
-    <link rel="stylesheet" href="static/css/common.css?v=1.12345691">
+
+    <link href="{{ asset('css/line/index.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('css/line/common.css') }}" type="text/css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script>
         $.ajax({
@@ -184,9 +185,9 @@
     </a>
 </div>-->
 
-<div class="haimiangou trans">
+<!-- <div class="haimiangou trans">
     <img class="haimiangouimg" src="static/images/index/haimiangou.png?v=001" alt="">
-</div>
+</div> -->
 
 <!--<div class="openShare uhide"></div>-->
 <!--<div class="openAnswer  uhide" onclick="openAnswer()" >
