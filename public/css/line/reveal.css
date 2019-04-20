@@ -1,0 +1,27 @@
+/*  --------------------------------------------------
+    Reveal Modals
+    -------------------------------------------------- */
+        
+
+.reveal-modal-bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    background: rgba(0,0,0,.8);
+    z-index: 99998;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+.reveal-modal {
+    visibility: hidden;
+    width:100%;
+    position: fixed;
+    z-index: 99999;
+    bottom: 0;
+    left: 0;
+    background-color: #f7f8fa;
+}
+

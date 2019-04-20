@@ -1,0 +1,106 @@
+/*****************************************/
+/*鍩虹header棰滆壊*/
+.bc-head {
+    background-color: #FFFFFF;
+}
+/*****************************************/
+/*鍩虹body鑳屾櫙棰滆壊*/
+.bc-bg {
+    background-color: #f4f5f5;
+}
+/*杈呭姪鎺т欢鑳屾櫙棰滆壊*/
+.sc-bg {
+    background-color: #EEEEEE;
+}
+/*杈呭姪鎺т欢鑳屾櫙棰滆壊*/
+.sc-bg-active {
+    background-color: #DFDFDF;
+}
+/*璀﹀憡鑳屾櫙鑹�*/
+.sc-bg-alert {
+    background-color: #F16412;
+}
+/*****************************************/
+/*鍩虹瀛椾綋棰滆壊*/
+.bc-text {
+    color: black;
+}
+
+/*鍩虹瀛椾綋棰滆壊--鐏拌壊*/
+.bc-text-gray {
+    color: gray;
+}
+/*鍩虹鏍囬瀛椾綋棰滆壊*/
+.bc-text-head {
+    color: white;
+}
+/*杈呭姪瀛椾綋棰滆壊*/
+.sc-text {
+    color: #848484;
+}
+/*杈呭姪瀛椾綋棰滆壊*/
+.sc-text-active {
+    color: #00A1EA !important;
+}
+/*杈呭姪瀛椾綋棰滆壊*/
+.sc-text-hint {
+    color: #E3E3E3;
+}
+/*杈呭姪瀛椾綋棰滆壊*/
+.sc-text-warn {
+    color: #FC7800;
+}
+/*杈呭姪瀛椾綋棰滆壊*/
+.sc-text-tab {
+    color: #636363;
+}
+/*****************************************/
+/*鍩虹杈规棰滆壊*/
+.bc-border {
+    border-color: #EEEEEE; 
+}
+.bc-border-2 {
+    border-color: #179AFF;
+}
+.bc-border-w {
+    border-color: white;
+}
+/*杈呭姪杈规棰滆壊*/
+.sc-border {
+    border-color: #FFFFFF;
+}
+.sc-border-tab {
+    border-color: #00A1EA;
+}
+/*****************************************/
+/*鍩虹鎸夐挳棰滆壊*/
+.bc-btn {
+    background-color: #179AFF;
+}
+/*杈呭姪鎸夐挳棰滆壊*/
+.sc-btn {
+    background-color: #00A1EA;
+}
+
+/**
+ *     鍏ㄥ眬榛樿鐨勫瓧浣撳ぇ灏�
+ */
+.text-size{
+    font-size: 0.85em;
+}
+
+.text-wh{
+    color: white;
+}
+
+.bc-wh{
+    background-color: white;
+}
+
+.text-gre{
+    color: #14CC76;
+}
+
+.text-bla{
+    color: black;
+}

@@ -1,0 +1,53 @@
+/*搴曢儴*/
+#footer{
+    position:relative;
+    display:-webkit-box;
+    height:2.9em;
+    -webkit-background-size:auto 3.125em;
+    overflow:hidden;
+}
+#footer > a{
+    font-size: 1.1em;
+    -webkit-box-flex: 1;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    background-position:center;
+    background-repeat:no-repeat;
+    -webkit-background-size:8.125em 2.1875em;
+    text-decoration:none;
+}
+#footer > a figure{
+    position:relative;
+    width:1.2em;
+    height:1.15em;
+    overflow:hidden;
+}
+#footer > a figure img{
+    position:absolute;
+    top:0;
+    width:1.1em; 
+    height:2.875em;
+} 
+
+#footer input[type="radio"]:checked + a figure img{ 
+    top:-1.91em;
+}      
+#footer > a::after{    
+    display:block;   
+    margin-top:0.1875em;
+    content:attr(title);
+    font-size:0.625em;   
+    line-height:0.375em;
+    color: #14CC76;
+}   
+
+#footer input[type="radio"] + a::after{
+     color: #999;
+     margin-top: 0.5em;   
+}
+
+#footer input[type="radio"]:checked + a::after{
+    color: #f7cb26;
+}

@@ -1,0 +1,156 @@
+html, body, main, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, hr, dialog, progress {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-style: normal;
+}
+
+del {
+    text-decoration: none;
+}
+
+/*绂佹椤甸潰a鏍囩涓環ref闀挎寜寮瑰嚭澶嶅埗瀵硅瘽妗�*/
+html, body {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    font-family: "PingFang SC", "SourceHanSansCN-Normal", "HiraginoSansGB", 'HiraginoSans-W3', "Helvetica Neue", "Helvetica", STHeiTi, "sans-serif";
+}
+
+article, aside, details, hgroup, nav, span {
+    display: inline-block;
+}
+
+footer, header, section, dialog, menu, a, label, time, figcaption, figure, pre, img, small, mark, cite, code, fieldset, button, progress {
+    display: block;
+}
+
+mark {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+ol, ul {
+    list-style: none;
+}
+
+:focus {
+    outline: 0;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+:lang(no) {
+    quotes: " { " " } ";
+}
+
+input:focus, input[type="password"] {
+    outline: none;
+    border: 0;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input::-webkit-input-placeholder {
+    line-height: 100%;
+}
+
+textarea {
+    overflow: auto;
+    resize: none;
+}
+
+input, button, textarea, select, :checked {
+    font-size: 1rem;
+    border: 0;
+    /*line-height: 1rem;*/
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+input:disabled {
+    opacity: 1;
+}
+
+img, button {
+    border: 0;
+}
+
+input[type="radio"] {
+    -webkit-border-radius: 0;
+}
+
+input + del, textarea + del {
+    display: none;
+    width: 1.125em;
+    height: 1.125em;
+    background: url(../images/form/clear.png) no-repeat center;
+    -webkit-background-size: 100% 100%;
+    outline: none;
+}
+
+input:focus:valid + del, textarea:focus:valid + del {
+    display: block;
+}
+
+pre {
+    overflow: hidden;
+    white-space: pre-wrap; /*淇濈暀绌虹櫧锛岃繘琛屾崲琛�*/
+    word-wrap: break-word; /*杩炵画瀛楃鎹㈣*/
+    word-break: break-all;
+}
+
+table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-spacing: 0;
+}
+
+.none {
+    display: none !important;
+}
+
+.block {
+    display: block !important;
+}
+
+.active {
+    background-color: #dfdfdf !important;
+}
+
+.active:after, .active:before {
+    -webkit-transition-duration: 200ms;
+}
+
+#main {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+#content {
+    -webkit-box-flex: 1;
+}
+
+#main_content {
+    -webkit-box-flex: 1;
+    position: relative;
+}
+

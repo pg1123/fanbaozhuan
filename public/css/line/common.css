@@ -1,0 +1,463 @@
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    /*font-family: PingFang-SC-Regular,sans-serif;*/
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+a {
+    text-decoration: none;
+}
+
+.category {
+    width: 100%;
+    padding-top: 0.5em;
+    background-color: white;
+}
+
+.category li {
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    padding: 3em 0 0.3em;
+    background-size: 2.75em;
+    background-repeat: no-repeat;
+    background-position: top;
+    margin: 0.2em 0 0.55em 0;
+}
+
+.category li span {
+    margin: 0.843em 0.5em 0em 0.5em;
+    font-size: 0.8125em;
+    color: #333333;
+}
+
+.hot {
+    margin-top: 0.75em;
+    background-color: #FFFFFF;
+    font-size: 1em;
+    color: #2c2c2c;
+    padding: 0.75em 1.28em;
+}
+
+.tuijian {
+    color: #FFFFFF;
+    font-size: 0.63em;
+    background-color: #3297ff;
+    padding: 0.05em 0.63em;
+    -webkit-border-radius: 0.8em;
+    border-radius: 0.8em;
+    margin-left: 0.71em;
+}
+
+.remen {
+    color: #FFFFFF;
+    font-size: 0.63em;
+    background-color: #fe3b37;
+    padding: 0.05em 0.63em;
+    -webkit-border-radius: 0.8em;
+    border-radius: 0.8em;
+    margin-left: 0.71em;
+}
+
+.remen-2 {
+    border: solid 1px #fe3b37;
+    color: #fe3b37;
+    font-size: 0.63em;
+    padding: 0.05em 0.63em;
+    -webkit-border-radius: 0.8em;
+    border-radius: 0.8em;
+    margin-left: 0.71em;
+}
+
+.tuijian-2 {
+    border: solid 1px #3297ff;
+    color: #3297ff;
+    font-size: 0.63em;
+    padding: 0.05em 0.63em;
+    -webkit-border-radius: 0.8em;
+    border-radius: 0.8em;
+    margin-left: 0.71em;
+}
+
+/*娓呴櫎娴姩*/
+.clearfloat:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+
+.clearfloat {
+    zoom: 1;
+}
+
+/**搴曢儴鍥哄畾鏍�**/
+.footer {
+    /*position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.4em;
+    line-height: 3.4em;
+    background-color: #ffffff;
+    z-index: 99;
+    padding: 1.2em 1.2em 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eeeeee;*/
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3.2em;
+    background-color: #ffffff;
+    border-top: 1px solid #eeeeee;
+}
+
+.footer .item {
+    padding-top: 0.35em;
+}
+
+.footer .item a,.footer .item div {
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #999999;
+}
+
+.footer .item.actived div,.footer .item.actived a {
+    color: #007aff;
+}
+
+
+
+.footer .item figure {
+    position: relative;
+   /* width: 1.2em;
+    height: 1.15em;*/
+    width: 1.468em;
+    height: 1.468em;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.footer .item.actived img {
+    top: -3em;
+}
+
+.footer .item figure img {
+    position: absolute;
+    top: 0;
+    /*width: 1.1em;
+    height: 2.875em;*/
+    width: 1.468em;
+    height: 4.2em;
+}
+
+.popup1 {
+    display: none;
+    padding: 0 0.6em;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    position: fixed;
+    top: 0;
+}
+
+.popup1 .raiders1 {
+    width: 52%;
+    /*margin: 11em auto 1em;*/
+    margin: 7.5em auto 1em;
+    display: block;
+}
+
+@media all and (min-width: 340px) and (min-height: 620px) {
+    .popup1 .raiders1 {
+        width: 52%;
+        margin: 7em auto 1em;
+        display: block;
+    }
+}
+
+@media all and (min-width: 620px) and (min-height: 340px) {
+    .popup1 .raiders1 {
+        width: 52%;
+        margin: 6.1em auto 1em;
+        display: block;
+    }
+}
+
+.popup1 .raiders2 {
+    width: 52%;
+    margin: 18.7em auto 1em;
+    display: block;
+}
+
+/*@media all and (min-width:325px) and (min-height:620px)*/
+/*{*/
+/*.popup1 .raiders2 {*/
+/*width: 45%;*/
+/*margin: 18.2em auto 1em;*/
+/*display: block;*/
+/*}*/
+/*}*/
+
+@media all and (min-width: 325px) {
+    .popup1 .raiders2 {
+        width: 45%;
+        margin: 18.2em auto 1em;
+        display: block;
+    }
+}
+
+.popup1 .startBtn {
+    width: 64%;
+    margin: 2.3em 11% 1em;
+    display: block;
+}
+
+.popup1 .okBtn {
+    width: 25%;
+    margin: 2.4em auto 1em;
+    display: block;
+}
+
+.popup1 .raiders3 {
+    display: block;
+    width: 45%;
+    margin: 8em auto 0;
+}
+
+.popup1 .popupShare {
+    position: fixed;
+    width: 3em;
+    height: auto;
+    top: 0.7em;
+    right: 0.7em;
+    z-index: 999999;
+}
+.popup1 .raiders4 {
+    display: block;
+    width: 80%;
+    margin: 6em auto 0;
+}
+
+/**娣诲姞鍒颁富灞忓箷**/
+.popup-screen {
+    display: none;
+    padding: 0 0.6em;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    position: fixed;
+    top: 0;
+}
+
+.screen-main {
+    position: fixed;
+    bottom: 0;
+    height: 19em;
+    left: 0;
+    right: 0;
+    background-color: #f7f7f7;
+    padding: 1em;
+}
+
+.screen-main .add-screen {
+    width: 0.8em;
+    height: 1.2em;
+    background-image: url('../images/index/lit.png');
+    background-repeat: no-repeat;
+    background-position: center 60%;
+    background-size: 100% 100%;
+}
+
+.screen-main .s-title {
+    color: #333333;
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+.screen-main .step {
+    color: #333333;
+    font-size: 0.9345em;
+    padding-left: 4em;
+    line-height: 1.6;
+}
+
+.screen-main .p-item {
+    width: 25%;
+    text-align: center;
+}
+
+.screen-main .photo-part img {
+    width: 100%;
+}
+
+.screen-main .know-btn {
+    width: 83%;
+    padding: 0.8em 0;
+    background-color: #ffffff;
+    margin: 0.6em auto 0;
+    text-align: center;
+    -webkit-border-radius: 0.4em;
+    -moz-border-radius: 0.4em;
+    border-radius: 0.8em;
+    color: #007aff;
+}
+
+/**鍒嗕韩**/
+.mengban1 {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    position: fixed;
+    top: 0;
+}
+
+.copydiv {
+    display: none;
+    width: 84%;
+    position: fixed;
+    top: 27%;
+    right: 0;
+    line-height: 25px;
+    align: center;
+    border-top: 1px solid #dddddd;
+    left: 0;
+    margin: auto;
+    background-color: white;
+    text-align: center;
+    z-index: 999;
+    border-radius: 10px;
+}
+
+.shareToText {
+    background-color: white;
+    color: #333333;
+    font-size: 0.9345em;
+    text-align: left;
+    line-height: 20px;
+}
+
+.shareToLink {
+    margin-top: 20px;
+    height: 40px;
+    background-color: #ededed;
+    line-height: 40px;
+    -webkit-border-radius: 0.6em;
+    -moz-border-radius: 0.6em;
+    border-radius: 0.6em;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 0.9345em;
+    color: #999999;
+    padding: 0 0.4em;
+    box-sizing: border-box;
+}
+
+.copytext {
+    position: fixed;
+    top: 335px;
+    color: white;
+    opacity: 0;
+}
+
+.shareBtn {
+    height: 36px;
+    background-color: #007aff;
+    color: white;
+    margin: 20px auto 0;
+    z-index: 555;
+    position: relative;
+    width: 40%;
+    border: 0;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+}
+
+.invitebtn {
+    height: 36px;
+    background-color: #408fef;
+    color: #04356b;
+    margin: 0 auto 0;
+    z-index: 555;
+    position: relative;
+    width: 40%;
+    border: 0;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+    font-size: 14px;
+}
+
+.invitecode {
+    text-align: center;
+    margin: 0.4em 0;
+    position: relative;
+}
+
+.copyinvite {
+    position: absolute;
+    top: 10px;
+    color: white;
+    opacity: 0;
+}
+.invitebtn:focus{
+    outline: none;
+}
+.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fheight {
+    display: none;
+    height: 2.6em;
+}
+
+.bdphoto-img {
+    display: block;
+    width: 100%;
+}
+
+/**safari鎵撳紑**/
+.popup-sa {
+    display: none;
+    padding: 0 0.6em;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    position: fixed;
+    top: 0;
+}
+.sa-tip{
+    width:94%;
+    margin:2em auto 0;
+}
+
+.sa-tip img{
+    width:100%;
+}
