@@ -19,7 +19,10 @@ class IndexController extends Controller
     const ZONGHE = 4;
 
     public function index() {
-        return view('line.index');
+        $appleApps = App::getApps(self::APPLE);
+        return view('line.index', [
+            'appleApps' => $appleApps
+        ]);
     }
 
 }

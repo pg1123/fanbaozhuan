@@ -16,6 +16,7 @@
     <link rel="shortcut icon" href="{{ asset('uploads/images/icon/fan_logo.ico') }}">
     <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+
     <link href="{{ asset('css/line/index.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ asset('css/line/common.css') }}" type="text/css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
@@ -88,7 +89,40 @@
 
     <!-- 试玩列表列表 -->
     <div id="tabTryPlayList" class="classCopy">
-        <div id="tryPlayList" class="bc-wh pdl"></div>
+        <div id="tryPlayList" class="bc-wh pdl">
+            
+
+        <div style="padding: 0 0;">
+        @foreach($appleApps as $key => $app)
+        <a 
+           class="ub uinn-tb ub-ac ub-pj ubb bc-border platform platform-a">
+            <div class="ub ub-f1">
+                <div class="ub-img7 platform-icon" style="background-image: url();"></div>
+                <div class="ub ub-f1 ub-ver ub-pj" style="padding: 0.1em 0 0.2em;">
+                    <div class="ub ub-ac ub-f1">
+                        <!-- 推荐 -->
+                    </div>
+                    <div class="ub ub-ac ub-f1">
+                        <div class="font-desc ut-s ub-f1">
+                            {{ $app->keywords }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ub goBtn ub-pc">
+                去赚钱
+            </div>
+        </a>
+        @endforeach
+    </div>
+    <!--<div class="bdphoto" onclick="_czc.push(['_trackEvent','淘宝机器人','试玩']);">
+        <img class="bdphoto-img" src="static/images/nindex/bds.png" alt="">
+    </div>-->
+    <!--<div class="index-bottom-advert" id="index-bottom-advert" onclick="goadvert()"></div>-->
+    <div class="new-tip-one">更多试玩平台正在准备中...</div>
+    <br />
+
+        </div>
     </div>
 
     <!--<div class="fheight"></div>-->
@@ -165,9 +199,9 @@
     </a>
 </div>-->
 
-<div class="haimiangou trans">
+<!-- <div class="haimiangou trans">
     <img class="haimiangouimg" src="static/images/index/haimiangou.png?v=001" alt="">
-</div>
+</div> -->
 
 <!--<div class="openShare uhide"></div>-->
 <!--<div class="openAnswer  uhide" onclick="openAnswer()" >
@@ -275,12 +309,11 @@
 <script>
     var clipboard1 = new Clipboard('.openAnswer');
 </script>
-
-<script type="text/javascript" src="{{ asset('js/line/template.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/line/common.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/line/api.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/line/index1.js') }}"></script>
-
+<script src="static/js/lib/template.js"></script>
+<!--<script src="static/js/lib/myslideup.js?v=1.12345691"></script>-->
+<script src="static/js/common.js?v=1.12345697"></script>
+<script src="static/js/api.js?v=1.12345691"></script>
+<script src="static/js/index1.js?v=1.123456923"></script>
 <!-- 滚动公告列表 -->
 <script type="text/javascript">
     function autoScroll(obj) {
@@ -320,30 +353,71 @@
 </script> -->
 <!-- end banner列表模板 -->
 
+
+
 <!-- 试玩列表模板 -->
 <script type="text/html" id="t:tryPlayList">
     <div style="padding: 0 0;">
-        @foreach($appleApps as $key => $app)
-        <a 
+        <%for(var i = 0;i < list.length; i++){%>
+        <a data-id="<%=list[i].id%>" data-utitle="<%=list[i].useTitle%>" data-platnum="<%=list[i].num%>"
+           href="javascript:;" data-type="<%=list[i].style%>"
+           data-linkUrl="<%=list[i].linkUrl%>" data-detailUrl="<%=list[i].detailUrl%>"
+           data-truetitle="<%=list[i].trueTitle%>" data-title="<%=list[i].title%>"
+           onclick="_czc.push(['_trackEvent','试玩赚钱','<%=list[i].trueTitle%>'])"
            class="ub uinn-tb ub-ac ub-pj ubb bc-border platform platform-a">
             <div class="ub ub-f1">
-                <div class="ub-img7 platform-icon" style="background-image: url();"></div>
+                <div class="ub-img7 platform-icon" style="background-image: url(<%=list[i].img%>);"></div>
                 <div class="ub ub-f1 ub-ver ub-pj" style="padding: 0.1em 0 0.2em;">
                     <div class="ub ub-ac ub-f1">
-                        <!-- 推荐 -->
+
+                        <%if(list[i].useTitle == 0){%>
+                        <div class="font-title">试玩平台<%=list[i].num%></div>
+                        <%}else{%>
+                        <div class="font-title"><%=list[i].title%></div>
+                        <%}%>
+
+
+                        <%if(list[i].tagText == '最佳'){%>
+                        <div class="label1">
+
+                            <%=list[i].tagText%>
+                        </div>
+                        <%}else if(list[i].tagText == '新手'){%>
+                        <div class="label2">
+
+                            <%=list[i].tagText%>
+                        </div>
+                        <%}else if(list[i].tagText == '推荐'){%>
+                        <div class="label3">
+
+                            <%=list[i].tagText%>
+                        </div>
+                        <%}else if(list[i].tagText == '必做'){%>
+                        <div class="label4">
+
+                            <%=list[i].tagText%>
+                        </div>
+                        <%}%>
                     </div>
                     <div class="ub ub-ac ub-f1">
                         <div class="font-desc ut-s ub-f1">
-                            {{ $app->keywords }}
+                            <%=list[i].describe%>
                         </div>
                     </div>
                 </div>
             </div>
+            <%if(list[i].is_ad == 1){%>
+            <div class="ub goarrow ub-pc ub-ac">
+
+            </div>
+            <%}else{%>
             <div class="ub goBtn ub-pc">
                 去赚钱
             </div>
+            <%}%>
+
         </a>
-        @endforeach
+        <%}%>
     </div>
     <!--<div class="bdphoto" onclick="_czc.push(['_trackEvent','淘宝机器人','试玩']);">
         <img class="bdphoto-img" src="static/images/nindex/bds.png" alt="">
@@ -354,5 +428,6 @@
     <!--<div class="new-tip">*精选试玩平台，每个都做收益更高</div>-->
 </script>
 <!-- end 试玩列表模板 -->
+
 </body>
 </html>
