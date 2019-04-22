@@ -49,7 +49,7 @@
 
 
     <!-- 广告banner -->
-    <div id="bannerList" class="swiper-container" style="width: 100%;"></div>
+   <!--  <div id="bannerList" class="swiper-container" style="width: 100%;"></div> -->
 
     <!-- 滚动公告 -->
     <div class="scroll-notice-wrap">
@@ -306,7 +306,7 @@
 <!-- end 滚动公告列表模板 -->
 
 <!-- banner列表模板 -->
-<!-- <script type="text/html" id="t:bannerList">
+<script type="text/html" id="t:bannerList">
     <div class="swiper-wrapper">
         <%for(var i = 0;i < list.length; i++){%>
         <a href="javascript:;" onclick="_czc.push(['_trackEvent','试玩-图','<%=list[i].title%>','<%=i+1%>']);"
@@ -317,7 +317,7 @@
         <%}%>
     </div>
     <div class="swiper-pagination"></div>
-</script> -->
+</script>
 <!-- end banner列表模板 -->
 
 <!-- 试玩列表模板 -->
@@ -327,9 +327,10 @@
         <a 
            class="ub uinn-tb ub-ac ub-pj ubb bc-border platform platform-a">
             <div class="ub ub-f1">
-                <div class="ub-img7 platform-icon" style="background-image: url();"></div>
+                <div class="ub-img7 platform-icon" style="background-image: url({{ asset('uploads/' . $app->logo) }});"></div>
                 <div class="ub ub-f1 ub-ver ub-pj" style="padding: 0.1em 0 0.2em;">
                     <div class="ub ub-ac ub-f1">
+                        <div class="font-title">试玩平台{{ $key+1 }}</div>
                         <!-- 推荐 -->
                     </div>
                     <div class="ub ub-ac ub-f1">

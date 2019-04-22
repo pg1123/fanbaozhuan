@@ -66,3 +66,5 @@ class App extends Model
 //php artisan migrate
 //php artisan make:model App\\Models\\App
 //php artisan admin:make AppController --model=App\\Models\\App
+
+//php artisan admin: reset-password

@@ -17,6 +17,7 @@ Route::post('sort', 'AppController@sort')->name('apps.sort');
     $router->resource('appcat', AppCatController::class);
     $router->resource('news', NewsController::class);
     $router->resource('newscat', NewsCatController::class);
+    $router->resource('ad', AppAdImageController::class);
 
 
 
