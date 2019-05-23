@@ -25,4 +25,11 @@ class IndexController extends Controller
         ]);
     }
 
+    public function appInfo($catId, $id) {
+        $app = App::find($id);
+        return view('line.appInfo', [
+            'app' => $app
+        ]);
+    }
+
 }
