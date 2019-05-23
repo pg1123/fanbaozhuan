@@ -27,8 +27,11 @@ class IndexController extends Controller
 
     public function appInfo($catId, $id) {
         $app = App::find($id);
+        $jpApps = App::getJpApps(3);
+
         return view('line.appInfo', [
-            'app' => $app
+            'app' => $app,
+            'jpApps' => $jpApps
         ]);
     }
 
