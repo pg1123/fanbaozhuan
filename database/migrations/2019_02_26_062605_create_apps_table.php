@@ -13,6 +13,7 @@ class CreateAppsTable extends Migration
      */
     public function up()
     {
+      //ALTER TABLE `apps` ADD `url_2` varchar(255) DEFAULT NULL AFTER `url`
         DB::unprepared('
             CREATE TABLE `apps` (
               `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -21,6 +22,7 @@ class CreateAppsTable extends Migration
               `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
               `logo` text COLLATE utf8_unicode_ci,
               `url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+              `url_2` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
               `keywords` text COLLATE utf8_unicode_ci DEFAULT NULL,
               `abstract` text COLLATE utf8_unicode_ci,
               `picture` text COLLATE utf8_unicode_ci,
@@ -47,3 +49,6 @@ class CreateAppsTable extends Migration
         Schema::dropIfExists('apps');
     }
 }
+
+
+

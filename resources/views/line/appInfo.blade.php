@@ -72,7 +72,7 @@
 
         <p class="plat_dd">{{ $app->name }}</p>
 
-        <div class="plat_btn" data-url="{{ $app->url }}">
+        <div class="plat_btn" data-url="{{ $app->url }}" data-url2="{{ $app->url_2 }}">
             开始赚钱
         </div>
         <div class="plat_time">
