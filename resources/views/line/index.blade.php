@@ -224,7 +224,7 @@
 
 <div class="popup-sa">
 <div class="sa-tip">
-    <img src="static/images/index/group1.png" alt="">
+    <img src="{{ asset('images/line/group.png') }}" alt="">
 </div>
 </div>
 

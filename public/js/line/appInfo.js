@@ -69,12 +69,10 @@ $(function () {
         jsonpCallback: 'platformDetail',
         async: true,
         success: function (data) {
-            // data = eval('(' + data + ')');
             skm = data.skm;
             data.platnum = platnum;
             $('#detailCon').html(template('t:detailCon', {list: data}));
-            // $('#myModal').html(template('t:myModal', {list: data}));
-            aboutPhoto(platformid);//灞曠ず澶у浘
+            aboutPhoto(platformid);
             $('#platPhoto').append(template('t:platPhoto', {data: data.detailImages}));
 
             $('.shareToLink').html(data.link_url);
@@ -101,6 +99,16 @@ $(function () {
     if (!is_wechat()) {
         $(".sharetopBtn").removeClass("uhide");
     }
+
+
+    $('.plat_btn').on('click',function (event) {
+        event.preventDefault();
+        //window.location.href = $(this).data('url');
+        window.open($(this).data('url'));
+    })
+
+    aboutPhoto(platformid);
+
 })
 
 

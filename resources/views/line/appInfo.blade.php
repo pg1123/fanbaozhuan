@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>友贝</title>
+    <title>饭宝赚</title>
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('uploads/images/icon/logo.jpg') }}">
@@ -33,8 +33,8 @@
 <div class="d-title">
     平台详情
 </div>
-<img class="sharetopBtn uhide" src="{{ asset('uploads/images/line/shareBtn.png') }}" alt="">
-<img class="plat_bg" src="{{ asset('uploads/images/line/plat_1.jpg') }}" alt="">
+<img class="sharetopBtn uhide" src="{{ asset('images/line/shareBtn.png') }}" alt="">
+<img class="plat_bg" src="{{ asset('images/line/plat_1.jpg') }}" alt="">
 <div id="detailCon" class="detailCon">
 
     <div class="price_part">
@@ -72,7 +72,7 @@
 
         <p class="plat_dd">{{ $app->name }}</p>
 
-        <div class="plat_btn">
+        <div class="plat_btn" data-url="{{ $app->url }}">
             开始赚钱
         </div>
         <div class="plat_time">
@@ -100,16 +100,16 @@
                 </div>
             @else
                 <div class="manItem">
-                    <img src="https://www.youbeiapp.com/static/images/platform/man1.png" alt="">
+                    <img src="{{ asset('uploads/images/icon/set1.png') }}" alt="">
                 </div>
                 <div class="manItem">
-                    <img src="https://www.youbeiapp.com/static/images/platform/man2.png" alt="">
+                    <img src="{{ asset('uploads/images/icon/set2.png') }}" alt="">
                 </div>
                 <div class="manItem">
-                    <img src="https://www.youbeiapp.com/static/images/platform/man3.png" alt="">
+                    <img src="{{ asset('uploads/images/icon/set3.png') }}" alt="">
                 </div>
                 <div class="manItem">
-                    <img src="https://www.youbeiapp.com/static/images/platform/man4.png" alt="">
+                    <img src="{{ asset('uploads/images/icon/set4.png') }}" alt="">
                 </div>
             @endif
         </div>
@@ -258,7 +258,7 @@
         <p class="shareToText">复制链接分享至你想发布的任何地方，
             让好友和你一起赚钱！</p>
         <p class="shareToLink">
-            https://itunes.apple.com/us/app/id1263820457
+            {{ $app->picture ? route('line.appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) : $app->url}}
         </p>
         <input class="copytext" id="copytext" value="">
         <button onclick="_czc.push(['_trackEvent','分享','按钮','详情']);" id="shareBtn" type="button" class="btn shareBtn"
@@ -283,6 +283,13 @@
 <!-- 平台详情模板 -->
 
 <script type="text/html" id="t:detailCon">
+    
+</script>
+
+
+<script>
+    $(function(){
+    });
     
 </script>
 
