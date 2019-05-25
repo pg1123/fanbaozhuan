@@ -28,6 +28,20 @@ class IndexController extends Controller
         ]);
     }
 
+    public function recommend() {
+        $recommendApps = App::getHotApps(self::APPLE);
+        return view('line.recommend', [
+            'recommendApps' => $recommendApps,
+        ]);
+    }
+
+    public function reader() {
+        $readerApps = App::getApps(self::YUEDU);
+        return view('line.reader', [
+            'readerApps' => $readerApps,
+        ]);
+    }
+
     public function appInfo($catId, $id) {
         $app = App::find($id);
         $jpApps = App::getJpApps(3);

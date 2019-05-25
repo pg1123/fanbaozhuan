@@ -1,0 +1,408 @@
+@import url('_base.css?v=0.16');
+@import url('_header.css');
+@import url('_footer.css');
+@import url('appcan.control.css');
+@import url('ui-base.css?v=1.12345691');
+@import url('ui-box.css');
+@import url('ui-color.css');
+@import url('reveal.css');
+
+/**璇曠帺鍒楄〃**/
+.platform-a {
+    padding: 0.5em 1.2em 0.9em;
+    background-color: #ffffff;
+    border-bottom: 0.7em solid #f6f6f6;
+}
+
+.platform-a:last-child{
+
+}
+
+/*.platform-a:last-child{*/
+    /*border-bottom: 0.7em solid #f6f6f6;*/
+/*}*/
+
+.read-con {
+    border-bottom:1px dashed #dddddd;
+    padding: 0.8em 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    /* word-break: break-all !important;
+     overflow: hidden;
+     white-space: pre-wrap;*/
+    font-size: 0.9345em;
+    color: #333333;
+    height: 3em;
+    line-height: 1.5em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.padding-info {
+    padding: 0.6em 0.5em;
+}
+
+.desc {
+    margin-top: 0.5em;
+    font-size: 0.75em;
+    color: #999999;
+}
+
+.read-img {
+    width: 1em;
+    height: 0.8em;
+    background: url('../images/index/readimg.png') no-repeat center center / 100% 100%;
+    margin-right: 0.4em;
+    font-size: 12px;
+    color: #8e8e93;
+}
+
+.tryPlayInfo {
+    padding: 0.8em 1.1em;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.padding-demo {
+    display: block;
+    width: 48.5%;
+    margin-right: 3%;
+    float: left;
+    background-color: #ffffff;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    border-radius: 0.3em;
+    margin-bottom: 0.8em;
+}
+
+.padding-demo:nth-child(2n) {
+    margin-right: 0;
+}
+
+/**杞挱鍥炬牱寮�**/
+.swiper-container .swiper-pagination-bullet {
+    background-color: #000000 !important;
+}
+
+.swiper-container .swiper-pagination-bullet-active {
+    background-color: white !important;
+}
+
+.swiper-container-newplayer .swiper-pagination-bullet {
+    background-color: #999999;
+}
+
+.swiper-container-newplayer .swiper-pagination-bullet-active {
+    background-color: #333333;
+}
+
+.earnBtn {
+    width: 5.8em;
+    height: 2.2em;
+    line-height: 2.12em;
+    font-size: 0.8675em;
+    font-weight: 500;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+    color: #50a3f9;
+    border:1px solid #50a3f9;
+}
+
+.new-tip {
+    color: #8e8e93;
+    font-size: 12px;
+    padding: 1em 0 2em;
+    text-align: center;
+}
+
+.bottom-tip-wrap {
+    display: none;
+    /*position: fixed;*/
+    height: 2.6em;
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*z-index: 99;*/
+}
+
+.bottom-tip {
+    font-size: 15px;
+    height: 100%;
+    line-height: 2.6em;
+    color: #ffffff;
+    background: url('../images/index/entrance.png') no-repeat center center / 100% 100%;
+    text-align: center;
+}
+
+.close-entry {
+    position: absolute;
+    right: 1.4em;
+    top: 0.9em;
+    width: 0.8em;
+    height: 0.8em;
+    background: url('../images/index/close.png') no-repeat center center / 100% 100%;
+}
+
+.platform-icon {
+    /*width: 4.325em;*/
+    /*height: 4.325em;*/
+    width: 2.6em;
+    height: 2.6em;
+    background-size: 100% 100%;
+    margin-right: 0.7em;
+    border: 1px solid #e8e8e8;
+    -webkit-border-radius: 0.6em;
+    -moz-border-radius: 0.6em;
+    border-radius: 0.6em;
+}
+
+
+.font-title {
+    font-size: 1em;
+    color: #333333;
+}
+.font-desc {
+    font-size: 13px;
+    color: #8e8e93;
+    padding-top: 1em;
+    padding-left: 4.3em;
+}
+/**瀹夊崜鏄剧ず**/
+
+.openShare {
+    z-index: 33;
+    position: fixed;
+    bottom: 5.2em;
+    right: 5px;
+    width: 4.2em;
+    height: 4.2em;
+    background: url(../images/index/fixedshare.png) no-repeat center center / 100% auto;
+}
+/*
+
+.openzhifubao {
+    z-index: 33;
+    position: fixed;
+    bottom: 9.6em;
+    right: 0.9em;
+    width: 2.8em;
+    height: 4.2em;
+    background: url(../images/index/fixbag.png) no-repeat center center / 100% auto;
+}
+
+.beat {
+    animation: beat 1s linear infinite;
+    -moz-animation: beat 1s linear infinite; !* Firefox *!
+    -webkit-animation: beat 1s linear infinite; !* Safari and Chrome *!
+    -o-animation: beat 1s linear infinite; !* Opera *!
+}
+
+!**璺冲姩*!
+@keyframes beat {
+    0% {
+        transform: scale(0.8, 0.8);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1, 1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0.8, 0.8);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes beat !* Firefox *!
+{
+    0% {
+        -moz-transform: scale(0.8, 0.8);
+        opacity: 1;
+    }
+    50% {
+        -moz-transform: scale(1, 1);
+        opacity: 0.8;
+    }
+    100% {
+        -moz-transform: scale(0.8, 0.8);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes beat !* Safari and Chrome *!
+{
+    0% {
+        -webkit-transform: scale(0.8, 0.8);
+        opacity: 1;
+    }
+    50% {
+        -webkit-transform: scale(1, 1);
+        opacity: 0.8;
+    }
+    100% {
+        -webkit-transform: scale(0.8, 0.8);
+        opacity: 1;
+    }
+}
+
+@-o-keyframes beat !* Opera *!
+{
+    0% {
+        -o-transform: scale(0.8, 0.8);
+        opacity: 1;
+    }
+    50% {
+        -o-transform: scale(1, 1);
+        opacity: 0.8;
+    }
+    100% {
+        -o-transform: scale(0.8, 0.8);
+        opacity: 1;
+    }
+}
+
+.dese {
+    animation: dese 1s linear infinite;
+    -moz-animation: dese 1s linear infinite; !* Firefox *!
+    -webkit-animation: dese 1s linear infinite; !* Safari and Chrome *!
+    -o-animation: dese 1s linear infinite; !* Opera *!
+}
+
+!* 瀹氫箟keyframe鍔ㄧ敾鏁堟灉锛氬槡鐟� *!
+@keyframes dese {
+    0% {
+        transform: rotate(-22deg);
+    }
+    !* 娣诲姞鏃嬭浆瑙掑害锛屼互涓嬬被浼� *!
+    20% {
+        transform: rotate(15deg);
+    }
+    30% {
+        transform: rotate(6deg);
+    }
+    40% {
+        transform: rotate(3deg);
+    }
+    55% {
+        transform: rotate(0deg);
+    }
+    70% {
+        transform: rotate(-4deg);
+    }
+    80% {
+        transform: rotate(7deg);
+    }
+    90% {
+        transform: rotate(-15deg);
+    }
+    90% {
+        transform: rotate(22deg);
+    }
+}
+
+@-moz-keyframes dese {
+    0% {
+        transform: rotate(-12deg);
+    }
+    !* 娣诲姞鏃嬭浆瑙掑害锛屼互涓嬬被浼� *!
+    20% {
+        transform: rotate(8deg);
+    }
+    30% {
+        transform: rotate(6deg);
+    }
+    40% {
+        transform: rotate(3deg);
+    }
+    55% {
+        transform: rotate(0deg);
+    }
+    70% {
+        transform: rotate(-4deg);
+    }
+    80% {
+        transform: rotate(7deg);
+    }
+    90% {
+        transform: rotate(-8deg);
+    }
+    90% {
+        transform: rotate(12deg);
+    }
+}
+
+@-webkit-keyframes dese {
+    0% {
+        transform: rotate(-12deg);
+    }
+    !* 娣诲姞鏃嬭浆瑙掑害锛屼互涓嬬被浼� *!
+    20% {
+        transform: rotate(8deg);
+    }
+    30% {
+        transform: rotate(6deg);
+    }
+    40% {
+        transform: rotate(3deg);
+    }
+    55% {
+        transform: rotate(0deg);
+    }
+    70% {
+        transform: rotate(-4deg);
+    }
+    80% {
+        transform: rotate(7deg);
+    }
+    90% {
+        transform: rotate(-8deg);
+    }
+    90% {
+        transform: rotate(12deg);
+    }
+}
+
+@-o-keyframes dese {
+    0% {
+        transform: rotate(-12deg);
+    }
+    !* 娣诲姞鏃嬭浆瑙掑害锛屼互涓嬬被浼� *!
+    20% {
+        transform: rotate(8deg);
+    }
+    30% {
+        transform: rotate(6deg);
+    }
+    40% {
+        transform: rotate(3deg);
+    }
+    55% {
+        transform: rotate(0deg);
+    }
+    70% {
+        transform: rotate(-4deg);
+    }
+    80% {
+        transform: rotate(7deg);
+    }
+    90% {
+        transform: rotate(-8deg);
+    }
+    90% {
+        transform: rotate(12deg);
+    }
+}*/
