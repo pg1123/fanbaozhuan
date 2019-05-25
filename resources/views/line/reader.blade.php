@@ -114,7 +114,7 @@
 <script type="text/html" id="t:tryPlayList">
     <div style="padding: 0 0;">
         @foreach($readerApps as $key => $app)
-        <a target="_Blank" href="{{ $app->url }}"
+        <a href="{{ $app->url }}"
            class="ub  ub-ver platform platform-a">
             <div class="ub ub-ac">
             <div class="ub-img7 platform-icon" style="background-image: url({{ asset('uploads/' . $app->logo) }});"></div>

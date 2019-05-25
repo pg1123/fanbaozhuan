@@ -106,9 +106,10 @@ $(function () {
         //window.location.href = $(this).data('url');
         if ($(this).data('url2'))
         {
-            window.open($(this).data('url2'));
+            window.location.href = $(this).data('url2');
+            //window.open($(this).data('url2'));
         }
-        window.open($(this).data('url'));
+        window.location.href = $(this).data('url');
     })
 
     aboutPhoto(platformid);

@@ -224,12 +224,12 @@ function initBannerList() {
 function clickToBannerDetail() {
     $(".banner").on('click', function () {
         var url = $(this).attr('data-url');
-        if ($(this).attr('data-id') == 3) {
-            window.location.href = 'radiers.html';
-        } else {
+        // if ($(this).attr('data-id') == 3) {
+        //     window.location.href = 'radiers.html';
+        // } else {
 
-            window.open(url);
-        }
+            window.location.href =url;
+        // }
 
     });
 }
