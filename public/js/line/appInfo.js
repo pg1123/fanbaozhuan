@@ -272,6 +272,7 @@ function aboutPhoto(platformid) {
 
     var mySwiper;
     $('.photoListItem').on('click', function (e) {
+        //alert(1123);
         //$('body').addClass('no-scroll');
         var _index = $('.photoListItem').index($(this));
         $('#photobig').show();

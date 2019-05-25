@@ -168,6 +168,9 @@
     <div class="swiper-container photobigGallary">
         <div id="platPhoto" class="swiper-wrapper"></div>
         <!--<div class="swiper-pagination"></div>-->
+        @foreach($app->picture as $pic)
+            <img src="{{ asset('uploads/' . $pic) }}" alt="">
+        @endforeach
     </div>
 </div>
 
