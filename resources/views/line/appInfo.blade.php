@@ -38,7 +38,7 @@
 <div id="detailCon" class="detailCon">
 
     <div class="price_part">
-        {{ $app->reward }}<span class="price_cash">元起</span>
+        <span class="price_cash">{{ $app->reward }}</span>元起
     </div>
     <div class="profile">
         试玩任务奖励
