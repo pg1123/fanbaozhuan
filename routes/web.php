@@ -49,3 +49,5 @@ Route::get('/hongbao', 'NewsController@zfb')->name('news.zfb');
 
 Route::get('/', 'Line\IndexController@index')->name('line.index');
 Route::get('/line/{cat_id}/{id}', 'Line\IndexController@appInfo')->name('line.appInfo');
+Route::get('/line/hongbao', 'Line\NewsController@zfb')->name('line.zfb');
+

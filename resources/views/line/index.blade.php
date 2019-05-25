@@ -52,7 +52,7 @@
     <div class="scroll-notice-wrap">
         <div class="scroll-notice">
             <div class="t_news">
-                <b><img src="http://static.jimivip.com/static/images/index/gonggaon.png" alt="" style="width: 18px;display: inline;float: left;margin-left: 6%;
+                <b><img src="{{ asset('images/line/gonggaon.png') }}" alt="" style="width: 18px;display: inline;float: left;margin-left: 6%;
     margin-top: 10px;"></b>
                 <!--<ul class="line news_li" id="scroll_notice">-->
 
@@ -98,7 +98,7 @@
 
         </div>
     </div>-->
-    <div class="index-bottom-guide">
+   <!--  <div class="index-bottom-guide">
         <img src="static/images/index/icon-youbei1.png"/>
         <div class="index-bottom-guide-text">
             <div class="index-bottom-guide-text1">友贝永久访问入口</div>
@@ -117,7 +117,7 @@
                 <div class="down-yb-button">立即安装</div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!--1215版本菜单-->
     <div style="height: 3.6em;"></div>
@@ -163,7 +163,7 @@
 </div>-->
 
 <div class="haimiangou trans">
-    <img class="haimiangouimg" src="static/images/index/haimiangou.png?v=001" alt="">
+    <img class="haimiangouimg" src="{{asset('images/line/hongbao.png')}}" alt="">
 </div>
 
 <!--<div class="openShare uhide"></div>-->
@@ -332,7 +332,8 @@
                     </div>
                     <div class="ub ub-ac ub-f1">
                         <div class="font-desc ut-s ub-f1">
-                            {{ $app->keywords }}
+                            每单试玩奖励1元
+                            <!-- {{ $app->keywords }} -->
                         </div>
                     </div>
                 </div>

@@ -68,7 +68,7 @@ $(function () {
     });
     
     $(".haimiangou").click(function () {
-        window.location.href = 'https://engine.lvehaisen.com/index/activity?appKey=4N9g1Fx9X1bAnDoNi9JwAz2aeLvf&adslotId=188596';
+        window.location.href = "/line/hongbao";
     });
     $(".totanrice").click(function () {
         window.location.href = 'http://tanrice.com/i/?10002';
@@ -158,31 +158,30 @@ function getIndexData() {
 
 //婊氬姩鍏憡
 function scroll_data() {
-    $.ajax({
-        type: 'GET',
-        url: staticurl + '/index/jimi/announcement',
-        contentType: 'application/json',
-        dataType: 'jsonp',
-        jsonp: 'callbackgg',
-        jsonpCallback: 'backgg',
-        async: true,
-        success: function (data) {
-            // console.log(data)
-            // alert(data);
-            // data = eval('(' + data + ')');
-            $('.scroll-text1').html(data[0].text);
-            $('.scroll-text2').html(data[1].text);
-            if(is_wechat()){
-                $('.scroll-text2').html("鍔犲叆鍙嬭礉瀹樻柟QQ缇わ細593701279");
-            }
-            $('.scroll-text2').on("click",function(){
-                window.location.href = "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=593701279&card_type=group&source=external";
-            });
-        },
-        error: function (request) {
+    $('.scroll-text2').html('所有试玩平台每天15点以后更新任务');
+    $('.scroll-text1').html('添加客服微信: fbz661');
+    // $.ajax({
+    //     type: 'GET',
+    //     url: staticurl + '/index/jimi/announcement',
+    //     contentType: 'application/json',
+    //     dataType: 'jsonp',
+    //     jsonp: 'callbackgg',
+    //     jsonpCallback: 'backgg',
+    //     async: true,
+    //     success: function (data) {
+    //         $('.scroll-text1').html(data[0].text);
+    //         $('.scroll-text2').html(data[1].text);
+    //         if(is_wechat()){
+    //             $('.scroll-text2').html("鍔犲叆鍙嬭礉瀹樻柟QQ缇わ細593701279");
+    //         }
+    //         $('.scroll-text2').on("click",function(){
+    //             window.location.href = "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=593701279&card_type=group&source=external";
+    //         });
+    //     },
+    //     error: function (request) {
 
-        }
-    });
+    //     }
+    // });
 }
 
 
@@ -237,84 +236,82 @@ function clickToBannerDetail() {
 
 //鍒濆鍖栬瘯鐜╁垪琛�
 function initTryPlayList() {
-    $.ajax({
-        type: 'GET',
-        url: staticurl + '/index/jimi/platformlist' + '/fromapp/' + fromApp,
-        contentType: 'application/json',
-        dataType: 'jsonp',
-        jsonp: 'platform',
-        jsonpCallback: 'platform',
-        async: true,
-        success: function (data) {
-            // data = eval('(' + data + ')');
-            $('#tryPlayList').html(template('t:tryPlayList', {list: data}));
-            //鐐瑰嚮璺宠浆骞冲彴璇︽儏椤甸潰
+    $('#tryPlayList').html(template('t:tryPlayList'));
 
-            tryPlayListLoaded = 1;
-
-            //todo  0105璇曞灏忓叺瑕佹眰鏄剧ず鏂版墜寮曞椤�
-
-            //if (act != 'act') {
-            if (localStorage.getItem('firstCome') != 1) {
-                $('.popup1').show();
-                $('.popup1').append($('.platform:eq(0)').clone());
-                closePopup1();
-                $('body').addClass('no-scroll');
-            }
-            var _host = window.location.href;
-            if(_host.indexOf("rukou")>0){
-                sessionStorage.setItem("fromrukou",1);
-            }
-            if(sessionStorage.getItem("fromrukou")==1){
-                $('body').removeClass('no-scroll');
-                $('.popup1').hide();
-                $('.index-bottom-guide').hide();
-            }else{
-                if(is_wechat()){
-                    $('.index-bottom-guide').hide();
-                }else{
-                    $('.index-bottom-guide').show();
-                }
-            }
-            var u = navigator.userAgent;
+    tryPlayListLoaded = 1;
+    var u = navigator.userAgent;
     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
     if (isAndroid) {
         $('.index-bottom-guide').hide();
     }
-            //}
+    var item = $(".platform");
+    clickToPlatformDetail(); //安装入口点击取消和安装
+    clickbd();
+    
+    var userAgent = navigator.userAgent;
+    if (userAgent.indexOf("Safari") > -1) {
+        mainScreen();
+    }
+
+    // $.ajax({
+    //     type: 'GET',
+    //     url: staticurl + '/index/jimi/platformlist' + '/fromapp/' + fromApp,
+    //     contentType: 'application/json',
+    //     dataType: 'jsonp',
+    //     jsonp: 'platform',
+    //     jsonpCallback: 'platform',
+    //     async: true,
+    //     success: function (data) {
+    //         $('#tryPlayList').html(template('t:tryPlayList', {list: data}));
+
+    //         tryPlayListLoaded = 1;
+
+    //         if (localStorage.getItem('firstCome') != 1) {
+    //             $('.popup1').show();
+    //             $('.popup1').append($('.platform:eq(0)').clone());
+    //             closePopup1();
+    //             $('body').addClass('no-scroll');
+    //         }
+    //         var _host = window.location.href;
+    //         if(_host.indexOf("rukou")>0){
+    //             sessionStorage.setItem("fromrukou",1);
+    //         }
+    //         if(sessionStorage.getItem("fromrukou")==1){
+    //             $('body').removeClass('no-scroll');
+    //             $('.popup1').hide();
+    //             $('.index-bottom-guide').hide();
+    //         }else{
+    //             if(is_wechat()){
+    //                 $('.index-bottom-guide').hide();
+    //             }else{
+    //                 $('.index-bottom-guide').show();
+    //             }
+    //         }
+    //         var u = navigator.userAgent;
+    // var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+    // if (isAndroid) {
+    //     $('.index-bottom-guide').hide();
+    // }
+
             
             
-            //鍦ㄧ1涓猧tem涓嬪姞涓€涓箍鍛�
-            var item = $(".platform");
-//          item.eq(0).css("border-bottom","0");
-//          var _tmgg = '<a href="http://tanrice.com/i/?10002"><div class="tmgg"><button class="tmgg-btn trans"></button></div></a>';
-//          item.eq(0).after(_tmgg);
-             //鍦ㄧ1涓猧tem涓嬪姞涓€涓箍鍛�
-//           if(!is_wechat()){//寰俊閲屼笉鏄剧ず
-//              item.eq(0).css("border-bottom","0");
-//              var _yrsw = '<a href="https://www.hellonokia.com/qq/seo4/" onclick="_czc.push([\'_trackEvent\',\'鍙嬭礉骞垮憡\',\'鏈堝叆鍗佷竾\']);"><div class="yrsw"></div></a>';
-//              item.eq(0).after(_yrsw);
-//           }
+    //         var item = $(".platform");
+
+
+
+    //         clickToPlatformDetail();
+    //         clickbd();
             
-//          //鍦ㄧ8涓猧tem涓嬪姞涓€涓箍鍛�
-//          item.eq(8).css("border-bottom","0");
-//          var _hbgg = '<a href="http://cpl.4gqp.com/Wxcpl/dn880.html?channel=ztios5"><div class="yxzq"></div></a>';
-//          item.eq(8).after(_hbgg);
+    //         var userAgent = navigator.userAgent;
+    //         if (userAgent.indexOf("Safari") > -1) {
+    //             mainScreen();
+    //         }
 
+    //     },
+    //     error: function (request) {
 
-            clickToPlatformDetail();//鐐瑰嚮杩涘叆璇︽儏椤�
-            clickbd();
-            
-            var userAgent = navigator.userAgent;
-            if (userAgent.indexOf("Safari") > -1) {
-                mainScreen();//鎻愮ず娣诲姞涓诲睆骞曠獥鍙�
-            }
-
-        },
-        error: function (request) {
-
-        }
-    });
+    //     }
+    // });
 
     $.ajax({
         type: 'GET',
@@ -355,53 +352,53 @@ function closePopup1() {
     })
 }
 
-// function clickToPlatformDetail() {
-//     $('.platform-a').on('click', function () {
-//         if ($('.popup1').length > 0) {
-//             $('.popup1').remove();
-//             $('body').removeClass('no-scroll');
-//         }
+function clickToPlatformDetail() {
+    $('.platform-a').on('click', function () {
+        if ($('.popup1').length > 0) {
+            $('.popup1').remove();
+            $('body').removeClass('no-scroll');
+        }
 
-//         localStorage.setItem('firstCome', 1);
-//         if(sessionStorage.getItem("fromrukou")==1){
-//             $('.index-bottom-guide').hide();
-//         }else{
-//             if(!is_wechat()){
-//                 $('.index-bottom-guide').show();
-//             }
-//             if(sessionStorage.getItem("showIndexButton")){
-//                 $('.index-bottom-guide').hide();
-//             }
-//         }
-//         var u = navigator.userAgent;
-//     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
-//     if (isAndroid) {
-//         $('.index-bottom-guide').hide();
-//     }
-//         var $this = $(this);
-//         var style = $this.attr('data-type');
-//         var linkUrl = $this.attr('data-linkUrl');
-//         var platformid = $this.attr('data-id');
-//         var utitle = $this.attr('data-utitle');
-//         var trueTitle = $this.attr('data-trueTitle');
-//         var title = $this.attr('data-title');
-//         var platnum = $this.attr('data-platnum');
-//         window._czc.push(['_trackEvent', '璇曠帺-鍒楄〃', trueTitle, title]);
-//         if (style == 2) {
-//             window.location.href = linkUrl;
-//         } else if (platformid == 89 || platformid == 64 || platformid == 90 || platformid == 92 || platformid == 95 || platformid == 104 || platformid == 102 || platformid == 109) {
-//             window.location.href = linkUrl;
-//         } else {
-//             if (utitle == 0) {
-//                 window.location.href = 'platformDetail.html?platformid=' + platformid + '&platnum=' + platnum;
-//             } else {
-//                 window.location.href = 'platformDetail.html?platformid=' + platformid;
-//             }
+        localStorage.setItem('firstCome', 1);
+        if(sessionStorage.getItem("fromrukou")==1){
+            $('.index-bottom-guide').hide();
+        }else{
+            if(!is_wechat()){
+                $('.index-bottom-guide').show();
+            }
+            if(sessionStorage.getItem("showIndexButton")){
+                $('.index-bottom-guide').hide();
+            }
+        }
+        var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+    if (isAndroid) {
+        $('.index-bottom-guide').hide();
+    }
+        var $this = $(this);
+        var style = $this.attr('data-type');
+        var linkUrl = $this.attr('data-linkUrl');
+        var platformid = $this.attr('data-id');
+        var utitle = $this.attr('data-utitle');
+        var trueTitle = $this.attr('data-trueTitle');
+        var title = $this.attr('data-title');
+        var platnum = $this.attr('data-platnum');
+        window._czc.push(['_trackEvent', '璇曠帺-鍒楄〃', trueTitle, title]);
+        if (style == 2) {
+            window.location.href = linkUrl;
+        } else if (platformid == 89 || platformid == 64 || platformid == 90 || platformid == 92 || platformid == 95 || platformid == 104 || platformid == 102 || platformid == 109) {
+            window.location.href = linkUrl;
+        } else {
+            if (utitle == 0) {
+                window.location.href = 'platformDetail.html?platformid=' + platformid + '&platnum=' + platnum;
+            } else {
+                window.location.href = 'platformDetail.html?platformid=' + platformid;
+            }
 
-//         }
-//         return false;
-//     })
-// }
+        }
+        return false;
+    })
+}
 
 //tab閫変腑鍒囨崲
 function checked(t) {

@@ -13,6 +13,7 @@ function get_query_val(name) {
 //鍚庡彴鍦板潃
 //var staticurl = "http://192.168.1.3:8099"
 var staticurl = "https://api.jimivip.com";
+var fanbaourl = "https://fanbaozhuan.local";
 
 
 var globalTimer;
