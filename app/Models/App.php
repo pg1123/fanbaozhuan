@@ -37,7 +37,7 @@ class App extends Model
 
     public static function getApps($catId, $count=99999)
     {
-        return (new static())->where('cat_id', $catId)->orderBy('position', 'asc')->take($count)->get();
+        return (new static())->where('cat_id', $catId)->where('is_publish', 1)->orderBy('position', 'asc')->take($count)->get();
     }
 
     public static function getJpApps($count=null)
