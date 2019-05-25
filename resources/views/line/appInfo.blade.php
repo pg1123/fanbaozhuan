@@ -274,11 +274,10 @@
  <script type="text/javascript" src="{{ asset('js/line/lib/jquery.reveal.js') }}"></script>
 
 <script src="//cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/clipboard.js/1.7.1/clipboard.min.js"></script>
+ <script src="{{ asset('js/clipboard.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/line/common.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/line/template.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/line/appInfo.js') }}"></script>
-
 
 <!-- 平台详情模板 -->
 

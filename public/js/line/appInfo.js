@@ -218,17 +218,36 @@ function sharePopup() {
 }
 
 
+// $('.ali-copy-btn').click(function() {
+//     var clipboard = new Clipboard('.ali-copy-btn');
+//     $(this).attr('data-clipboard-text', "580587007");
+//     $(this).text('已复制');
+//     $(this).css('background', '#D9D9D9');
+//     $(this).css('color', '#999999');
+// });
+
 //澶嶅埗鏉�
 function clipboard() {
-    var clipboard = new Clipboard('.shareBtn');
-    clipboard.on('success', function (e) {
-        var msg = e.trigger.getAttribute('aria-label');
-        alert(msg);
-        $("#mengban1").hide();
-        $("#copydiv").hide();
-        $('body').removeClass('no-scroll');
-        e.clearSelection();
+
+    $('.shareBtn').click(function(){
+        var clipboard = new Clipboard('.shareBtn');
+        var link = $('.shareToLink').html();
+        $(this).attr('data-clipboard-text', link);
+        $(this).text('已复制');
+        $(this).css('background', '#D9D9D9');
+        $(this).css('color', '#999999');
+
     });
+
+    // var clipboard = new Clipboard('.shareBtn');
+    // clipboard.on('success', function (e) {
+    //     var msg = e.trigger.getAttribute('aria-label');
+    //     alert(msg);
+    //     $("#mengban1").hide();
+    //     $("#copydiv").hide();
+    //     $('body').removeClass('no-scroll');
+    //     e.clearSelection();
+    // });
 }
 
 /*鏀惧ぇ鍥剧墖杞挱灞曠ず**/
