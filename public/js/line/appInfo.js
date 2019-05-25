@@ -231,7 +231,7 @@ function clipboard() {
 
     $('.shareBtn').click(function(){
         var clipboard = new Clipboard('.shareBtn');
-        var link = $('.shareToLink').html();
+        var link = $('.shareToLink').html().replace(/(^\s*)|(\s*$)/g, "");;
         $(this).attr('data-clipboard-text', link);
         $(this).text('已复制');
         $(this).css('background', '#D9D9D9');

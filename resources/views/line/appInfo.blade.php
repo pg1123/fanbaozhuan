@@ -258,7 +258,7 @@
         <p class="shareToText">复制链接分享至你想发布的任何地方，
             让好友和你一起赚钱！</p>
         <p class="shareToLink">
-            {{ $app->picture ? route('line.appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) : $app->url}}
+            
         </p>
         <input class="copytext" id="copytext" value="">
         <button onclick="_czc.push(['_trackEvent','分享','按钮','详情']);" id="shareBtn" type="button" class="btn shareBtn"
@@ -288,8 +288,8 @@
 
 <script>
     $(function(){
+        $('.shareToLink').html(window.location.href);
     });
-    
 </script>
 
 </body>
