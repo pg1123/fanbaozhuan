@@ -26,6 +26,19 @@
     document.getElementById("cnzz_stat_icon_1271319646").style.display = "none";</script>
 </head>
 <body>
+<!--平台介绍图-->
+<div class="popup_box photobig" id="photobig">
+    <div class="swiper-container photobigGallary">
+        <div id="platPhoto" class="swiper-wrapper">
+            @foreach($app->picture as $pic)
+            <div class="swiper-slide">
+                <img src="{{ asset('uploads/' . $pic) }}"
+                     alt="">
+            </div>
+            @endforeach
+        </div>
+    </div>
+</div>
 <div id="nav-left">
     <div id="back"></div>
 </div>
@@ -163,16 +176,7 @@
 <!--弹出分享-->
 <!--<div id="myModal" class="reveal-modal"></div>-->
 
-<!--平台列表图-->
-<div class="popup_box photobig" id="photobig">
-    <div class="swiper-container photobigGallary">
-        <div id="platPhoto" class="swiper-wrapper"></div>
-        <!--<div class="swiper-pagination"></div>-->
-        @foreach($app->picture as $pic)
-            <img src="{{ asset('uploads/' . $pic) }}" alt="">
-        @endforeach
-    </div>
-</div>
+
 
 <script type="text/html" id="t:platPhoto">
     <%for(var c = 0;c < data.length ; c++){%>
@@ -293,6 +297,7 @@
     $(function(){
         $('.shareToLink').html(window.location.href);
     });
+    
 </script>
 
 </body>
