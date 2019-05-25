@@ -332,7 +332,7 @@
                     </div>
                     <div class="ub ub-ac ub-f1">
                         <div class="font-desc ut-s ub-f1">
-                            每单试玩奖励1元
+                            每单试玩奖励{{ $app->reward }}元
                             <!-- {{ $app->keywords }} -->
                         </div>
                     </div>

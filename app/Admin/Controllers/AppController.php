@@ -189,6 +189,7 @@ class AppController extends Controller
         }
         $form->select('cat_id', '栏目')->options($catsList);
         $form->text('name', '平台名称');
+        $form->text('reward', '每单奖励');
         $form->image('logo', '平台Logo');
         $form->text('url', '链接');
         $form->text('url_2', '链接2');
