@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>友贝</title>
+    <title>饭宝赚</title>
     <meta name="keywords" content="试客小兵,应用试客,多点应用号,应用试客官网,北京多点科技股份有限公司,北京多点科技官网,广告激励平台,App试玩,手机赚钱,积米">
     <!--<meta name="description" content="网站描述">-->
     <meta charset="utf-8">
