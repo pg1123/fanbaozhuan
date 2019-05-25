@@ -39,6 +39,22 @@
         </div>
     </div>
 </div>
+<!--弹框-复制分享链接-->
+<div class="mengban1" id="mengban1"></div>
+<div class="copydiv" id="copydiv">
+    <div style="padding: 10% 7% 8% 7%;">
+        <p class="shareToText">复制链接分享至你想发布的任何地方，
+            让好友和你一起赚钱！</p>
+        <p class="shareToLink">
+            {{ $app->url }}
+        </p>
+        <input class="copytext" id="copytext" value="">
+        <button onclick="_czc.push(['_trackEvent','分享','按钮','详情']);" id="shareBtn" type="button" class="btn shareBtn"
+                data-clipboard-target="#copytext" aria-label="复制成功！">
+            复制
+        </button>
+    </div>
+</div>
 <div id="nav-left">
     <div id="back"></div>
 </div>
@@ -258,22 +274,7 @@
     <div class="wxzq-red-pack-open-close"></div>
 </div>-->
 
-<!--弹框-复制分享链接-->
-<div class="mengban1" id="mengban1"></div>
-<div class="copydiv" id="copydiv">
-    <div style="padding: 10% 7% 8% 7%;">
-        <p class="shareToText">复制链接分享至你想发布的任何地方，
-            让好友和你一起赚钱！</p>
-        <p class="shareToLink">
-            
-        </p>
-        <input class="copytext" id="copytext" value="">
-        <button onclick="_czc.push(['_trackEvent','分享','按钮','详情']);" id="shareBtn" type="button" class="btn shareBtn"
-                data-clipboard-target="#copytext" aria-label="复制成功！">
-            复制
-        </button>
-    </div>
-</div>
+
 
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <!-- <script src="static/js/lib/jquery.reveal.js"></script>
@@ -294,9 +295,9 @@
 
 
 <script>
-    $(function(){
-        $('.shareToLink').html(window.location.href);
-    });
+    // $(function(){
+    //     $('.shareToLink').html(window.location.href);
+    // });
     
 </script>
 
