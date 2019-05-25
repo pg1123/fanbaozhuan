@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\App;
 use App\Models\AppCat;
 use App\Models\News;
+use App\Models\AppAdImage;
 
 /**
  *
@@ -20,8 +21,10 @@ class IndexController extends Controller
 
     public function index() {
         $appleApps = App::getApps(self::APPLE);
+        $ads = AppAdImage::getAds();
         return view('line.index', [
-            'appleApps' => $appleApps
+            'appleApps' => $appleApps,
+            'ads' => $ads
         ]);
     }
 

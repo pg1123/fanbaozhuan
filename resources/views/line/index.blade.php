@@ -307,13 +307,13 @@
 <!-- banner列表模板 -->
 <script type="text/html" id="t:bannerList">
     <div class="swiper-wrapper">
-        <%for(var i = 0;i < list.length; i++){%>
-        <a href="javascript:;" onclick="_czc.push(['_trackEvent','试玩-图','<%=list[i].title%>','<%=i+1%>']);"
+        @foreach($ads as $ad)
+        <a href="javascript:;" onclick="_czc.push(['_trackEvent','试玩-图',$ad->name,'<%=i+1%>']);"
            class="banner swiper-slide"
-           data-id='<%=list[i].id%>' data-url="<%=list[i].url%>" style="height: 100%;width: 100%;">
-            <img src="<%=list[i].img%>" alt="" width="100%">
+           data-id="{{$ad->id}}" data-url="{{$ad->url}}" style="height: 100%;width: 100%;">
+            <img src="{{ asset('uploads/' . $ad->picture) }}" alt="" width="100%">
         </a>
-        <%}%>
+        @endforeach
     </div>
     <div class="swiper-pagination"></div>
 </script>
