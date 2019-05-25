@@ -352,53 +352,53 @@ function closePopup1() {
     })
 }
 
-// function clickToPlatformDetail() {
-//     $('.platform-a').on('click', function () {
-//         if ($('.popup1').length > 0) {
-//             $('.popup1').remove();
-//             $('body').removeClass('no-scroll');
-//         }
+function clickToPlatformDetail() {
+    // $('.platform-a').on('click', function () {
+    //     if ($('.popup1').length > 0) {
+    //         $('.popup1').remove();
+    //         $('body').removeClass('no-scroll');
+    //     }
 
-//         localStorage.setItem('firstCome', 1);
-//         if(sessionStorage.getItem("fromrukou")==1){
-//             $('.index-bottom-guide').hide();
-//         }else{
-//             if(!is_wechat()){
-//                 $('.index-bottom-guide').show();
-//             }
-//             if(sessionStorage.getItem("showIndexButton")){
-//                 $('.index-bottom-guide').hide();
-//             }
-//         }
-//         var u = navigator.userAgent;
-//     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
-//     if (isAndroid) {
-//         $('.index-bottom-guide').hide();
-//     }
-//         var $this = $(this);
-//         var style = $this.attr('data-type');
-//         var linkUrl = $this.attr('data-linkUrl');
-//         var platformid = $this.attr('data-id');
-//         var utitle = $this.attr('data-utitle');
-//         var trueTitle = $this.attr('data-trueTitle');
-//         var title = $this.attr('data-title');
-//         var platnum = $this.attr('data-platnum');
-//         window._czc.push(['_trackEvent', '璇曠帺-鍒楄〃', trueTitle, title]);
-//         if (style == 2) {
-//             window.location.href = linkUrl;
-//         } else if (platformid == 89 || platformid == 64 || platformid == 90 || platformid == 92 || platformid == 95 || platformid == 104 || platformid == 102 || platformid == 109) {
-//             window.location.href = linkUrl;
-//         } else {
-//             if (utitle == 0) {
-//                 window.location.href = 'platformDetail.html?platformid=' + platformid + '&platnum=' + platnum;
-//             } else {
-//                 window.location.href = 'platformDetail.html?platformid=' + platformid;
-//             }
+    //     localStorage.setItem('firstCome', 1);
+    //     if(sessionStorage.getItem("fromrukou")==1){
+    //         $('.index-bottom-guide').hide();
+    //     }else{
+    //         if(!is_wechat()){
+    //             $('.index-bottom-guide').show();
+    //         }
+    //         if(sessionStorage.getItem("showIndexButton")){
+    //             $('.index-bottom-guide').hide();
+    //         }
+    //     }
+    //     var u = navigator.userAgent;
+    // var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+    // if (isAndroid) {
+    //     $('.index-bottom-guide').hide();
+    // }
+    //     var $this = $(this);
+    //     var style = $this.attr('data-type');
+    //     var linkUrl = $this.attr('data-linkUrl');
+    //     var platformid = $this.attr('data-id');
+    //     var utitle = $this.attr('data-utitle');
+    //     var trueTitle = $this.attr('data-trueTitle');
+    //     var title = $this.attr('data-title');
+    //     var platnum = $this.attr('data-platnum');
+    //     window._czc.push(['_trackEvent', '璇曠帺-鍒楄〃', trueTitle, title]);
+    //     if (style == 2) {
+    //         window.location.href = linkUrl;
+    //     } else if (platformid == 89 || platformid == 64 || platformid == 90 || platformid == 92 || platformid == 95 || platformid == 104 || platformid == 102 || platformid == 109) {
+    //         window.location.href = linkUrl;
+    //     } else {
+    //         if (utitle == 0) {
+    //             window.location.href = 'platformDetail.html?platformid=' + platformid + '&platnum=' + platnum;
+    //         } else {
+    //             window.location.href = 'platformDetail.html?platformid=' + platformid;
+    //         }
 
-//         }
-//         return false;
-//     })
-// }
+    //     }
+    //     return false;
+    // })
+}
 
 //tab閫変腑鍒囨崲
 function checked(t) {
