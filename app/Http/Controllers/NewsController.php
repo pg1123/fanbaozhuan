@@ -29,6 +29,7 @@ class NewsController extends Controller
     }
 
     public function gonglue() {
+        echo 111;exit;
         return view('news.gonglue');
     }
 

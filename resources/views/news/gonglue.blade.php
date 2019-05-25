@@ -150,6 +150,6 @@
 <script type="text/javascript">
     $('#start').on('click', function(event) {
         event.preventDefault();
-        window.location.href = "{{ route('index.index') }}";
+        window.location.href = "/";
     });
 </script>

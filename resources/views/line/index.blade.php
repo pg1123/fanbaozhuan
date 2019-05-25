@@ -65,7 +65,9 @@
                 </div>
             </div>
         </div>
-        <a href="javascript:;"><img onclick="kefu()" class="gotofonglue" src="http://static.jimivip.com/static/images/index/kefu.png"></a>
+        <!-- http://static.jimivip.com/static/images/index/kefu.png onclick="kefu()"-->
+        <a href="{{ route('line.gonglue')}}"><img  class="gotofonglue" src="uploads/images/icon/gonglue.png"></a>
+        
     </div>
 
 
