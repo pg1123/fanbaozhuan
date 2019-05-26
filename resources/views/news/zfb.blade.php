@@ -85,6 +85,7 @@
             <script src="{{ asset('js/jquery-1.11.3.min.js') }}"></script>
             <script src="{{ asset('js/clipboard.js') }}"></script>
             <script src="{{ asset('js/mui.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/line/common.js') }}"></script>
             <script type="text/javascript">
             jQuery(document).ready(function() {
                 $('.ali-copy-btn').click(function() {
