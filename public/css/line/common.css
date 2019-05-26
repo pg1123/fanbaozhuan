@@ -276,7 +276,7 @@ a {
 .screen-main .add-screen {
     width: 0.8em;
     height: 1.2em;
-    background-image: url('../images/index/lit.png');
+    background-image: url('../../images/line/lit.png');
     background-repeat: no-repeat;
     background-position: center 60%;
     background-size: 100% 100%;

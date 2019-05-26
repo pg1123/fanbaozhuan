@@ -57,7 +57,13 @@ function mainScreen() {
      $('.bottom-tip-wrap').show();
      $('.bottom-tip-wrap').on('click', function () {
          $('.popup-screen').show();
-     })
+     });
+
+     $('.close-entry').on('click', function () {
+        $('.fheight').remove();
+        $('.bottom-tip-wrap').remove();
+     });
+
     if(sessionStorage.getItem("fromrukou")==1){
         $('.index-bottom-guide').hide();
     }else{
