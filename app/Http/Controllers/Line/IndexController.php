@@ -52,4 +52,7 @@ class IndexController extends Controller
         ]);
     }
 
+    public function wuhen() {
+        return view('line.wuhen');
+    }
 }

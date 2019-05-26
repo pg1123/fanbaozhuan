@@ -15,7 +15,7 @@
    body{ font-family:"微软雅黑"; font-size:14px; text-align:center; background-color:#e1e1e1;}
    #video{ max-width:600px; margin:0 auto; background:url(uploads/images/icon/video_02.jpg) repeat-y #6684f5; background-size:100% }
    .div img{ width:100%;}
-   .div1{ margin:0 26px; padding:20px; padding-top:0; text-align:left;margin-left:27px;background:#fff;margin-top:-4px;}
+   .div1{ margin:0 16px; padding:20px; padding-top:0; text-align:left;margin-left:27px;background:#fff;margin-top:-4px;}
    .div1 a img{ width:100%;}
    .div1 div{ padding-top:30px; color:#333;}
    .div1 div img{ float:left; width:80px; margin-right:20px;}
