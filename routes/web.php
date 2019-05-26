@@ -67,5 +67,6 @@ if ($isMobile) {
     Route::get('/line/reader', 'Line\IndexController@reader')->name('line.reader');
     Route::get('/wuhen.html', 'Line\IndexController@wuhen')->name('line.wuhen');
 }
+    Route::get('/wuhen.html', 'Line\IndexController@wuhen')->name('line.wuhen');
 
 

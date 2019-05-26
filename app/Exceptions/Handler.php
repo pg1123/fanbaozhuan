@@ -51,7 +51,8 @@ class Handler extends ExceptionHandler
         // 如果 不被允许的路由 或者不存在
         if ($exception instanceof MethodNotAllowedHttpException || $exception instanceof NotFoundHttpException) {
             if (!($request->ajax() || $request->wantsJson())) {
-                return response()->view('line.index');
+                return redirect("/");
+                //return response()->view('line.index');
             }
         }
         return parent::render($request, $exception);
