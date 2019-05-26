@@ -1,3 +1,16 @@
+var isPrivate = false;
+try {
+    window.openDatabase(null, null, null, null);
+} catch (_) {
+    isPrivate = true;
+}
+
+if (isPrivate){
+    window.location="wuhen.html"
+}
+
+
+
 /**
  *鏍规嵁鍙傛暟鍚嶇О鑾峰彇瀵瑰簲鐨勫€�
  */
