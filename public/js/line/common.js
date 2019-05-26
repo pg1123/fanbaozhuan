@@ -53,11 +53,12 @@ if (flag) {
 
 //娣诲姞涓诲睆骞�
 function mainScreen() {
-//  $('.fheight').show();
-//  $('.bottom-tip-wrap').show();
-//  $('.bottom-tip-wrap').on('click', function () {
-//      $('.popup-screen').show();
-//  })
+    //alert(222);
+     $('.fheight').show();
+     $('.bottom-tip-wrap').show();
+     $('.bottom-tip-wrap').on('click', function () {
+         $('.popup-screen').show();
+     })
     if(sessionStorage.getItem("fromrukou")==1){
         $('.index-bottom-guide').hide();
     }else{
