@@ -253,6 +253,14 @@ function initTryPlayList() {
         mainScreen();
     }
 
+
+    if (localStorage.getItem('firstCome') != 1) {
+        $('.popup1').show();
+        $('.popup1').append($('.platform:eq(0)').clone());
+        closePopup1();
+        $('body').addClass('no-scroll');
+    }
+
     // $.ajax({
     //     type: 'GET',
     //     url: staticurl + '/index/jimi/platformlist' + '/fromapp/' + fromApp,
