@@ -90,16 +90,16 @@
         <div id="tryPlayList" class="bc-wh pdl"></div>
     </div>
 
-    <!--<div class="fheight"></div>-->
+    <div class="fheight"></div>
     <!---底部添加主窗口提示栏-->
-    <!--<div class="bottom-tip-wrap">
+    <div class="bottom-tip-wrap">
         <div class="bottom-tip">
             添加永久赚钱入口
         </div>
         <div class="close-entry">
 
         </div>
-    </div>-->
+    </div>
    <!--  <div class="index-bottom-guide">
         <img src="static/images/index/icon-youbei1.png"/>
         <div class="index-bottom-guide-text">

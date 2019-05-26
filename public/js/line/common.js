@@ -53,7 +53,6 @@ if (flag) {
 
 //娣诲姞涓诲睆骞�
 function mainScreen() {
-    //alert(222);
      $('.fheight').show();
      $('.bottom-tip-wrap').show();
      $('.bottom-tip-wrap').on('click', function () {

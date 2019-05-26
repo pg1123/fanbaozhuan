@@ -1133,7 +1133,7 @@ a {
     height: 100%;
     line-height: 2.6em;
     color: #ffffff;
-    background: url('../images/index/entrance.png') no-repeat center center / 100% 100%;
+    background: url('../../images/line/entrance.png') no-repeat center center / 100% 100%;
     text-align: center;
 }
 
@@ -1143,7 +1143,7 @@ a {
     top: 0.9em;
     width: 0.8em;
     height: 0.8em;
-    background: url('../images/index/close.png') no-repeat center center / 100% 100%;
+    background: url('../../images/line/close.png') no-repeat center center / 100% 100%;
 }
 
 /**
