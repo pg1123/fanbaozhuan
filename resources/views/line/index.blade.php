@@ -46,7 +46,20 @@
 
 
     <!-- 广告banner -->
-    <div id="bannerList" class="swiper-container" style="width: 100%;"></div>
+    <div id="bannerList" class="swiper-container" style="width: 100%;">
+        
+        <div class="swiper-wrapper">
+            @foreach($ads as $ad)
+            <a href="{{$ad->url}}"
+               class="banner swiper-slide"
+               data-id="{{$ad->id}}" data-url="" style="height: 100%;width: 100%;">
+                <img src="{{ asset('uploads/' . $ad->picture) }}" alt="" width="100%">
+            </a>
+            @endforeach
+        </div>
+        <div class="swiper-pagination"></div>
+
+    </div>
 
     <!-- 滚动公告 -->
     <div class="scroll-notice-wrap">
@@ -305,49 +318,18 @@
 <!-- end 滚动公告列表模板 -->
 
 <!-- banner列表模板 -->
-<script type="text/html" id="t:bannerList">
-    <!-- <div class="swiper-wrapper">
+<!-- <script type="text/html" id="t:bannerList">
+    <div class="swiper-wrapper">
         @foreach($ads as $ad)
-        <a href="javascript:;" onclick="_czc.push(['_trackEvent','试玩-图',$ad->name,'<%=i+1%>']);"
+        <a href="{{$ad->url}}"
            class="banner swiper-slide"
-           data-id="{{$ad->id}}" data-url="{{$ad->url}}" style="height: 100%;width: 100%;">
+           data-id="{{$ad->id}}" data-url="" style="height: 100%;width: 100%;">
             <img src="{{ asset('uploads/' . $ad->picture) }}" alt="" width="100%">
         </a>
         @endforeach
-    </div> -->
-
-    <div class="swiper-wrapper">
-                <a href="javascript:;" onclick="_czc.push(['_trackEvent','试玩-图',$ad->name,'<%=i+1%>']);"
-           class="banner swiper-slide"
-           data-id="1" data-url="http://fanbaozhuan.com/line/gonglue" style="height: 100%;width: 100%;">
-            <img src="http://www.fanbaozhuan.local/uploads/images/0ab1c0ee7afe6c5d0aa97855af20c802.png" alt="" width="100%">
-        </a>
-                <a href="javascript:;" onclick="_czc.push(['_trackEvent','试玩-图',$ad->name,'<%=i+1%>']);"
-           class="banner swiper-slide"
-           data-id="2" data-url="http://integral.xckoo.com/invite?uid=173259" style="height: 100%;width: 100%;">
-            <img src="http://www.fanbaozhuan.local/uploads/images/e5fdcae2bb4d2b1b517fe68dcb647f32.png" alt="" width="100%">
-        </a>
-                <a href="javascript:;" onclick="_czc.push(['_trackEvent','试玩-图',$ad->name,'<%=i+1%>']);"
-           class="banner swiper-slide"
-           data-id="3" data-url="https://www.eimoney.com/diamonds/mobile/WmfiJovvLXBCnKGMFPZq/4223666/link2" style="height: 100%;width: 100%;">
-            <img src="http://www.fanbaozhuan.local/uploads/images/7a06e2d0af460e25ade349c27f30a716.png" alt="" width="100%">
-        </a>
-
-            <a href="javascript:;" onclick="_czc.push(['_trackEvent','试玩-图',$ad->name,'<%=i+1%>']);"
-           class="banner swiper-slide"
-           data-id="4" data-url="http://pphongbao.com/?random=1122&r=824767506&from=singlemessage&isappinstalled=0" style="height: 100%;width: 100%;">
-            <img src="http://fanbaozhuan.com/uploads/images/55acbb1864aee836a72b18de6ced7068.jpg" alt="" width="100%">
-        </a>
-                <a href="javascript:;" onclick="_czc.push(['_trackEvent','试玩-图',$ad->name,'<%=i+1%>']);"
-           class="banner swiper-slide"
-           data-id="5" data-url="http://tanrice.com/i/?19069" style="height: 100%;width: 100%;">
-            <img src="http://www.fanbaozhuan.local/uploads/images/419fdf654c9a72cd60e2ba07d29327dd.jpg" alt="" width="100%">
-        </a>
-            </div>
-
-
+    </div>
     <div class="swiper-pagination"></div>
-</script>
+</script> -->
 <!-- end banner列表模板 -->
 
 <!-- 试玩列表模板 -->

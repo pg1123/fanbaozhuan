@@ -194,30 +194,36 @@ function clickToArticlexbList() {
 
 //banner鍒楄〃
 function initBannerList() {
-    $.ajax({
-        type: 'GET',
-        url: staticurl + '/index/jimi/bannerlist',
-        contentType: 'application/json',
-        dataType: 'jsonp',
-        jsonp: 'callback',
-        jsonpCallback: 'back',
-        async: true,
-        success: function (data) {
-            // data = eval('(' + data + ')');
-            $('#bannerList').html(template('t:bannerList', {list: data}));
-            var mySwiper = new Swiper('.swiper-container', {
+
+    var mySwiper = new Swiper('.swiper-container', {
                 loop: true,
                 pagination: '.swiper-pagination',
                 autoplay: 2000,
             });
+    // $.ajax({
+    //     type: 'GET',
+    //     url: staticurl + '/index/jimi/bannerlist',
+    //     contentType: 'application/json',
+    //     dataType: 'jsonp',
+    //     jsonp: 'callback',
+    //     jsonpCallback: 'back',
+    //     async: true,
+    //     success: function (data) {
+    //         // data = eval('(' + data + ')');
+    //         $('#bannerList').html(template('t:bannerList', {list: data}));
+    //         var mySwiper = new Swiper('.swiper-container', {
+    //             loop: true,
+    //             pagination: '.swiper-pagination',
+    //             autoplay: 2000,
+    //         });
 
-            //鐐瑰嚮banner璺宠浆閾炬帴
-            clickToBannerDetail();
-        },
-        error: function (request) {
+    //         //鐐瑰嚮banner璺宠浆閾炬帴
+    //         clickToBannerDetail();
+    //     },
+    //     error: function (request) {
 
-        }
-    });
+    //     }
+    // });
 }
 
 //鐐瑰嚮banner璺宠浆閾炬帴
