@@ -151,6 +151,6 @@
 <script type="text/javascript">
     $('#start').on('click', function(event) {
         event.preventDefault();
-        window.location.href = "/";
+        window.location.href = "/online";
     });
 </script>

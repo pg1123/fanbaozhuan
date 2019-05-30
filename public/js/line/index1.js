@@ -68,7 +68,7 @@ $(function () {
     });
     
     $(".haimiangou").click(function () {
-        window.location.href = "/line/hongbao";
+        window.location.href = "/online/hongbao";
     });
     $(".totanrice").click(function () {
         window.location.href = 'http://tanrice.com/i/?10002';
