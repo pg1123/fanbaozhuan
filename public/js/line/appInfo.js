@@ -103,12 +103,6 @@ $(function () {
 
     $('.plat_btn').on('click',function (event) {
         event.preventDefault();
-        //window.location.href = $(this).data('url');
-        if ($(this).data('url2'))
-        {
-            window.location.href = $(this).data('url2');
-            //window.open($(this).data('url2'));
-        }
         window.location.href = $(this).data('url');
     })
 
