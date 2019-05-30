@@ -79,7 +79,7 @@
             </div>
         </div>
         <!-- http://static.jimivip.com/static/images/index/kefu.png onclick="kefu()"-->
-        <a href="{{ route('line.gonglue')}}"><img  class="gotofonglue" src="uploads/images/icon/gonglue.png"></a>
+        <a href="{{ route('line.gonglue')}}"><img  class="gotofonglue" src="{{ asset('uploads/images/icon/gonglue.png') }}"></a>
         
     </div>
 
