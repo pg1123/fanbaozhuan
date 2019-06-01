@@ -63,7 +63,7 @@ Route::get('/wuhen.html', 'Line\IndexController@wuhen')->name('line.wuhen');
 
 if ($isMobile) {
 
-    Route::group(['prefix' => 'online'], function () {
+    Route::group(['prefix' => '/'], function () {
         Route::get('/', 'Line\IndexController@index')->name('line.index');
         Route::get('/{cat_id}/{id}', 'Line\IndexController@appInfo')->name('line.appInfo');
         Route::get('/hongbao', 'Line\NewsController@zfb')->name('line.zfb');
