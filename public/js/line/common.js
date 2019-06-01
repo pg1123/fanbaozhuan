@@ -6,7 +6,7 @@ try {
 }
 
 if (isPrivate){
-    window.location="http://fanbaozhuan.com/wuhen.html";
+    //window.location="http://fanbaozhuan.com/wuhen.html";
 }
 
 
