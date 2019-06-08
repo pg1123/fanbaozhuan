@@ -55,7 +55,7 @@
     <div style="height: 3.6em;"></div>
     <div class="footer">
         <div class="ub footer-inner clearfloat">
-            <a href="/" onclick="_czc.push(['_trackEvent','底部','试玩赚钱']);" class="ub ub-pc ub-ac ub-f1 ub-ver item">
+            <a href="{{ route('line.index')}}" onclick="_czc.push(['_trackEvent','底部','试玩赚钱']);" class="ub ub-pc ub-ac ub-f1 ub-ver item">
                 <figure>
                     <img src="http://static.jimivip.com/static/images/index/index.png" alt="">
                 </figure>
