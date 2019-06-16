@@ -36,7 +36,7 @@
         height: 50px;
         left: 30px;
         top: 20px;
-        background-image: url(img/logo.png);
+        background-image: url(images/line/logo.png);
         background-position: 100%;
         background-size: 100%;
         background-repeat: no-repeat;
