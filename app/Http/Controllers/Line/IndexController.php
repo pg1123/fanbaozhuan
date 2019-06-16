@@ -18,9 +18,20 @@ class IndexController extends Controller
     const ANDROID = 2;
     const YUEDU = 3;
     const ZONGHE = 4;
+    private $type;
+
+    public function __construct()
+    {
+        $this->is_android = false;
+        $agent = strtolower($_SERVER['HTTP_USER_AGENT']);
+        $is_android = (strpos($agent, 'android')) ? true : false;
+        $this->type = !$is_android ? self::APPLE : self::ANDROID;
+
+
+    }
 
     public function index() {
-        $appleApps = App::getApps(self::APPLE);
+        $appleApps = App::getApps($this->type);
         $ads = AppAdImage::getAds();
         return view('line.index', [
             'appleApps' => $appleApps,
@@ -29,7 +40,7 @@ class IndexController extends Controller
     }
 
     public function recommend() {
-        $recommendApps = App::getHotApps(self::APPLE);
+        $recommendApps = App::getHotApps($this->type);
         return view('line.recommend', [
             'recommendApps' => $recommendApps,
         ]);

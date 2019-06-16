@@ -65,6 +65,7 @@ if ($isMobile) {
     Route::get('/line/gonglue', 'Line\NewsController@gonglue')->name('line.gonglue');
     Route::get('/line/recommend', 'Line\IndexController@recommend')->name('line.recommend');
     Route::get('/line/reader', 'Line\IndexController@reader')->name('line.reader');
+    Route::get('/android', 'Line\IndexController@android')->name('line.android');
     Route::get('/wuhen.html', 'Line\IndexController@wuhen')->name('line.wuhen');
 }
     Route::get('/wuhen.html', 'Line\IndexController@wuhen')->name('line.wuhen');
