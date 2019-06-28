@@ -60,6 +60,16 @@ class App extends Model
         return (new static())->where('cat_id', $catId)->where('is_bibei', 1)->orderBy('position', 'asc')->get();
     }
 
+    public function getTagIdAttribute($value)
+    {
+        return explode(',', $value);
+    }
+
+    public function setTagIdAttribute($value)
+    {
+        $this->attributes['tag_id'] = trim(implode($value, ','), ',');
+    }
+
 }
 
 //php artisan make:migration create_users_table

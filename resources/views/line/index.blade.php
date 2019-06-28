@@ -341,8 +341,20 @@
             <div class="ub ub-f1">
                 <div class="ub-img7 platform-icon" style="background-image: url({{ asset('uploads/' . $app->logo) }});"></div>
                 <div class="ub ub-f1 ub-ver ub-pj" style="padding: 0.1em 0 0.2em;">
-                    <div class="ub ub-ac ub-f1">
+                    <div class="ub ub-ac ub-f1 tag">
                         <div class="font-title">试玩平台{{ $key+1 }}</div>
+                        @foreach($app->tag_id as $tagId)
+                            @if( $tagId == 1)
+                                <span>新手</span>
+                            @endif
+                            @if( $tagId == 2)
+                                <span class="sp1">提现秒到账</span>
+                            @endif
+                            @if( $tagId == 3)
+                                <span>推荐</span>
+                            @endif
+                            <!-- <span class="sp1">111</span> -->
+                        @endforeach
                         <!-- 推荐 -->
                     </div>
                     <div class="ub ub-ac ub-f1">
