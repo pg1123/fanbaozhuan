@@ -351,6 +351,9 @@
                                 <span>推荐</span>
                             @endif
                             @if( $tagId == 3)
+                                <span class="sp1">必做</span>
+                            @endif
+                            @if( $tagId == 4)
                                 <span class="sp1">提现秒到账</span>
                             @endif
                             <!-- <span class="sp1">111</span> -->
