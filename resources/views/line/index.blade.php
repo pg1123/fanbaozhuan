@@ -348,10 +348,10 @@
                                 <span>新手</span>
                             @endif
                             @if( $tagId == 2)
-                                <span class="sp1">提现秒到账</span>
+                                <span>推荐</span>
                             @endif
                             @if( $tagId == 3)
-                                <span>推荐</span>
+                                <span class="sp1">提现秒到账</span>
                             @endif
                             <!-- <span class="sp1">111</span> -->
                         @endforeach
