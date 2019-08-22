@@ -103,13 +103,13 @@ $(function () {
 
     $('.plat_btn').on('click',function (event) {
         event.preventDefault();
-        //window.location.href = $(this).data('url');
-        if ($(this).data('url2'))
-        {
-            window.location.href = $(this).data('url2');
-        } else {
-            window.location.href = $(this).data('url');
-        }
+        window.location.href = $(this).data('url');
+        // if ($(this).data('url2'))
+        // {
+        //     window.location.href = $(this).data('url2');
+        // } else {
+        //     window.location.href = $(this).data('url');
+        // }
     })
 
     aboutPhoto(platformid);
