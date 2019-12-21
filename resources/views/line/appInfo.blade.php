@@ -46,7 +46,6 @@
         <p class="shareToText">复制链接分享至你想发布的任何地方，
             让好友和你一起赚钱！</p>
         <p class="shareToLink">
-            <!-- $app->url_2 ? $app->url_2 : $app->url -->
             {{ $app->url }}
         </p>
         <input class="copytext" id="copytext" value="">
