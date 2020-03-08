@@ -58,19 +58,19 @@
         <div class="ub footer-inner clearfloat">
             <a href="/" onclick="_czc.push(['_trackEvent','底部','试玩赚钱']);" class="ub ub-pc ub-ac ub-f1 ub-ver item">
                 <figure>
-                    <img src="http://static.jimivip.com/static/images/index/index.png" alt="">
+                    <img src="{{ asset('uploads/images/icon/index.png') }}" alt="">
                 </figure>
                 <div>试玩赚钱</div>
             </a>
             <a href="{{ route('line.recommend')}}" onclick="_czc.push(['_trackEvent','底部','推荐']);" class="ub ub-pc ub-ac ub-f1 ub-ver item ">
                 <figure>
-                    <img src="http://static.jimivip.com/static/images/index/recommend.png" alt="">
+                    <img src="{{ asset('uploads/images/icon/recommend.png') }}" alt="">
                 </figure>
                 <div>推荐</div>
             </a>
             <a class="ub ub-pc ub-ac ub-f1 ub-ver item actived" href="javascript:;" onclick="_czc.push(['_trackEvent','底部','阅读赚钱']);">
                 <figure>
-                    <img src="http://static.jimivip.com/static/images/index/reading.png" alt="">
+                    <img src="{{ asset('uploads/images/icon/reading.png') }}" alt="">
 
                 </figure>
                 <div>阅读赚钱</div>
