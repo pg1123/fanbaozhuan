@@ -208,16 +208,16 @@
     <div class="swiper-container manphotos">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="https://www.youbeiapp.com/static/images/platform/WechatIMG182.png" alt="">
+                <img src="{{ asset('uploads/images/icon/WechatIMG182.png') }}" alt="">
             </div>
             <div class="swiper-slide">
-                <img src="https://www.youbeiapp.com/static/images/platform/WechatIMG183.png" alt="">
+                <img src="{{ asset('uploads/images/icon/WechatIMG183.png') }}" alt="">
             </div>
             <div class="swiper-slide">
-                <img src="https://www.youbeiapp.com/static/images/platform/WechatIMG184.png" alt="">
+                <img src="{{ asset('uploads/images/icon/WechatIMG184.png') }}" alt="">
             </div>
             <div class="swiper-slide">
-                <img src="https://www.youbeiapp.com/static/images/platform/WechatIMG186.png" alt="">
+                <img src="{{ asset('uploads/images/icon/WechatIMG186.png') }}" alt="">
             </div>
         </div>
         <!--<div class="swiper-pagination"></div>-->
@@ -228,16 +228,16 @@
     <div class="swiper-container manphotosshike">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="https://www.youbeiapp.com/static/images/platform/shikebig1.jpg" style="width: 100%;" alt="">
+                <img src="{{ asset('uploads/images/icon/shikebig1.jpg') }}" style="width: 100%;" alt="">
             </div>
             <div class="swiper-slide">
-                <img src="https://www.youbeiapp.com/static/images/platform/shikebig2.jpg" style="width: 100%;" alt="">
+                <img src="{{ asset('uploads/images/icon/shikebig2.jpg') }}" style="width: 100%;" alt="">
             </div>
             <div class="swiper-slide">
-                <img src="https://www.youbeiapp.com/static/images/platform/shikebig3.jpg" style="width: 100%;" alt="">
+                <img src="{{ asset('uploads/images/icon/shikebig3.jpg') }}" style="width: 100%;" alt="">
             </div>
             <div class="swiper-slide">
-                <img src="https://www.youbeiapp.com/static/images/platform/WechatIMG186.png" style="width: 100%;" alt="">
+                <img src="{{ asset('uploads/images/icon/WechatIMG186.png') }}" style="width: 100%;" alt="">
             </div>
         </div>
         <!--<div class="swiper-pagination"></div>-->
@@ -246,9 +246,9 @@
 
 <!-- 第一次进入详情页 -->
 <div class="popup1 raider_step1">
-    <img class="raiders2" src="https://www.youbeiapp.com/static/images/platform/raiders-2.png" alt="">
-    <img class="startBtn" src="https://www.youbeiapp.com/static/images/platform/startBtns.png" alt="">
-    <img class="okBtn" src="https://www.youbeiapp.com/static/images/platform/okbtn.png" alt="">
+    <img class="raiders2" src="{{ asset('uploads/images/icon/raiders-2.png') }}" alt="">
+    <img class="startBtn" src="{{ asset('uploads/images/icon/startBtns.png') }}" alt="">
+    <img class="okBtn" src="{{ asset('uploads/images/icon/okbtn.png') }}" alt="">
 </div>
 
 <!-- 第二次进入详情页 -->
@@ -259,8 +259,8 @@
 <!--2018年01月16日17:31:05 by-cj-->
 <!-- 第三次进入详情页 -->
 <div class="popup1 raider_step3">
-    <img class="popupShare" src="https://www.youbeiapp.com/static/images/platform/pshare.png" alt="">
-    <img class="raiders3" src="https://www.youbeiapp.com/static/images/platform/raiders_3.png" alt="">
+    <img class="popupShare" src="{{ asset('uploads/images/icon/pshare.png') }}" alt="">
+    <img class="raiders3" src="{{ asset('uploads/images/icon/readers_3.png') }}" alt="">
 </div>
 <!-- 第四次进入详情页 -->
 <!-- 红包广告-->
