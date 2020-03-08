@@ -214,7 +214,7 @@
 
 <!-- 第一次进入 -->
 <div class="popup1">
-    <img class="raiders1" src="http://static.jimivip.com/static/images/index/gonglue.png" alt="">
+    <img class="raiders1" src="{{asset('uploads/images/icon/gonglue2.png')}}" alt="">
 </div>
 
 <!--添加到主屏幕 -->
@@ -228,7 +228,7 @@
             <p>步骤二：添加到主屏幕即可</p>
         </div>
         <div class="photo-part">
-            <img src="http://static.jimivip.com/static/images/index/screen.png" alt="">
+            <img src="{{asset('uploads/images/icon/screen.png')}}" alt="">
 
         </div>
         <div class="know-btn">
