@@ -75,19 +75,19 @@
     <div class="ub reward_part">
 
         <div class="ub ub-f1 ub-ac ub-pc">
-            <img class="ub p_img" src="https://www.youbeiapp.com/static/images/platform/palipay.png" alt="">
+            <img class="ub p_img" src="{{ asset('uploads/images/icon/palipay.png') }}" alt="">
             <div class="ub">支付宝</div>
         </div>
         
 
         <div class="ub ub-f1 ub-ac ub-pc">
-            <img class="ub p_img" src="https://www.youbeiapp.com/static/images/platform/pwechat.png" alt="">
+            <img class="ub p_img" src="{{ asset('uploads/images/icon/pwechat.png') }}" alt="">
             <div class="ub">微信</div>
         </div>
         
 
         <div class="ub ub-f1 ub-ac ub-pc">
-            <img class="ub p_img" src="https://www.youbeiapp.com/static/images/platform/pwidthdraw.png" alt="">
+            <img class="ub p_img" src="{{ asset('uploads/images/icon/pwidthdraw.png') }}" alt="">
             <div class="ub">10元提现</div>
         </div>
     </div>
@@ -116,16 +116,16 @@
         <div class="managePhoto clearfloat">
             @if( 1 == 0)
                 <div class="manItem">
-                    <img src="https://www.youbeiapp.com/static/images/platform/shike1.png" alt="">
+                    <img src="{{ asset('uploads/images/icon/shike1.png') }}" alt="">
                 </div>
                 <div class="manItem">
-                    <img src="https://www.youbeiapp.com/static/images/platform/shike2.png" alt="">
+                    <img src="{{ asset('uploads/images/icon/shike2.png') }}" alt="">
                 </div>
                 <div class="manItem">
-                    <img src="https://www.youbeiapp.com/static/images/platform/shike3.png" alt="">
+                    <img src="{{ asset('uploads/images/icon/shike3.png') }}" alt="">
                 </div>
                 <div class="manItem">
-                    <img src="https://www.youbeiapp.com/static/images/platform/man4.png" alt="">
+                    <img src="{{ asset('uploads/images/icon/man4.png') }}" alt="">
                 </div>
             @else
                 <div class="manItem">
