@@ -260,7 +260,7 @@
 <!-- 第三次进入详情页 -->
 <div class="popup1 raider_step3">
     <img class="popupShare" src="{{ asset('uploads/images/icon/pshare.png') }}" alt="">
-    <img class="raiders3" src="{{ asset('uploads/images/icon/readers_3.png') }}" alt="">
+    <img class="raiders3" src="{{ asset('uploads/images/icon/raiders_3.png') }}" alt="">
 </div>
 <!-- 第四次进入详情页 -->
 <!-- 红包广告-->
