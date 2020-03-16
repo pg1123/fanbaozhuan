@@ -1,7 +1,6 @@
 var skm;
 var platDetail;
 var act = sessionStorage.getItem('act');
-var fromApp = sessionStorage.getItem('fromapp');//浠庡摢涓猘pp璺宠繃鏉ョ殑
 $(function () {
     $('#nav-left').on('click', function () {
         //window.location.href = 'index.html?act='+act;
@@ -11,19 +10,19 @@ $(function () {
 
     platDetail = localStorage.getItem('platDetail');
 
-//  if (act != 'act') {
-//      if (!platDetail) {
-//          if(sessionStorage.getItem("fromrukou")==1){
-//              $('.raider_step1').hide();
-//              $('.index-bottom-guide').hide();
-//              $('body').removeClass('no-scroll');
-//          }else{
-//              $('.index-bottom-guide').show();
-//              $('.raider_step1').show();
-//              $('body').addClass('no-scroll');
-//          }
-//      }
-//  }
+ if (act != 'act') {
+     if (!platDetail) {
+         if(sessionStorage.getItem("fromrukou")==1){
+             $('.raider_step1').hide();
+             $('.index-bottom-guide').hide();
+             $('body').removeClass('no-scroll');
+         }else{
+             $('.index-bottom-guide').show();
+             $('.raider_step1').show();
+             $('body').addClass('no-scroll');
+         }
+     }
+ }
     if (!platDetail) {
         if(sessionStorage.getItem("fromrukou")==1){
             $('.raider_step1').hide();

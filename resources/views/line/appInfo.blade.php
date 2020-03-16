@@ -179,7 +179,7 @@
 
 
 <!-- 平台详情 -->
-<div id="platformDetail"></div>
+<!-- <div id="platformDetail"></div> -->
 
 <!--弹出分享-->
 <!--<div id="myModal" class="reveal-modal"></div>-->
