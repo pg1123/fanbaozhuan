@@ -41,6 +41,21 @@ function ajax(url, para, success, error, loading) {
     });
 }
 
+function ajax_general(option, para, success, error, loading) {
+    if (option.async == undefined) {
+        option.async = true;
+    }
+    option.type = option.type || 'POST';
+    var url = staticurlanswer + option.action;
+    option.data = para;
+    ajax(url, option, function (res) {
+        if (option.cache) {
+            //_SET_DATA(action + para.specialdata,res,option.cache);
+        }
+        success(res);
+    }, error, loading);
+}
+
 
 var interface = {};
 
@@ -55,9 +70,9 @@ interface.getCode = function (para, success, error) {
 }
 
 //棣栭〉鏁版嵁
-interface.getUserHomeData = function (para, success, error) {
+/*interface.getUserHomeData = function (para, success, error) {
     ajax_general({action: 'getUserHomeData', type: 'POST'}, para, success, error);
-}
+}*/
 
 //鑾峰彇棰樼洰
 interface.getAnswerData = function (para, success, error) {

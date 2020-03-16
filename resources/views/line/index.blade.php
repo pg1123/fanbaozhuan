@@ -14,32 +14,15 @@
     <link rel="apple-touch-icon-precomposed" href="{{ asset('uploads/images/icon/logo.jpg') }}">
     <link rel="bookmark"  type="image/x-icon"  href="{{ asset('uploads/images/icon/fan_logo.ico') }}"/>
     <link rel="shortcut icon" href="{{ asset('uploads/images/icon/fan_logo.ico') }}">
-    <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
-    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <link href="{{ asset('css/line/swiper.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('css/line/animate.min.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ asset('css/line/index.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ asset('css/line/common.css') }}" type="text/css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
     <style type="text/css">
         
     </style>
 
-    <script>
-        var u = navigator.userAgent;
-        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
-        if (isAndroid) {
-            // window.location.href = 'readearn.html';
-        }
-
-    </script>
-    <script>
-        //声明_czc对象:
-        var _czc = _czc || [];
-        //绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
-        window._czc.push(["_setAccount", "1271319646"]);
-    </script>
-    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " //");
-    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1271319646'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1271319646' type='text/javascript'%3E%3C/script%3E"));
-    document.getElementById("cnzz_stat_icon_1271319646").style.display = "none";</script>
 </head>
 <body style="background-color: #ffffff;">
 <div>
@@ -282,8 +265,8 @@
     </div>
 </div>-->
 
-<script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/clipboard.js/1.7.1/clipboard.min.js"></script>
+<script src="{{ asset('js/swiper.jquery.min.js') }}"></script>
+<script src="{{ asset('js/clipboard.js') }}"></script>
 <script>
     var clipboard1 = new Clipboard('.openAnswer');
 </script>

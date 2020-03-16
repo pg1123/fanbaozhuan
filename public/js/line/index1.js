@@ -139,11 +139,9 @@ function getIndexData() {
         indexData = {}
     }
 
-    interface.getUserHomeData(indexData, function (data) {
+   /* interface.getUserHomeData(indexData, function (data) {
         console.log(data);
         if (data.length == 0) {
-           /* $('.answer_w').removeClass('uhide');
-            $('.answer_dot').html('0');*/
         } else {
             if(data.alreadyCount > 0){
                 $('.answer_w').removeClass('uhide');
@@ -153,7 +151,7 @@ function getIndexData() {
         }
     }, function (error) {
         console.log(error)
-    })
+    })*/
 }
 
 //婊氬姩鍏憡
@@ -506,7 +504,7 @@ function kefu() {
             s = ei.getElementsByTagName(q)[0];
     j.async = true;
     j.charset = 'UTF-8';
-    j.src = '//static.meiqia.com/dist/meiqia.js?_=t';
+    //j.src = '//static.meiqia.com/dist/meiqia.js?_=t';
     s.parentNode.insertBefore(j, s);
 })(window, document, 'script', '_MEIQIA');
 _MEIQIA('entId', '56427');
