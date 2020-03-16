@@ -126,6 +126,7 @@ function openBohe() {
 }
 */
 
+
 //鑾峰彇寰呴鍙栫孩鍖呬釜鏁�
 function getIndexData() {
     user = getUser();
