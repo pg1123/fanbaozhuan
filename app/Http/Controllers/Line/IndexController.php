@@ -35,7 +35,8 @@ class IndexController extends Controller
         $ads = AppAdImage::getAds();
         return view('line.index', [
             'appleApps' => $appleApps,
-            'ads' => $ads
+            'ads' => $ads,
+            'people' => rand(15984, 16020)
         ]);
     }
 

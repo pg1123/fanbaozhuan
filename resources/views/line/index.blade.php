@@ -77,7 +77,7 @@
             </div>
         </div>
         <div class="ub ub-ac" style="font-size: 0.8675em;color: #8e8e93;">
-            <span id="checkPeopleNum"></span>人正在试玩中
+            <span id="checkPeopleNum"> {{ $people }} </span>人正在试玩中
         </div>
     </div>
 

@@ -326,7 +326,7 @@ function initTryPlayList() {
     //     }
     // });
 
-    $.ajax({
+    /*$.ajax({
         type: 'GET',
         url: staticurl + '/index/jimi/checkPeopleNum',
         contentType: 'application/json',
@@ -339,7 +339,7 @@ function initTryPlayList() {
         },
         error: function (request) {
         }
-    });
+    });*/
 
 }
 
