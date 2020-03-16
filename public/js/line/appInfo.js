@@ -60,34 +60,7 @@ $(function () {
     var platformid = get_query_val('platformid');
     var platnum = get_query_val('platnum');
 
-    $.ajax({
-        type: 'GET',
-        url: staticurl + '/index/jimi/platformDetail?id=' + platformid+'&fromapp='+fromApp,
-        contentType: 'application/json',
-        dataType: 'jsonp',
-        jsonp: 'platformDetail',
-        jsonpCallback: 'platformDetail',
-        async: true,
-        success: function (data) {
-            skm = data.skm;
-            data.platnum = platnum;
-            $('#detailCon').html(template('t:detailCon', {list: data}));
-            aboutPhoto(platformid);
-            $('#platPhoto').append(template('t:platPhoto', {data: data.detailImages}));
 
-            $('.shareToLink').html(data.link_url);
-            $('#copytext').val('鏈€闈犺氨鐨勬墜鏈鸿禋閽卞钩鍙帮紝姣忎釜鏈堣交杞绘澗鏉句笂鍗冨厓闆惰姳閽憋紝浣犱篃蹇潵璇曡瘯鍚э紒 ' + data.link_url);
-
-            $('.plat_btn').on('click',function () {
-                window._czc.push(['_trackEvent','璇曠帺-璇︽儏',data.trueTitle,data.title]);
-                window.location.href = data.link_url;
-            })
-
-        },
-        error: function (request) {
-
-        }
-    });
 
     sharePopup();//鐐瑰嚮鍙充笂瑙掑垎浜寜閽�
 

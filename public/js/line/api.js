@@ -41,21 +41,6 @@ function ajax(url, para, success, error, loading) {
     });
 }
 
-function ajax_general(option, para, success, error, loading) {
-    if (option.async == undefined) {
-        option.async = true;
-    }
-    option.type = option.type || 'POST';
-    var url = staticurlanswer + option.action;
-    option.data = para;
-    ajax(url, option, function (res) {
-        if (option.cache) {
-            //_SET_DATA(action + para.specialdata,res,option.cache);
-        }
-        success(res);
-    }, error, loading);
-}
-
 
 var interface = {};
 

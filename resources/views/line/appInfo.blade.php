@@ -8,22 +8,14 @@
     <link rel="apple-touch-icon-precomposed" href="{{ asset('uploads/images/icon/logo.jpg') }}">
     <link rel="bookmark"  type="image/x-icon"  href="{{ asset('uploads/images/icon/fan_logo.ico') }}"/>
     <link rel="shortcut icon" href="{{ asset('uploads/images/icon/fan_logo.ico') }}">
-    <link href="//cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
+    <link href="{{ asset('css/line/swiper.min.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ asset('css/line/common.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ asset('css/line/appInfo.css') }}" type="text/css" rel="stylesheet">
 
     <style type="text/css">
         
     </style>
-    <script>
-        //声明_czc对象:
-        var _czc = _czc || [];
-        //绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
-        _czc.push(["_setAccount", "1271319646"]);
-    </script>
-    <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " //");
-    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1271319646'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1271319646' type='text/javascript'%3E%3C/script%3E"));
-    document.getElementById("cnzz_stat_icon_1271319646").style.display = "none";</script>
+
 </head>
 <body>
 <!--平台介绍图-->
@@ -253,8 +245,7 @@
 
 <!-- 第二次进入详情页 -->
 <div class="popup1 raider_step2">
-    <!--<img class="popupShare" src="https://www.youbeiapp.com/static/images/platform/pshare.png" alt="">-->
-    <img class="raiders4" src="https://www.youbeiapp.com/static/images/platform/kuang.png" alt=""  onclick="_czc.push(['_trackEvent','详情','早起赚钱']);">
+  
 </div>
 <!--2018年01月16日17:31:05 by-cj-->
 <!-- 第三次进入详情页 -->
@@ -274,15 +265,10 @@
     <div class="wxzq-red-pack-open-close"></div>
 </div>-->
 
-
-
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<!-- <script src="static/js/lib/jquery.reveal.js"></script>
- -->
- <script type="text/javascript" src="{{ asset('js/line/lib/jquery.reveal.js') }}"></script>
-
-<script src="//cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
- <script src="{{ asset('js/clipboard.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/line/lib/jquery.reveal.js') }}"></script>
+<script src="{{ asset('js/swiper.jquery.min.js') }}"></script>
+<script src="{{ asset('js/clipboard.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/line/common.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/line/template.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/line/appInfo.js') }}"></script>
