@@ -13,15 +13,13 @@ $(function () {
  if (act != 'act') {
      if (!platDetail) {
          if(sessionStorage.getItem("fromrukou")==1){
-             alert(1);
              $('.raider_step1').hide();
              $('.index-bottom-guide').hide();
              $('body').removeClass('no-scroll');
          }else{
-            //alert(2);
-             /*$('.index-bottom-guide').show();
+             $('.index-bottom-guide').show();
              $('.raider_step1').show();
-             $('body').addClass('no-scroll');*/
+             $('body').addClass('no-scroll');
          }
      }
  }
