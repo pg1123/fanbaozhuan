@@ -12,11 +12,11 @@
 */
 
 
-$agent = strtolower($_SERVER['HTTP_USER_AGENT']);
+/*$agent = strtolower($_SERVER['HTTP_USER_AGENT']);
 $is_iphone = (strpos($agent, 'iphone')) ? true : false;
 $is_ipad = (strpos($agent, 'ipad')) ? true : false;
 $is_android = (strpos($agent, 'android')) ? true : false;
-$isMobile = ($is_iphone or $is_ipad or $is_android) ? true : false;
+$isMobile = ($is_iphone or $is_ipad or $is_android) ? true : false;*/
 
 /*Route::get('/bibei', 'IndexController@bibei')->name('index.bibei');
 Route::get('/new', 'IndexController@new')->name('index.new');
@@ -59,7 +59,7 @@ Route::get('/hongbao', 'NewsController@zfb')->name('news.zfb');*/
 
 Route::get('/', 'Line\IndexController@index')->name('line.index');
 
-if ($isMobile) {
+if (1) {
     Route::get('/line/{cat_id}/{id}', 'Line\IndexController@appInfo')->name('line.appInfo');
     Route::get('/line/hongbao', 'Line\NewsController@zfb')->name('line.zfb');
     Route::get('/line/gonglue', 'Line\NewsController@gonglue')->name('line.gonglue');
