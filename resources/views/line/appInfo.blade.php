@@ -237,11 +237,11 @@
 </div>
 
 <!-- 第一次进入详情页 -->
-<div class="popup1 raider_step1">
+<!-- <div class="popup1 raider_step1">
     <img class="raiders2" src="{{ asset('uploads/images/icon/raiders-2.png') }}" alt="">
     <img class="startBtn" src="{{ asset('uploads/images/icon/startBtns.png') }}" alt="">
     <img class="okBtn" src="{{ asset('uploads/images/icon/okbtn.png') }}" alt="">
-</div>
+</div> -->
 
 <!-- 第二次进入详情页 -->
 <div class="popup1 raider_step2">
