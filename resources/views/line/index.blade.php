@@ -366,5 +366,18 @@
     <!--<div class="new-tip">*精选试玩平台，每个都做收益更高</div>-->
 </script>
 <!-- end 试玩列表模板 -->
+
+<script>
+    $(function(){
+        //$('.shareToLink').html(window.location.href);
+        //延迟加载图片 
+    　　　　$("img").lazyload({ 
+    　　　　　　event: "scrollstop", //滚动加载
+    　　　　　　effect : "fadeIn" //淡入
+    　　　　}); 
+    });
+</script>
+
+
 </body>
 </html>

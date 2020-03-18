@@ -280,10 +280,14 @@
 
 
 <script>
-    // $(function(){
-    //     $('.shareToLink').html(window.location.href);
-    // });
-    
+    $(function(){
+        //$('.shareToLink').html(window.location.href);
+        //延迟加载图片 
+    　　　　$("img").lazyload({ 
+    　　　　　　event: "scrollstop", //滚动加载
+    　　　　　　effect : "fadeIn" //淡入
+    　　　　}); 
+    });
 </script>
 
 </body>
