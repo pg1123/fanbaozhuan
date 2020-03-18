@@ -216,7 +216,7 @@
     </div>
 </div>
 <!--设备图,只针对试客的样式-->
-<div class="popup_box manphotoshike" id="manphotoshike">
+<!-- <div class="popup_box manphotoshike" id="manphotoshike">
     <div class="swiper-container manphotosshike">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -232,9 +232,8 @@
                 <img src="{{ asset('uploads/images/icon/WechatIMG186.png') }}" style="width: 100%;" alt="">
             </div>
         </div>
-        <!--<div class="swiper-pagination"></div>-->
     </div>
-</div>
+</div> -->
 
 <!-- 第一次进入详情页 -->
 <div class="popup1 raider_step1">
