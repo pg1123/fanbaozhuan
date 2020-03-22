@@ -181,10 +181,10 @@
 </script>
 
 <!--设备图-->
-<div class="popup_box manphoto" id="manphoto">
+<!-- <div class="popup_box manphoto" id="manphoto">
     <div class="swiper-container manphotos">
         <div class="swiper-wrapper">
-            <!-- <div class="swiper-slide">
+            <div class="swiper-slide">
                 <img src="{{ asset('uploads/images/icon/WechatIMG182.png') }}" alt="">
             </div>
             <div class="swiper-slide">
@@ -195,11 +195,10 @@
             </div>
             <div class="swiper-slide">
                 <img src="{{ asset('uploads/images/icon/WechatIMG186.png') }}" alt="">
-            </div> -->
+            </div>
         </div>
-        <!--<div class="swiper-pagination"></div>-->
     </div>
-</div>
+</div> -->
 <!--设备图,只针对试客的样式-->
 <!-- <div class="popup_box manphotoshike" id="manphotoshike">
     <div class="swiper-container manphotosshike">
