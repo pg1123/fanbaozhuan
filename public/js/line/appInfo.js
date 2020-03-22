@@ -17,6 +17,7 @@ $(function () {
              $('.index-bottom-guide').hide();
              $('body').removeClass('no-scroll');
          }else{
+            //alert(2);
              $('.index-bottom-guide').show();
              $('.raider_step1').show();
              $('body').addClass('no-scroll');
@@ -29,6 +30,7 @@ $(function () {
             $('.index-bottom-guide').hide();
             $('body').removeClass('no-scroll');
         }else{
+            //alert(4);
             $('.index-bottom-guide').show();
             $('.raider_step1').show();
             $('body').addClass('no-scroll');
@@ -36,6 +38,7 @@ $(function () {
     }
     
     if (platDetail == 1) {
+        //alert(5);
         if(!is_wechat()){
 //          $('.raider_step2').show();
             $('.raider_step3').show();
@@ -43,6 +46,7 @@ $(function () {
         }
     }
     if (platDetail == 2) {
+        //alert(6);
         if(!is_wechat()){
 //          $('.raider_step3').show();
 //          $(".mask,.wxzq-red-pack-open").show();

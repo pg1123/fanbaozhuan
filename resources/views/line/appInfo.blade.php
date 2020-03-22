@@ -106,20 +106,6 @@
             特别注意：该平台任务助手下载安装后需要在"设置-通用-设备管理"中添加信任方可使用
         </p>
         <div class="managePhoto clearfloat">
-            @if( 1 == 0)
-                <div class="manItem">
-                    <img src="{{ asset('uploads/images/icon/shike1.png') }}" alt="">
-                </div>
-                <div class="manItem">
-                    <img src="{{ asset('uploads/images/icon/shike2.png') }}" alt="">
-                </div>
-                <div class="manItem">
-                    <img src="{{ asset('uploads/images/icon/shike3.png') }}" alt="">
-                </div>
-                <div class="manItem">
-                    <img src="{{ asset('uploads/images/icon/man4.png') }}" alt="">
-                </div>
-            @else
                 <div class="manItem">
                     <img src="{{ asset('uploads/images/icon/set1.png') }}" alt="">
                 </div>
@@ -132,7 +118,6 @@
                 <div class="manItem">
                     <img src="{{ asset('uploads/images/icon/set4.png') }}" alt="">
                 </div>
-            @endif
         </div>
     </div>
     @endif
@@ -199,7 +184,7 @@
 <div class="popup_box manphoto" id="manphoto">
     <div class="swiper-container manphotos">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
                 <img src="{{ asset('uploads/images/icon/WechatIMG182.png') }}" alt="">
             </div>
             <div class="swiper-slide">
@@ -210,7 +195,7 @@
             </div>
             <div class="swiper-slide">
                 <img src="{{ asset('uploads/images/icon/WechatIMG186.png') }}" alt="">
-            </div>
+            </div> -->
         </div>
         <!--<div class="swiper-pagination"></div>-->
     </div>
@@ -282,11 +267,6 @@
 <script>
     $(function(){
         //$('.shareToLink').html(window.location.href);
-        //延迟加载图片 
-    　　　　$("img").lazyload({ 
-    　　　　　　event: "scrollstop", //滚动加载
-    　　　　　　effect : "fadeIn" //淡入
-    　　　　}); 
     });
 </script>
 
