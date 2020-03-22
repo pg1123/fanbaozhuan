@@ -135,6 +135,7 @@
         <div class="profile_dd">
             {{ $app->keywords }}
         </div>
+
         <!-- <ul class="photoList clearfloat">
             @foreach($app->picture as $pic)
             <li class="photoListItem">
