@@ -332,7 +332,11 @@
            class="ub uinn-tb ub-ac ub-pj ubb bc-border platform platform-a">
             <div class="ub ub-f1">
                 <!-- <div class="ub-img7 platform-icon" style="background-image: url({{ asset('uploads/' . $app->logo) }});"></div> -->
-                <img class="ub-img7 platform-icon" data-original="{{ asset('uploads/' . $app->logo) }}" alt="">
+                @if( $key == 0)
+                    <img class="ub-img7 platform-icon" src="{{ asset('uploads/' . $app->logo) }}" alt="">
+                @else
+                    <img class="ub-img7 platform-icon" data-original="{{ asset('uploads/' . $app->logo) }}" alt="">
+                @endif
                 <div class="ub ub-f1 ub-ver ub-pj" style="padding: 0.1em 0 0.2em;">
                     <div class="ub ub-ac ub-f1 tag">
                         <div class="font-title">试玩平台{{ $key+1 }}</div>
