@@ -342,7 +342,7 @@
                         <div class="font-title">试玩平台{{ $key+1 }}</div>
                         @foreach($app->tag_id as $tagId)
                             @if( $tagId == 1)
-                                <span class="sp1">新手</span>
+                                <span class="sp1">最佳</span>
                             @endif
                             @if( $tagId == 2)
                                 <span class="sp2">推荐</span>
