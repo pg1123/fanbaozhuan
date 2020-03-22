@@ -135,13 +135,13 @@
         <div class="profile_dd">
             {{ $app->keywords }}
         </div>
-        <ul class="photoList clearfloat">
+        <!-- <ul class="photoList clearfloat">
             @foreach($app->picture as $pic)
             <li class="photoListItem">
                 <img src="{{ asset('uploads/' . $pic) }}" alt="">
             </li>
             @endforeach
-        </ul>
+        </ul> -->
 
     </div>
 
