@@ -1547,12 +1547,47 @@ a {
 .tag span {
     color: #fff;
     font-size: 10px;
-    background-color: #f59c62;
+    background-color: #fff;
     line-height: 16px;
-    border-radius: 0 10px 10px 10px;
+    border-radius: 10px 10px 10px 0;
     padding: 2px 5px;
     margin-left: 4px;
+    background-position: 100% 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /*font-size: 10px;
+    position: absolute;
+    display: inline-block;
+    line-height: 16px;
+    padding: 2px 5px;
+    margin: -10px 0 0 4px;
+    text-align: center;
+    color: #fff;
+    background-position: 100% 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;*/
 }
 .tag .sp1 {
-    background-color: #9593E4;
+    /*background-color: #9593E4;*/
+    background-image: url(../../images/line/icon-lable1.png);
+}
+
+.tag .sp2 {
+    /*background-color: #9593E4;*/
+    background-image: url(../../images/line/icon-lable2.png);
+}
+
+.tag .sp3 {
+    /*background-color: #9593E4;*/
+    background-image: url(../../images/line/icon-lable3.png);
+}
+
+.tag .sp4 {
+    /*background-color: #9593E4;*/
+    background-image: url(../../images/line/icon-lable4.png);
+}
+
+.tag .sp5 {
+    /*background-color: #9593E4;*/
+    background-image: url(../../images/line/icon-lable5.png);
 }

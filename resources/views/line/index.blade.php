@@ -342,18 +342,20 @@
                         <div class="font-title">试玩平台{{ $key+1 }}</div>
                         @foreach($app->tag_id as $tagId)
                             @if( $tagId == 1)
-                                <span>新手</span>
+                                <span class="sp1">新手</span>
                             @endif
                             @if( $tagId == 2)
-                                <span>推荐</span>
+                                <span class="sp2">推荐</span>
                             @endif
                             @if( $tagId == 3)
-                                <span class="sp1">必做</span>
+                                <span class="sp3">必做</span>
                             @endif
                             @if( $tagId == 4)
-                                <span class="sp1">提现秒到账</span>
+                                <span class="sp1">最新</span>
                             @endif
-                            <!-- <span class="sp1">111</span> -->
+                            @if( $tagId == 5)
+                                <span class="sp1">体现秒到账</span>
+                            @endif
                         @endforeach
                         <!-- 推荐 -->
                     </div>
