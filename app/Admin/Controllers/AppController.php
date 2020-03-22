@@ -194,7 +194,7 @@ class AppController extends Controller
         $form->text('url', '链接');
         $form->text('url_2', '链接2');
         $form->textarea('keywords', '关键词');
-        $form->multipleSelect('tag_id', '标签')->options([1 => '最佳', 2 => '推荐', 3 => '必做', 4=>'最新', 5=>'提现秒到账']);
+        $form->multipleSelect('tag_id', '标签')->options([1 => '最佳', 2 => '推荐', 3 => '必做', 4=>'最新', 5=>'活多', 6=>'体现秒到账']);
         $form->textarea('abstract', '简介');
         $form->multipleImage('picture', '图片')->removable();
         $states = [

@@ -354,7 +354,10 @@
                                 <span class="sp4">最新</span>
                             @endif
                             @if( $tagId == 5)
-                                <span class="sp5">提现秒到账</span>
+                                <span class="sp5">活多</span>
+                            @endif
+                            @if( $tagId == 6)
+                                <span class="sp6">提现秒到账</span>
                             @endif
                         @endforeach
                         <!-- 推荐 -->
