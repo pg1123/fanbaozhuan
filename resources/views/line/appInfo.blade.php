@@ -107,16 +107,16 @@
         </p>
         <div class="managePhoto clearfloat">
                 <div class="manItem">
-                    <img src="{{ asset('uploads/images/icon/set1.png') }}" alt="">
+                    <img data-original="{{ asset('uploads/images/icon/set1.png') }}" alt="">
                 </div>
                 <div class="manItem">
-                    <img src="{{ asset('uploads/images/icon/set2.png') }}" alt="">
+                    <img data-original="{{ asset('uploads/images/icon/set2.png') }}" alt="">
                 </div>
                 <div class="manItem">
-                    <img src="{{ asset('uploads/images/icon/set3.png') }}" alt="">
+                    <img data-original="{{ asset('uploads/images/icon/set3.png') }}" alt="">
                 </div>
                 <div class="manItem">
-                    <img src="{{ asset('uploads/images/icon/set4.png') }}" alt="">
+                    <img data-original="{{ asset('uploads/images/icon/set4.png') }}" alt="">
                 </div>
         </div>
     </div>

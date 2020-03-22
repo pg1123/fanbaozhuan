@@ -384,7 +384,7 @@
 <script>
     $(function(){
         $("img").lazyload({
-            threshold : 400
+            threshold : 400,
         });
     });
 </script>
