@@ -42,7 +42,7 @@
                class="banner swiper-slide" style="height: 100%;width: 100%;">
                 <img src="{{ asset('uploads/images/banner1.png') }}" alt="" width="100%">
             </a>
-            <a href="https://www.eimoney.com/diamonds/mobile/WmfiJovvLXBCnKGMFPZq/4223666/link2"
+            <a href="https://invite.zhangxindaily.com/landing/share.html?promote=4223666"
                class="banner swiper-slide" style="height: 100%;width: 100%;">
                 <img src="{{ asset('uploads/images/banner3.png') }}" alt="" width="100%">
             </a>
