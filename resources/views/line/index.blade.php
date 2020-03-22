@@ -351,10 +351,10 @@
                                 <span class="sp3">必做</span>
                             @endif
                             @if( $tagId == 4)
-                                <span class="sp1">最新</span>
+                                <span class="sp4">最新</span>
                             @endif
                             @if( $tagId == 5)
-                                <span class="sp1">体现秒到账</span>
+                                <span class="sp5">提现秒到账</span>
                             @endif
                         @endforeach
                         <!-- 推荐 -->
