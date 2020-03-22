@@ -18,7 +18,6 @@
     <link href="{{ asset('css/line/animate.min.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ asset('css/line/index.css') }}" type="text/css" rel="stylesheet">
     <link href="{{ asset('css/line/common.css') }}" type="text/css" rel="stylesheet">
-    <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
     <style type="text/css">
         
     </style>
@@ -273,7 +272,9 @@
     </div>
 </div>-->
 
+<script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('js/swiper.jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.lazyload.min.js') }}"></script>
 <script src="{{ asset('js/clipboard.js') }}"></script>
 <script>
     var clipboard1 = new Clipboard('.openAnswer');
@@ -330,7 +331,8 @@
         <a href="{{ $app->picture ? route('line.appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) : $app->url}}"
            class="ub uinn-tb ub-ac ub-pj ubb bc-border platform platform-a">
             <div class="ub ub-f1">
-                <div class="ub-img7 platform-icon" style="background-image: url({{ asset('uploads/' . $app->logo) }});"></div>
+                <!-- <div class="ub-img7 platform-icon" style="background-image: url({{ asset('uploads/' . $app->logo) }});"></div> -->
+                <img class="ub-img7 platform-icon" data-original="{{ asset('uploads/' . $app->logo) }}" alt="">
                 <div class="ub ub-f1 ub-ver ub-pj" style="padding: 0.1em 0 0.2em;">
                     <div class="ub ub-ac ub-f1 tag">
                         <div class="font-title">试玩平台{{ $key+1 }}</div>
@@ -377,12 +379,9 @@
 
 <script>
     $(function(){
-        //$('.shareToLink').html(window.location.href);
-        //延迟加载图片 
-    　　　　/*$("img").lazyload({ 
-    　　　　　　event: "scrollstop", //滚动加载
-    　　　　　　effect : "fadeIn" //淡入
-    　　　　}); */
+        $("img").lazyload({
+            threshold : 400
+        });
     });
 </script>
 

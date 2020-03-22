@@ -135,14 +135,13 @@
         <div class="profile_dd">
             {{ $app->keywords }}
         </div>
-
-        <!-- <ul class="photoList clearfloat">
+        <ul class="photoList clearfloat">
             @foreach($app->picture as $pic)
             <li class="photoListItem">
-                <img src="{{ asset('uploads/' . $pic) }}" alt="">
+                <img data-original="{{ asset('uploads/' . $pic) }}" alt="">
             </li>
             @endforeach
-        </ul> -->
+        </ul>
 
     </div>
 
@@ -153,7 +152,7 @@
         <div class="downList clearfloat">
             @foreach($jpApps as $app)
             <a class="downItem" href="{{ $app->picture ? route('line.appInfo', ['cat_id' => $app->cat_id, 'id' => $app->id]) : $app->url}}">
-                <img src="{{ asset('uploads/' . $app->logo) }}" alt="">
+                <img data-original="{{ asset('uploads/' . $app->logo) }}" alt="">
                 <p class="downdd">{{ $app->name }}</p>
             </a>
              @endforeach
@@ -250,6 +249,7 @@
 </div>-->
 
 <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.lazyload.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/line/lib/jquery.reveal.js') }}"></script>
 <script src="{{ asset('js/swiper.jquery.min.js') }}"></script>
 <script src="{{ asset('js/clipboard.js') }}"></script>
@@ -267,6 +267,7 @@
 <script>
     $(function(){
         //$('.shareToLink').html(window.location.href);
+        $("img").lazyload();
     });
 </script>
 
