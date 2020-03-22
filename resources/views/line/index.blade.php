@@ -32,13 +32,21 @@
     <div id="bannerList" class="swiper-container" style="width: 100%;">
         
         <div class="swiper-wrapper">
-            @foreach($ads as $ad)
+            <!-- @foreach($ads as $ad)
             <a href="{{$ad->url}}"
                class="banner swiper-slide"
                data-id="{{$ad->id}}" data-url="" style="height: 100%;width: 100%;">
                 <img src="{{ asset('uploads/' . $ad->picture) }}" alt="" width="100%">
             </a>
-            @endforeach
+            @endforeach -->
+            <a href="/line/gonglue"
+               class="banner swiper-slide" style="height: 100%;width: 100%;">
+                <img src="{{ asset('uploads/images/banner1.png') }}" alt="" width="100%">
+            </a>
+            <a href="https://www.eimoney.com/diamonds/mobile/WmfiJovvLXBCnKGMFPZq/4223666/link2"
+               class="banner swiper-slide" style="height: 100%;width: 100%;">
+                <img src="{{ asset('uploads/images/banner3.png') }}" alt="" width="100%">
+            </a>
         </div>
         <div class="swiper-pagination"></div>
 
@@ -99,7 +107,7 @@
    <!--  <div class="index-bottom-guide">
         <img src="static/images/index/icon-youbei1.png"/>
         <div class="index-bottom-guide-text">
-            <div class="index-bottom-guide-text1">友贝永久访问入口</div>
+            <div class="index-bottom-guide-text1">饭宝永久访问入口</div>
             <div class="index-bottom-guide-text2">让赚钱变得更简单</div>
         </div>
         <div class="index-button-down">立即安装</div>
