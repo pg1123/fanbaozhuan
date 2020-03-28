@@ -60,13 +60,13 @@
                 <figure>
                     <img src="{{ asset('uploads/images/icon/index.png') }}" alt="">
                 </figure>
-                <div>试玩赚钱</div>
+                <div>苹果赚钱</div>
             </a>
-            <a href="{{ route('line.recommend')}}" onclick="_czc.push(['_trackEvent','底部','推荐']);" class="ub ub-pc ub-ac ub-f1 ub-ver item ">
+            <a href="{{ route('line.anzhuo')}}" onclick="_czc.push(['_trackEvent','底部','推荐']);" class="ub ub-pc ub-ac ub-f1 ub-ver item ">
                 <figure>
                     <img src="{{ asset('uploads/images/icon/recommend.png') }}" alt="">
                 </figure>
-                <div>推荐</div>
+                <div>安卓</div>
             </a>
             <a class="ub ub-pc ub-ac ub-f1 ub-ver item actived" href="javascript:;" onclick="_czc.push(['_trackEvent','底部','阅读赚钱']);">
                 <figure>

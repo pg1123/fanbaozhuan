@@ -22,21 +22,34 @@ class IndexController extends Controller
 
     public function __construct()
     {
-        $this->is_android = false;
-        $agent = strtolower($_SERVER['HTTP_USER_AGENT']);
-        $is_android = (strpos($agent, 'android')) ? true : false;
-        $this->type = !$is_android ? self::APPLE : self::ANDROID;
+        // $this->is_android = false;
+        // $agent = strtolower($_SERVER['HTTP_USER_AGENT']);
+        // $is_android = (strpos($agent, 'android')) ? true : false;
+        // $this->type = !$is_android ? self::APPLE : self::ANDROID;
 
 
     }
 
     public function index() {
-        $appleApps = App::getApps($this->type);
-        $ads = AppAdImage::getAds();
+        $appleApps = App::getApps(self::APPLE);
+        //$ads = AppAdImage::getAds();
         return view('line.index', [
             'appleApps' => $appleApps,
-            'ads' => $ads,
-            'people' => rand(15984, 16020)
+            //'ads' => $ads,
+            'people' => rand(15984, 16020),
+            'type' => '苹果'
+        ]);
+    }
+
+
+    public function anzhuo() {
+        $appleApps = App::getApps(self::ANDROID);
+        //$ads = AppAdImage::getAds();
+        return view('line.index', [
+            'appleApps' => $appleApps,
+            //'ads' => $ads,
+            'people' => rand(15984, 16020),
+            'type' => '安卓'
         ]);
     }
 

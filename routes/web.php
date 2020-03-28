@@ -58,16 +58,15 @@ Route::get('/hongbao', 'NewsController@zfb')->name('news.zfb');*/
 // });
 
 Route::get('/', 'Line\IndexController@index')->name('line.index');
+Route::get('/anzhuo', 'Line\IndexController@anzhuo')->name('line.anzhuo');
 
-if (1) {
-    Route::get('/line/{cat_id}/{id}', 'Line\IndexController@appInfo')->name('line.appInfo');
-    Route::get('/line/hongbao', 'Line\NewsController@zfb')->name('line.zfb');
-    Route::get('/line/gonglue', 'Line\NewsController@gonglue')->name('line.gonglue');
-    Route::get('/line/recommend', 'Line\IndexController@recommend')->name('line.recommend');
-    Route::get('/line/reader', 'Line\IndexController@reader')->name('line.reader');
-    Route::get('/android', 'Line\IndexController@android')->name('line.android');
-    Route::get('/wuhen.html', 'Line\IndexController@wuhen')->name('line.wuhen');
-}
-    Route::get('/wuhen.html', 'Line\IndexController@wuhen')->name('line.wuhen');
+Route::get('/line/{cat_id}/{id}', 'Line\IndexController@appInfo')->name('line.appInfo');
+Route::get('/line/hongbao', 'Line\NewsController@zfb')->name('line.zfb');
+Route::get('/line/gonglue', 'Line\NewsController@gonglue')->name('line.gonglue');
+Route::get('/line/recommend', 'Line\IndexController@recommend')->name('line.recommend');
+Route::get('/line/reader', 'Line\IndexController@reader')->name('line.reader');
+Route::get('/android', 'Line\IndexController@android')->name('line.android');
+Route::get('/wuhen.html', 'Line\IndexController@wuhen')->name('line.wuhen');
+
 
 

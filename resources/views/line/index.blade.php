@@ -31,13 +31,7 @@
     <div id="bannerList" class="swiper-container" style="width: 100%;">
         
         <div class="swiper-wrapper">
-            <!-- @foreach($ads as $ad)
-            <a href="{{$ad->url}}"
-               class="banner swiper-slide"
-               data-id="{{$ad->id}}" data-url="" style="height: 100%;width: 100%;">
-                <img src="{{ asset('uploads/' . $ad->picture) }}" alt="" width="100%">
-            </a>
-            @endforeach -->
+           
             <a href="/line/gonglue"
                class="banner swiper-slide" style="height: 100%;width: 100%;">
                 <img src="{{ asset('uploads/images/banner1.png') }}" alt="" width="100%">
@@ -80,7 +74,7 @@
 
             </div>
             <div class="ub ub-ac ub-pc" style="color: #333333;font-size: 1em;font-weight: 500">
-                赚钱优选
+                {{ $type }}赚钱优选
             </div>
         </div>
         <div class="ub ub-ac" style="font-size: 0.8675em;color: #8e8e93;">
@@ -128,17 +122,17 @@
     <div style="height: 3.6em;"></div>
     <div class="footer">
         <div class="ub footer-inner clearfloat">
-            <a href="javascript:;" onclick="_czc.push(['_trackEvent','底部','试玩赚钱']);" class="ub ub-pc ub-ac ub-f1 ub-ver item actived">
+            <a href="{{ $type  == '苹果' ? 'javascript:;' : route('line.index')}}" onclick="_czc.push(['_trackEvent','底部','试玩赚钱']);" class="ub ub-pc ub-ac ub-f1 ub-ver item {{ $type  == '苹果' ? 'actived' : '' }}">
                 <figure>
                     <img src="{{ asset('uploads/images/icon/index.png') }}" alt="">
                 </figure>
-                <div>试玩赚钱</div>
+                <div>苹果赚钱</div>
             </a>
-            <a href="{{ route('line.recommend')}}" onclick="_czc.push(['_trackEvent','底部','推荐']);" class="ub ub-pc ub-ac ub-f1 ub-ver item">
+            <a href="{{ $type  == '安卓' ? 'javascript:;' : route('line.anzhuo')}}" onclick="_czc.push(['_trackEvent','底部','推荐']);" class="ub ub-pc ub-ac ub-f1 ub-ver item {{ $type  == '安卓' ? 'actived' : '' }}">
                 <figure>
                     <img src="{{ asset('uploads/images/icon/recommend.png') }}" alt="">
                 </figure>
-                <div>推荐</div>
+                <div>安卓赚钱</div>
             </a>
             <a class="ub ub-pc ub-ac ub-f1 ub-ver item" href="{{ route('line.reader')}}" onclick="_czc.push(['_trackEvent','底部','阅读赚钱']);">
                 <figure>
@@ -309,20 +303,6 @@
 </script> -->
 <!-- end 滚动公告列表模板 -->
 
-<!-- banner列表模板 -->
-<!-- <script type="text/html" id="t:bannerList">
-    <div class="swiper-wrapper">
-        @foreach($ads as $ad)
-        <a href="{{$ad->url}}"
-           class="banner swiper-slide"
-           data-id="{{$ad->id}}" data-url="" style="height: 100%;width: 100%;">
-            <img src="{{ asset('uploads/' . $ad->picture) }}" alt="" width="100%">
-        </a>
-        @endforeach
-    </div>
-    <div class="swiper-pagination"></div>
-</script> -->
-<!-- end banner列表模板 -->
 
 <!-- 试玩列表模板 -->
 <script type="text/html" id="t:tryPlayList">
