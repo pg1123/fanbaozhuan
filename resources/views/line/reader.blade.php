@@ -65,7 +65,7 @@
             <a href="{{ route('line.anzhuo')}}" onclick="_czc.push(['_trackEvent','底部','推荐']);" class="ub ub-pc ub-ac ub-f1 ub-ver item ">
                 <figure>
                     <img src="{{ asset('uploads/images/icon/recommend.png') }}" alt="">
-                </figure>
+                </figure> 
                 <div>安卓</div>
             </a>
             <a class="ub ub-pc ub-ac ub-f1 ub-ver item actived" href="javascript:;" onclick="_czc.push(['_trackEvent','底部','阅读赚钱']);">
