@@ -58,6 +58,7 @@
                     <!--<marquee direction="up" truespeed="truespeed" height="36px" behavior="scroll" scrollamount="3" scrolldelay="100">-->
                         <div class="scroll-auto scroll-text1"></div>
                         <div class="scroll-auto scroll-text2"></div>
+                        <div class="scroll-auto scroll-text3"></div>
                     <!--</marquee>-->
                 </div>
             </div>

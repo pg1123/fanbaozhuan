@@ -157,6 +157,7 @@ function getIndexData() {
 
 //婊氬姩鍏憡
 function scroll_data() {
+    $('.scroll-text3').html('多个平台一起做，收益会翻倍噢～');
     $('.scroll-text2').html('所有试玩平台每天15点以后更新任务');
     $('.scroll-text1').html('添加客服微信: fbz662');
     // $.ajax({
